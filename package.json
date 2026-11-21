@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lokalno": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/lokalni-zagon.ps1"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.117.2",
