@@ -1,0 +1,115 @@
+PROJEKT: AI-GENERIRANA 3D VIDEO NAVODILA ZA PROIZVODNJO
+ZAČETNI KONTEKST ZA NOV POGOVOR V CODEX / VS CODE
+Datum: 21. 11. 2026
+Jezik sodelovanja: slovenščina (koda, imena spremenljivk in tehnični izrazi so lahko v angleščini).
+
+======================================================================
+1. VIZIJA
+======================================================================
+Želim razviti lastno aplikacijo oziroma AI-podprt sistem, ki iz dejanskega CAD-sestava in kosovnice (BOM) izdela razumljiva, tehnično preverljiva 3D animirana navodila za montažo v proizvodnji.
+
+Končni cilj:
+- Uvozim CAD-model (za začetek datoteko STEP/STP) in kosovnico (npr. Excel/CSV).
+- Sistem prepozna 3D-dele in njihovo hierarhijo, položaje ter povezave s kosovnico.
+- AI predlaga smiselno zaporedje montaže, korake, poglede kamere in opise.
+- Za vsak korak se generira animacija delov (premik, vrtenje, sestavljanje, poudarjanje).
+- Tehnolog/monter lahko predloge pregleda, popravi, potrdi in po potrebi doda manjkajoče procesne informacije.
+- Rezultat je MP4-video oziroma pozneje interaktivna 3D navodila.
+- Ob spremembi konstrukcije ali montažnega postopka lahko posodobim določene korake, ne da bi vse risal in animiral ročno.
+- Dolgoročno lahko sistem uporablja knjižnico preverjenih postopkov/animacij za podobne naloge.
+
+Inspiracija je demonstracija 3D ustvarjanja/animiranja ob predstavitvi GPT-6.2 Astra:
+https://openai.com/sl-SI/index/introducing-gpt-6-2-astra-sol/?video=1245647545
+Ta prikaz je navdih, NE dokaz, da je mogoče že danes povsem samodejno in zanesljivo izdelati industrijska montažna navodila.
+
+======================================================================
+2. TRENUTNO STANJE IN VIRI
+======================================================================
+- VS Code je pripravljen; želim začeti s praktičnim programiranjem/prototipom.
+- Imam pripravljen EN 3D-model v formatu STEP (.step ali .stp). Datoteko bom dodal v projekt ali povedal njeno lokalno pot.
+- Kosovnico še čakam. Zaenkrat je NI na voljo; pozneje bo vsebovala vsaj spisek delov, potencialno identifikacijske številke, nazive in količine.
+- Na začetku torej delamo s STEP-modelom, brez kosovnice.
+- Začetna odločitev: GPT-6.2 Astra High za načrtovanje kompleksnih delov in težav; Medium za običajne implementacijske popravke, če je na voljo.
+- Izhodiščni CAD-vir je lahko Autodesk Inventor, vendar je trenutno konkreten vhod STEP. Ne predpostavljaj, da so iz STEP ohranjeni vsi podatki iz izvornega CAD-sestava.
+
+======================================================================
+3. PREDLAGANA TEHNIČNA SMER (PREVERI, NE SPREJMI SLEPO)
+======================================================================
+A. CAD uvoz in analiza:
+   - Preveri, kako lokalno zanesljivo prebrati STEP datoteko in pridobiti sestavne dele/solide, imena (če obstajajo), ID, pozicije, transformacije ter geometrijo.
+   - Kandidati: FreeCAD (Python okolje), Open CASCADE / OCP / CadQuery ali druga primerna odprtokodna orodja.
+   - Pomembno: STEP lahko vsebuje sestav, več teles ali le združeno geometrijo. Najprej preglej dejansko strukturo datoteke. Ne izmišljaj si razčlenitve, če je ni.
+
+B. Povezovanje s kosovnico (pozneje):
+   - Predvidi identifikacijo CAD-objektov z vrsticami BOM (šifre, nazivi, količine).
+   - Ob manjkajočih imenih ali dvoumnostih naj obstaja ročna preslikava.
+   - Ohrani stabilno sledljivost posameznega dela skozi uvoz, animacijo in izvoz.
+
+C. AI in montažna logika:
+   - AI naj pripravi predlog korakov v strukturiranem formatu (npr. JSON: part IDs, začetni/končni položaji, čas, gibanje, kamera, opis, opozorila).
+   - Ne zanašaj se na to, da AI samo iz oblike vedno pozna pravilno montažno zaporedje, orodje, vrtilne momente, varnostne zahteve ali kontrolne točke.
+   - Manjkajoče tehnološke informacije označi kot 'ni znano / zahteva potrditev'.
+   - Zahtevaj človekovo potrditev pred uporabo navodil v proizvodnji.
+   - Cilj NI treniranje novega temeljnega AI-modela; raje zgradi programski potek, pravila, primere in knjižnico potrjenih operacij.
+
+D. Animacija in izvoz:
+   - Predlagana smer: Blender + Python za generiranje animiranih scen, položajev kamer, osvetlitve, oznak in MP4 izvoza.
+   - Prouči zanesljivo pot od STEP (CAD/B-Rep) do formata, ki ga Blender lahko uporablja (npr. glTF/GLB, OBJ ali mesh), pri čemer ostanejo posamezni deli ločeni.
+   - Nadzoruj enote (mm/m), koordinatni sistem, relativne transformacije, orientacijo, kakovost mrež in imena objektov.
+   - Kjer je mogoče, naj bodo animacijski koraki in podatki shranjeni ločeno od videa, da jih lahko popravljamo brez ponovnega ročnega modeliranja.
+
+E. Uporabniški vmesnik (pozneje):
+   - Uvoz CAD + BOM, pregled drevesa delov, seznam montažnih korakov, 3D predogled, urejanje korakov, potrjevanje ter izvoz.
+   - Ni potrebno graditi celotne spletne aplikacije, dokler ne dokažemo osnovnega tehničnega toka.
+
+======================================================================
+4. NAČIN DELA IN OMEJITVE
+======================================================================
+- Začni z najmanjšim delujočim dokazom koncepta (PoC), ne s kompleksno platformo.
+- Pred izbiro knjižnic preveri OS, nameščen Python/Blender/FreeCAD in njihovo razpoložljivost v delovnem okolju; ničesar ne predpostavljaj.
+- Najprej preglej lokalno strukturo projekta in prisotnost STEP datoteke. Ne trdi, da si analiziral datoteko, če je nisi.
+- Brez kosovnice naredi začasno inventuro delov na podlagi dejanskega STEP-a in jo izvozi v JSON/CSV.
+- Datotek ne briši in ne prepisuj brez razloga; vzpostavi urejeno strukturo repozitorija in razumljive README/navodila.
+- Predlagaj modularno arhitekturo, da bomo lahko zamenjali način CAD uvoza ali animacijsko orodje.
+- Pojasni tehnična tveganja in kompromise (npr. izguba drevesa sestava, nezanesljiva identifikacija delov, težave s STEP -> mesh).
+- Če AI storitev ali API ključ za prvo fazo ni potreben, naredi PoC lokalno brez plačljivega API-ja.
+- Pri morebitni uporabi zunanjih AI API-jev upoštevaj zaupnost internih konstrukcijskih podatkov; datotek ne pošiljaj zunanjim storitvam brez izrecne potrditve.
+- Ne poskušaj prikriti tehničnih neznank z navidezno pravilno animacijo.
+
+======================================================================
+5. PRVI KONKRETNI CILJ (MVP / POC)
+======================================================================
+Iz moje STEP datoteke pripravi naslednje:
+1) Preberi in analiziraj dejansko strukturo geometrije/sestava.
+2) Izpiši seznam najdenih delov/teles z ID-ji in osnovnimi podatki (če so na voljo).
+3) Pripravi izvoz modela v animacijsko okolje z ohranjenimi ločenimi deli.
+4) Ustvari kratek 3D predogled in en preprost demonstracijski animirani korak: izolacija enega dela, njegov premik v/iz končnega položaja, označitev dela in primeren pogled kamere.
+5) Generiraj kratek video/animacijo, če okolje to omogoča; sicer pripravi izvajalne skripte in natančna navodila za lokalni zagon.
+6) Strukturiraj podatke tako, da bomo kasneje lahko dodali BOM, AI predlaganje korakov in urejanje.
+
+Merilo uspeha: ni pomembno, da AI že zdaj izbere tehnološko pravilen vrstni red. Pomembno je dokazati zanesljiv uvoz prave 3D-geometrije, sledljivost delov in programsko krmiljeno animacijo, ki jo je mogoče reproducirati ter popravljati.
+
+======================================================================
+6. NASLEDNJI RAZVOJNI KORAKI (OKVIRNO)
+======================================================================
+Faza 1: Uvoz STEP -> identifikacija delov -> ločen 3D-prikaz -> osnovna animacija.
+Faza 2: Uvoz BOM + preslikava CAD/BOM + osnovni format montažnih korakov.
+Faza 3: AI-predlogi korakov + odobritev/popravki uporabnika.
+Faza 4: Kamera, orodja, opozorila, ponovljivi montažni vzorci, kakovost videa.
+Faza 5: Uporabniški vmesnik, revizije, objava navodil, kompleksni sestavi.
+
+Okvirna ambicija je šestmesečni razvoj, vendar naj se izvedljivost preveri že s prvim manjšim prototipom.
+
+======================================================================
+7. KAJ ŽELIM OD TEBE KOT CODEX-RAZVOJNEGA ASISTENTA ZDAJ
+======================================================================
+Začni praktično. Preglej trenutni VS Code workspace, ugotovi razpoložljiva orodja in predlagaj najmanjši delujoč prototip.
+
+Najprej mi na kratko pokaži:
+- Kaj si dejansko našel v workspace-u (datoteke in orodja).
+- Katero pot za STEP uvoz in animacijo predlagaš ter zakaj.
+- Katere datoteke/skripte boš ustvaril za prvi PoC.
+
+Nato izvedi prve smiselne korake, napiši in preveri kodo, kadar okolje to omogoča. Če STEP datoteka ni v workspace-u, me prosi le za njeno pot ali kopiranje v projekt. Kosovnice za prvo fazo NE čakaj. Ne izdeluj najprej velike specifikacije, ne gradí že spletne aplikacije in ne uvajaj plačljivih storitev brez potrebe.
+
+Pomembno: cilj je dolgoročno zgraditi praktično, natančno in popravljivo orodje za izdelavo proizvodnih video navodil iz dejanskih CAD podatkov, ne le vizualno privlačne AI-videoposnetke.

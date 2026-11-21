@@ -1,0 +1,26 @@
+{
+  "ai_model": "claude-opus-5-5",
+  "ai_mesto": "fable",
+  "zacetek": "2026-11-21T20:51:35+01:00",
+  "konec": "2026-11-21T21:11:00+01:00",
+  "status": "uspeh",
+  "povzetek": "STEP (Inventor 2027) vsebuje pravi sestav: 14 produktov, 29 pojavitev, 28 listnih delov z imeni, materiali in barvami. Inventura P001-P028, GLB z ločenimi deli (m, Y-gor), 11 predlaganih korakov s smermi vstavljanja, preverjenimi na trke (B-Rep), video 61,7 s 1920x1080 (VTK + ffmpeg). Zaporedje je predlog, ni potrjeno.",
+  "orodja": [
+    "Python 3.12.16 (uv, trening/okolje/fable)",
+    "cadquery-ocp 8.0.1.1.0 (OpenCascade 8.0, XCAF)",
+    "trimesh 5.2.1",
+    "numpy 2.5.5",
+    "VTK 9.6.2 (offscreen OpenGL)",
+    "ffmpeg 9.0.2 (libx264)"
+  ],
+  "tezave": [
+    "Vrstni red montaže in delitev na polizdelke (ali je okvir zvarjen) nista znana - zahteva potrditev tehnologa.",
+    "Pritrdilnega materiala (vijaki, matice) v STEP ni.",
+    "Prenos Blenderja je zavrnil varnostni klasifikator Claude Code - render je narejen z VTK (brez senc).",
+    "cadquery-ocp nima izdaje za Python 3.15 - uporabljen Python 3.12 prek uv.",
+    "Gostota kolesa v STEP je 'Generic' 1,0 - masa kolesa nezanesljiva.",
+    "V GLB je podsestav ročaja sploščen, mreže ponovljenih delov so podvojene.",
+    "Majhna prekrivanja v CAD (2,6-5,3 mm3) med policami in L-povezavami - lastnost modela.",
+    "Delovni slot je 'fable', model, ki je delal, pa je claude-opus-5-5 (zapisan pošteno)."
+  ]
+}

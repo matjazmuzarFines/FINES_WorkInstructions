@@ -1,0 +1,314 @@
+{
+  "prag_mm3": 1.0,
+  "korak_poti_mm": 5.0,
+  "staticno_pari_bbox": [
+    {
+      "a": "P001",
+      "b": "P003",
+      "presek_mm3": 0.0
+    },
+    {
+      "a": "P001",
+      "b": "P004",
+      "presek_mm3": 0.0
+    },
+    {
+      "a": "P002",
+      "b": "P003",
+      "presek_mm3": 0.0
+    },
+    {
+      "a": "P002",
+      "b": "P004",
+      "presek_mm3": 0.0
+    },
+    {
+      "a": "P005",
+      "b": "P009",
+      "presek_mm3": 0.101
+    },
+    {
+      "a": "P005",
+      "b": "P011",
+      "presek_mm3": 0.101
+    },
+    {
+      "a": "P005",
+      "b": "P019",
+      "presek_mm3": 0.0
+    },
+    {
+      "a": "P006",
+      "b": "P010",
+      "presek_mm3": 0.101
+    },
+    {
+      "a": "P006",
+      "b": "P011",
+      "presek_mm3": 0.101
+    },
+    {
+      "a": "P006",
+      "b": "P020",
+      "presek_mm3": 0.0
+    },
+    {
+      "a": "P007",
+      "b": "P009",
+      "presek_mm3": 0.101
+    },
+    {
+      "a": "P007",
+      "b": "P012",
+      "presek_mm3": 0.101
+    },
+    {
+      "a": "P007",
+      "b": "P019",
+      "presek_mm3": 0.0
+    },
+    {
+      "a": "P008",
+      "b": "P010",
+      "presek_mm3": 0.101
+    },
+    {
+      "a": "P008",
+      "b": "P012",
+      "presek_mm3": 0.101
+    },
+    {
+      "a": "P008",
+      "b": "P020",
+      "presek_mm3": 0.0
+    },
+    {
+      "a": "P009",
+      "b": "P011",
+      "presek_mm3": 0.0
+    },
+    {
+      "a": "P009",
+      "b": "P012",
+      "presek_mm3": 0.0
+    },
+    {
+      "a": "P009",
+      "b": "P017",
+      "presek_mm3": 5.311
+    },
+    {
+      "a": "P010",
+      "b": "P011",
+      "presek_mm3": 0.0
+    },
+    {
+      "a": "P010",
+      "b": "P012",
+      "presek_mm3": 0.0
+    },
+    {
+      "a": "P010",
+      "b": "P017",
+      "presek_mm3": 5.311
+    },
+    {
+      "a": "P011",
+      "b": "P017",
+      "presek_mm3": 2.636
+    },
+    {
+      "a": "P012",
+      "b": "P017",
+      "presek_mm3": 2.636
+    },
+    {
+      "a": "P019",
+      "b": "P021",
+      "presek_mm3": 4.855
+    },
+    {
+      "a": "P020",
+      "b": "P021",
+      "presek_mm3": 4.855
+    }
+  ],
+  "staticno_prekrivanja": [
+    {
+      "a": "P009",
+      "b": "P017",
+      "presek_mm3": 5.311
+    },
+    {
+      "a": "P010",
+      "b": "P017",
+      "presek_mm3": 5.311
+    },
+    {
+      "a": "P011",
+      "b": "P017",
+      "presek_mm3": 2.636
+    },
+    {
+      "a": "P012",
+      "b": "P017",
+      "presek_mm3": 2.636
+    },
+    {
+      "a": "P019",
+      "b": "P021",
+      "presek_mm3": 4.855
+    },
+    {
+      "a": "P020",
+      "b": "P021",
+      "presek_mm3": 4.855
+    }
+  ],
+  "koraki": [
+    {
+      "st": 1,
+      "naslov": "Spodnji okvir: vzdolžni cevi",
+      "preizkusene_smeri": [
+        {
+          "smer": "+Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "izbrana": "+Z",
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 2,
+      "naslov": "Spodnji okvir: prečni cevi",
+      "preizkusene_smeri": [
+        {
+          "smer": "+Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "izbrana": "+Z",
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 3,
+      "naslov": "Plošče koles na spodnji okvir",
+      "preizkusene_smeri": [
+        {
+          "smer": "-Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "izbrana": "-Z",
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 4,
+      "naslov": "Navpične noge",
+      "preizkusene_smeri": [
+        {
+          "smer": "+Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "izbrana": "+Z",
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 5,
+      "naslov": "Spodnja lesena polica",
+      "preizkusene_smeri": [
+        {
+          "smer": "+Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "izbrana": "+Z",
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 6,
+      "naslov": "Vmesni povezavi",
+      "preizkusene_smeri": [
+        {
+          "smer": "+Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "izbrana": "+Z",
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 7,
+      "naslov": "Vmesna lesena polica",
+      "preizkusene_smeri": [
+        {
+          "smer": "+Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "izbrana": "+Z",
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 8,
+      "naslov": "Zgornje povezave",
+      "preizkusene_smeri": [
+        {
+          "smer": "+Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "izbrana": "+Z",
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 9,
+      "naslov": "Zgornja lesena polica",
+      "preizkusene_smeri": [
+        {
+          "smer": "+Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "izbrana": "+Z",
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 10,
+      "naslov": "Kolesa",
+      "preizkusene_smeri": [
+        {
+          "smer": "-Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "izbrana": "-Z",
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 11,
+      "naslov": "Ročaj (podsestav MLU124029200)",
+      "preizkusene_smeri": [
+        {
+          "smer": "navzven_X",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "izbrana": "navzven_X",
+      "status": "brez trkov (preverjeno)"
+    }
+  ],
+  "cas_s": 18.3
+}

@@ -1,0 +1,27 @@
+{
+  "najvecja_razlika_bbox_mm": 0.05221698169611955,
+  "slike": 615,
+  "fps": 25,
+  "trajanje_s": 24.6,
+  "robovi_pogleda_px": {
+    "sestav": [
+      155.9,
+      154.7,
+      66.6,
+      79.4
+    ],
+    "P123": [
+      420.4,
+      214.5,
+      354.1,
+      28.1
+    ],
+    "P117": [
+      111.8,
+      106.5,
+      77.6,
+      299.8
+    ]
+  },
+  "grafika": "Intel(R) UHD Graphics 770"
+}

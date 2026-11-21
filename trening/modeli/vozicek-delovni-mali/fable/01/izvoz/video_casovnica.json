@@ -1,0 +1,63 @@
+{
+  "fps": 30,
+  "velikost": [
+    1920,
+    1080
+  ],
+  "slicic": 1851,
+  "dolzina_s": 61.7,
+  "poglavja": [
+    {
+      "cas_s": 0.0,
+      "opis": "uvod: celoten sestav"
+    },
+    {
+      "cas_s": 4.0,
+      "opis": "korak 1: Spodnji okvir: vzdolžni cevi"
+    },
+    {
+      "cas_s": 8.7,
+      "opis": "korak 2: Spodnji okvir: prečni cevi"
+    },
+    {
+      "cas_s": 13.4,
+      "opis": "korak 3: Plošče koles na spodnji okvir"
+    },
+    {
+      "cas_s": 18.1,
+      "opis": "korak 4: Navpične noge"
+    },
+    {
+      "cas_s": 22.8,
+      "opis": "korak 5: Spodnja lesena polica"
+    },
+    {
+      "cas_s": 27.5,
+      "opis": "korak 6: Vmesni povezavi"
+    },
+    {
+      "cas_s": 32.2,
+      "opis": "korak 7: Vmesna lesena polica"
+    },
+    {
+      "cas_s": 36.9,
+      "opis": "korak 8: Zgornje povezave"
+    },
+    {
+      "cas_s": 41.6,
+      "opis": "korak 9: Zgornja lesena polica"
+    },
+    {
+      "cas_s": 46.3,
+      "opis": "korak 10: Kolesa"
+    },
+    {
+      "cas_s": 51.0,
+      "opis": "korak 11: Ročaj (podsestav MLU124029200)"
+    },
+    {
+      "cas_s": 55.7,
+      "opis": "zakljucek: koncni sestav"
+    }
+  ]
+}

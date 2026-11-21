@@ -1,0 +1,91 @@
+[
+  {
+    "st": 1,
+    "naslov": "Kolo pod ploščo",
+    "opis": "Kolo P123 približaj plošči P113 od spodaj. Končni položaj in zasuk sta prevzeta iz STEP-a.",
+    "deli": [
+      "P123"
+    ],
+    "referencni_deli": [
+      "P113"
+    ],
+    "gibanje": {
+      "tip": "premik",
+      "od_mm": [
+        0,
+        0,
+        -105
+      ],
+      "do_mm": [
+        0,
+        0,
+        0
+      ],
+      "trajanje_s": 3.2,
+      "interpolacija": "gladki kubični prehod"
+    },
+    "kamera": {
+      "pogled": "Ortografski pogled s strani ročaja in sprednje stranice",
+      "cilj_mm": [
+        -465,
+        -160,
+        571
+      ],
+      "smer_proti_kameri": [
+        -0.66,
+        -1,
+        0.29
+      ],
+      "sirina_mm": 580
+    },
+    "opozorila": [
+      "Samostojen geometrijski prikaz. Vrstni red, podpiranje vozička, pritrditev, orodje in momenti zahtevajo potrditev tehnologa."
+    ],
+    "potrditev": "ni znano / zahteva potrditev"
+  },
+  {
+    "st": 2,
+    "naslov": "Zgornja polica",
+    "opis": "Polico P117 spusti med zgornje povezave. Daljši rob ostane vzporeden z daljšo stranico vozička.",
+    "deli": [
+      "P117"
+    ],
+    "referencni_deli": [
+      "P110"
+    ],
+    "gibanje": {
+      "tip": "premik",
+      "od_mm": [
+        0,
+        0,
+        145
+      ],
+      "do_mm": [
+        0,
+        0,
+        0
+      ],
+      "trajanje_s": 3.2,
+      "interpolacija": "gladki kubični prehod"
+    },
+    "kamera": {
+      "pogled": "Ortografski pogled s strani ročaja in sprednje stranice",
+      "cilj_mm": [
+        -5,
+        0,
+        1215
+      ],
+      "smer_proti_kameri": [
+        -0.59,
+        -1,
+        0.57
+      ],
+      "sirina_mm": 1460
+    },
+    "opozorila": [
+      "Samostojen geometrijski prikaz. Vrstni red, podpiranje vozička, pritrditev, orodje in momenti zahtevajo potrditev tehnologa.",
+      "V končni legi CAD zazna prostorninski presek z deli P109, P110, P111, P112. Naleganje zahteva pregled konstruktorja."
+    ],
+    "potrditev": "ni znano / zahteva potrditev"
+  }
+]

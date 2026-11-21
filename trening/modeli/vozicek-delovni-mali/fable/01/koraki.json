@@ -1,0 +1,561 @@
+{
+  "opomba": "Zaporedje je predlog AI, ni potrjeno s tehnologom. Smeri vstavljanja so preverjene na trke z B-Rep geometrijo.",
+  "koraki": [
+    {
+      "st": 1,
+      "naslov": "Spodnji okvir: vzdolžni cevi",
+      "opis": "Vzdolžni cevi 30x30x1,5 l=993 (MTC324009902) položi vzporedno na razdalji kot v modelu. Deli: P001 (Cev  30x30x1,5 l=993), P002 (Cev  30x30x1,5 l=993).",
+      "deli": [
+        "P001",
+        "P002"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          300.0
+        ],
+        "do_mm": [
+          0,
+          0,
+          0
+        ],
+        "trajanje_s": 2.5,
+        "koordinate": "odmik od končnega položaja, koordinate sestava STEP (mm, Z gor)",
+        "smer": "+Z",
+        "po_delih_od_mm": {
+          "P001": [
+            0.0,
+            0.0,
+            300.0
+          ],
+          "P002": [
+            0.0,
+            0.0,
+            300.0
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "kamera": {
+        "pogled": "izometrija spredaj-desno, zgoraj"
+      },
+      "opozorila": [
+        "Način spajanja (varjenje, vijačenje ...): ni znano / zahteva potrditev.",
+        "Orodje, momenti in kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev",
+      "vir_zaporedja": "predlog AI (fable) iz geometrije - ni potrjeno"
+    },
+    {
+      "st": 2,
+      "naslov": "Spodnji okvir: prečni cevi",
+      "opis": "Prečni cevi l=493 (MTC324010002) namesti med konca vzdolžnih cevi in tvori pravokotni okvir. Deli: P003 (CEv 30x30x1,5 l=493), P004 (CEv 30x30x1,5 l=493).",
+      "deli": [
+        "P003",
+        "P004"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          300.0
+        ],
+        "do_mm": [
+          0,
+          0,
+          0
+        ],
+        "trajanje_s": 2.5,
+        "koordinate": "odmik od končnega položaja, koordinate sestava STEP (mm, Z gor)",
+        "smer": "+Z",
+        "po_delih_od_mm": {
+          "P003": [
+            0.0,
+            0.0,
+            300.0
+          ],
+          "P004": [
+            0.0,
+            0.0,
+            300.0
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "kamera": {
+        "pogled": "izometrija spredaj-desno, zgoraj"
+      },
+      "opozorila": [
+        "Način spajanja (varjenje, vijačenje ...): ni znano / zahteva potrditev.",
+        "Orodje, momenti in kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev",
+      "vir_zaporedja": "predlog AI (fable) iz geometrije - ni potrjeno"
+    },
+    {
+      "st": 3,
+      "naslov": "Plošče koles na spodnji okvir",
+      "opis": "Plošče koles (MTC324039900) namesti v vogale pod spodnji okvir. Deli: P013 (Plošča kolesa), P014 (Plošča kolesa), P015 (Plošča kolesa), P016 (Plošča kolesa).",
+      "deli": [
+        "P013",
+        "P014",
+        "P015",
+        "P016"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          -200.0
+        ],
+        "do_mm": [
+          0,
+          0,
+          0
+        ],
+        "trajanje_s": 2.5,
+        "koordinate": "odmik od končnega položaja, koordinate sestava STEP (mm, Z gor)",
+        "smer": "-Z",
+        "po_delih_od_mm": {
+          "P013": [
+            0.0,
+            0.0,
+            -200.0
+          ],
+          "P014": [
+            0.0,
+            0.0,
+            -200.0
+          ],
+          "P015": [
+            0.0,
+            0.0,
+            -200.0
+          ],
+          "P016": [
+            0.0,
+            0.0,
+            -200.0
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "kamera": {
+        "pogled": "izometrija od spodaj"
+      },
+      "opozorila": [
+        "Način spajanja (varjenje, vijačenje ...): ni znano / zahteva potrditev.",
+        "Orodje, momenti in kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev",
+      "vir_zaporedja": "predlog AI (fable) iz geometrije - ni potrjeno"
+    },
+    {
+      "st": 4,
+      "naslov": "Navpične noge",
+      "opis": "Štiri navpične cevi l=730 (MTC324010102) postavi v vogale okvirja. Deli: P005 (CEv 30x30x1,5 l=730), P006 (CEv 30x30x1,5 l=730), P007 (CEv 30x30x1,5 l=730), P008 (CEv 30x30x1,5 l=730).",
+      "deli": [
+        "P005",
+        "P006",
+        "P007",
+        "P008"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          500.0
+        ],
+        "do_mm": [
+          0,
+          0,
+          0
+        ],
+        "trajanje_s": 2.5,
+        "koordinate": "odmik od končnega položaja, koordinate sestava STEP (mm, Z gor)",
+        "smer": "+Z",
+        "po_delih_od_mm": {
+          "P005": [
+            0.0,
+            0.0,
+            500.0
+          ],
+          "P006": [
+            0.0,
+            0.0,
+            500.0
+          ],
+          "P007": [
+            0.0,
+            0.0,
+            500.0
+          ],
+          "P008": [
+            0.0,
+            0.0,
+            500.0
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "kamera": {
+        "pogled": "izometrija spredaj-desno"
+      },
+      "opozorila": [
+        "Način spajanja (varjenje, vijačenje ...): ni znano / zahteva potrditev.",
+        "Orodje, momenti in kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev",
+      "vir_zaporedja": "predlog AI (fable) iz geometrije - ni potrjeno"
+    },
+    {
+      "st": 5,
+      "naslov": "Spodnja lesena polica",
+      "opis": "Polico 930x482x18 (MTC324011101) spusti med noge na spodnji okvir. Deli: P018 (Polica lesena 930x482x18).",
+      "deli": [
+        "P018"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          900.0
+        ],
+        "do_mm": [
+          0,
+          0,
+          0
+        ],
+        "trajanje_s": 2.5,
+        "koordinate": "odmik od končnega položaja, koordinate sestava STEP (mm, Z gor)",
+        "smer": "+Z",
+        "po_delih_od_mm": {
+          "P018": [
+            0.0,
+            0.0,
+            900.0
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "kamera": {
+        "pogled": "izometrija spredaj-desno, zgoraj"
+      },
+      "opozorila": [
+        "Način spajanja (varjenje, vijačenje ...): ni znano / zahteva potrditev.",
+        "Orodje, momenti in kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev",
+      "vir_zaporedja": "predlog AI (fable) iz geometrije - ni potrjeno"
+    },
+    {
+      "st": 6,
+      "naslov": "Vmesni povezavi",
+      "opis": "Vmesni povezavi 1000 (MTC324011201) namesti vzdolžno med noge na višini vmesne police. Deli: P019 (Povezava vmesna 1000), P020 (Povezava vmesna 1000).",
+      "deli": [
+        "P019",
+        "P020"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          500.0
+        ],
+        "do_mm": [
+          0,
+          0,
+          0
+        ],
+        "trajanje_s": 2.5,
+        "koordinate": "odmik od končnega položaja, koordinate sestava STEP (mm, Z gor)",
+        "smer": "+Z",
+        "po_delih_od_mm": {
+          "P019": [
+            0.0,
+            0.0,
+            500.0
+          ],
+          "P020": [
+            0.0,
+            0.0,
+            500.0
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "kamera": {
+        "pogled": "izometrija spredaj-desno"
+      },
+      "opozorila": [
+        "Način spajanja (varjenje, vijačenje ...): ni znano / zahteva potrditev.",
+        "Orodje, momenti in kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev",
+      "vir_zaporedja": "predlog AI (fable) iz geometrije - ni potrjeno"
+    },
+    {
+      "st": 7,
+      "naslov": "Vmesna lesena polica",
+      "opis": "Polico 930x482x18 (MTC324011101) položi na vmesni povezavi. Deli: P021 (Polica lesena 930x482x18).",
+      "deli": [
+        "P021"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          500.0
+        ],
+        "do_mm": [
+          0,
+          0,
+          0
+        ],
+        "trajanje_s": 2.5,
+        "koordinate": "odmik od končnega položaja, koordinate sestava STEP (mm, Z gor)",
+        "smer": "+Z",
+        "po_delih_od_mm": {
+          "P021": [
+            0.0,
+            0.0,
+            500.0
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "kamera": {
+        "pogled": "izometrija spredaj-desno, zgoraj"
+      },
+      "opozorila": [
+        "Način spajanja (varjenje, vijačenje ...): ni znano / zahteva potrditev.",
+        "Orodje, momenti in kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev",
+      "vir_zaporedja": "predlog AI (fable) iz geometrije - ni potrjeno"
+    },
+    {
+      "st": 8,
+      "naslov": "Zgornje povezave",
+      "opis": "Zgornje povezave 1000 (MTC324010201) in 500 (MTC324010301) namesti na vrh nog. Deli: P009 (Povezava zgornja 1000), P010 (Povezava zgornja 1000), P011 (Povezava zgornja 500), P012 (Povezava zgornja 500).",
+      "deli": [
+        "P009",
+        "P010",
+        "P011",
+        "P012"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          400.0
+        ],
+        "do_mm": [
+          0,
+          0,
+          0
+        ],
+        "trajanje_s": 2.5,
+        "koordinate": "odmik od končnega položaja, koordinate sestava STEP (mm, Z gor)",
+        "smer": "+Z",
+        "po_delih_od_mm": {
+          "P009": [
+            0.0,
+            0.0,
+            400.0
+          ],
+          "P010": [
+            0.0,
+            0.0,
+            400.0
+          ],
+          "P011": [
+            0.0,
+            0.0,
+            400.0
+          ],
+          "P012": [
+            0.0,
+            0.0,
+            400.0
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "kamera": {
+        "pogled": "izometrija spredaj-desno, zgoraj"
+      },
+      "opozorila": [
+        "Način spajanja (varjenje, vijačenje ...): ni znano / zahteva potrditev.",
+        "Orodje, momenti in kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev",
+      "vir_zaporedja": "predlog AI (fable) iz geometrije - ni potrjeno"
+    },
+    {
+      "st": 9,
+      "naslov": "Zgornja lesena polica",
+      "opis": "Polico 993x493x18 (MTC324010802) položi na zgornje povezave. Deli: P017 (Polica lesena 993x493x18).",
+      "deli": [
+        "P017"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          400.0
+        ],
+        "do_mm": [
+          0,
+          0,
+          0
+        ],
+        "trajanje_s": 2.5,
+        "koordinate": "odmik od končnega položaja, koordinate sestava STEP (mm, Z gor)",
+        "smer": "+Z",
+        "po_delih_od_mm": {
+          "P017": [
+            0.0,
+            0.0,
+            400.0
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "kamera": {
+        "pogled": "izometrija spredaj-desno, zgoraj"
+      },
+      "opozorila": [
+        "Način spajanja (varjenje, vijačenje ...): ni znano / zahteva potrditev.",
+        "Orodje, momenti in kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev",
+      "vir_zaporedja": "predlog AI (fable) iz geometrije - ni potrjeno"
+    },
+    {
+      "st": 10,
+      "naslov": "Kolesa",
+      "opis": "Štiri gibljiva kolesa fi80 z zavoro (TENTE) namesti pod plošče koles. Deli: P022 (Kolo fi80 gibljivo z zavoro), P023 (Kolo fi80 gibljivo z zavoro), P024 (Kolo fi80 gibljivo z zavoro), P025 (Kolo fi80 gibljivo z zavoro).",
+      "deli": [
+        "P022",
+        "P023",
+        "P024",
+        "P025"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          -250.0
+        ],
+        "do_mm": [
+          0,
+          0,
+          0
+        ],
+        "trajanje_s": 2.5,
+        "koordinate": "odmik od končnega položaja, koordinate sestava STEP (mm, Z gor)",
+        "smer": "-Z",
+        "po_delih_od_mm": {
+          "P022": [
+            0.0,
+            0.0,
+            -250.0
+          ],
+          "P023": [
+            0.0,
+            0.0,
+            -250.0
+          ],
+          "P024": [
+            0.0,
+            0.0,
+            -250.0
+          ],
+          "P025": [
+            0.0,
+            0.0,
+            -250.0
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "kamera": {
+        "pogled": "izometrija od spodaj"
+      },
+      "opozorila": [
+        "Način spajanja (varjenje, vijačenje ...): ni znano / zahteva potrditev.",
+        "Orodje, momenti in kontrolne točke: ni znano / zahteva potrditev.",
+        "Pritrdilni material (vijaki, matice) ni v STEP modelu.",
+        "Ali se voziček za montažo koles obrne, ni znano."
+      ],
+      "potrditev": "ni znano / zahteva potrditev",
+      "vir_zaporedja": "predlog AI (fable) iz geometrije - ni potrjeno"
+    },
+    {
+      "st": 11,
+      "naslov": "Ročaj (podsestav MLU124029200)",
+      "opis": "Podsestav ročaja (zvarjenec MLU124029200: 2x nosilec MTC324079400, cev inox MTC324079500) namesti na stranico pri x = -574 mm. Deli: P026 (Nosilec ročaja), P027 (Cev inox fi30x1,5 l=428), P028 (Nosilec ročaja).",
+      "deli": [
+        "P026",
+        "P027",
+        "P028"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          -300.0,
+          0.0,
+          0.0
+        ],
+        "do_mm": [
+          0,
+          0,
+          0
+        ],
+        "trajanje_s": 2.5,
+        "koordinate": "odmik od končnega položaja, koordinate sestava STEP (mm, Z gor)",
+        "smer": "navzven_X",
+        "po_delih_od_mm": {
+          "P026": [
+            -300.0,
+            0.0,
+            0.0
+          ],
+          "P027": [
+            -300.0,
+            0.0,
+            0.0
+          ],
+          "P028": [
+            -300.0,
+            0.0,
+            0.0
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "kamera": {
+        "pogled": "izometrija zadaj-levo"
+      },
+      "opozorila": [
+        "Način spajanja (varjenje, vijačenje ...): ni znano / zahteva potrditev.",
+        "Orodje, momenti in kontrolne točke: ni znano / zahteva potrditev.",
+        "Ročaj je v STEP ločen podsestav 'zvarjenec' - prikazan je kot en kos."
+      ],
+      "potrditev": "ni znano / zahteva potrditev",
+      "vir_zaporedja": "predlog AI (fable) iz geometrije - ni potrjeno"
+    }
+  ]
+}

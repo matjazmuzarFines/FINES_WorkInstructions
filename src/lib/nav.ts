@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { BookOpenText, Factory, Link2, ListChecks, Settings, ShieldCheck } from "lucide-react";
+import { BookOpenText, Factory, Link2, ListChecks, Settings, ShieldCheck, Sparkles } from "lucide-react";
 
 export type NavItem = {
   label: string;
@@ -47,6 +47,17 @@ export const NAV: NavGroup[] = [
     label: "Admin",
     icon: ShieldCheck,
     sekcije: [
+      {
+        label: "Orodja",
+        items: [
+          {
+            label: "AI trening",
+            href: "/admin/trening",
+            icon: Sparkles,
+            hint: "Primerjaj AI video navodila Astra in Fable",
+          },
+        ],
+      },
       {
         label: "Podatki navodil",
         items: [

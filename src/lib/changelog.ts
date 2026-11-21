@@ -9,6 +9,28 @@ export type ChangelogEntry = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    verzija: "4.02",
+    datum: "21. 11. 2026",
+    spremembe: [
+      "AI trening: AI mora kritično razmišljati - utemeljiti izbiro orodij, sam preveriti rezultat, ob slabi oceni poiskati vzrok in boljšo rešitev (ne samo ponovno generirati).",
+      "Skupno znanje trening/ZNANJE.md (pravila in spoznanja, bereta ga oba AI-ja) - prikazano na vrhu strani.",
+      "Nov zavihek Spoznanja: predlogi AI-ja za skupno znanje (spoznanja.md v poskusu).",
+      "Prompt za poskus 02 in naprej zahteva diagnozo prejšnjega poskusa na začetku poročila.",
+    ],
+  },
+  {
+    verzija: "4.01",
+    datum: "21. 11. 2026",
+    spremembe: [
+      "Nova stran Admin → Orodja → AI trening: training ground za AI-generirana 3D video navodila iz STEP modelov.",
+      "Isti model obdelata GPT-6.2 Astra (Codex) in Claude Fable 5.2 (Claude Code) v VS Code; stran pokaže oba poskusa drug ob drugem (video, predogled, poročilo, koraki, deli, datoteke).",
+      "Gumb Predvajaj oba zažene oba videa hkrati; primerjalna tabela pokaže število delov, korakov, dolžino videa, čas izdelave in ocene (boljša zeleno).",
+      "Ocenjevanje poskusov po 6 kriterijih (1-5) s komentarjem; ocene se shranijo v trening/modeli/<model>/ocene.json.",
+      "Nov model: naziv, opis in STEP datoteke - aplikacija ustvari mapo trening/modeli/<id>/. Gumb Prompt kopira zagonski prompt za naslednji poskus.",
+      "Podatki ostanejo samo na tem računalniku: stran deluje le na lokalnem strežniku, z admin prijavo; na Vercelu je izklopljena.",
+    ],
+  },
+  {
     verzija: "3.02",
     datum: "16. 10. 2026",
     spremembe: [

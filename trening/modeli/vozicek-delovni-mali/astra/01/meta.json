@@ -1,0 +1,22 @@
+{
+  "ai_model": "gpt-6.2-astra",
+  "zacetek": "2026-11-21T20:51:17+01:00",
+  "konec": "2026-11-21T21:04:53+01:00",
+  "status": "uspeh",
+  "povzetek": "28 pojavitev, 92 teles in dve animaciji v GLB. Video prikazuje dvig kolesa in spust zgornje police. Pri polici so v CAD-legi izmerjeni majhni preseki.",
+  "orodja": [
+    "Python 3.12.14",
+    "cadquery-ocp-novtk 8.0.1.1.0",
+    "numpy 2.3.5",
+    "Pillow 13.0.0",
+    "moderngl 5.13.0",
+    "glcontext 3.1.0",
+    "imageio-ffmpeg 0.8.1",
+    "FFmpeg 9.0.2-essentials_build-www.gyan.dev"
+  ],
+  "tezave": [
+    "Zaporedje, podpiranje vozička, pritrditev in dovoljene tolerance zahtevajo potrditev.",
+    "V končni legi P117 ima CAD majhen prostorninski presek s štirimi zgornjimi povezavami.",
+    "ID-ji pojavitev so vezani na to revizijo datoteke STEP."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "kodek": "H.264",
+  "format": "yuv420p",
+  "velikost": [
+    1280,
+    720
+  ],
+  "fps": 25,
+  "dekodirane_slike": 615,
+  "pregledani_casi_s": [
+    1.0,
+    4.0,
+    5.7,
+    8.6,
+    11.4,
+    13.3,
+    16.2,
+    18.4,
+    21.0
+  ]
+}

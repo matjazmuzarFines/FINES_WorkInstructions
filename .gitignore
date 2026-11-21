@@ -40,3 +40,22 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI trening: interni CAD podatki in velike datoteke ostanejo lokalno (glej trening/README.md)
+/trening/okolje/
+/trening/modeli/*/vhod/
+/trening/**/*.step
+/trening/**/*.stp
+/trening/**/*.STEP
+/trening/**/*.STP
+/trening/**/*.mp4
+/trening/**/*.webm
+/trening/**/*.glb
+/trening/**/*.gltf
+/trening/**/*.bin
+/trening/**/*.obj
+/trening/**/*.stl
+/trening/**/*.blend
+/trening/**/*.blend1
+/trening/**/.venv/
+/trening/**/__pycache__/
