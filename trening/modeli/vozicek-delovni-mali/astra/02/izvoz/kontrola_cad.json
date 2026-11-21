@@ -1,0 +1,330 @@
+{
+  "sha256": "10d82de5a9a373bca00d874c5cfff4f3c21a6d607c9068c075d2a7a02ce092aa",
+  "product": 14,
+  "nauo": 29,
+  "materiali": {
+    "MTC324009902": {
+      "naziv": "Steel, Mild",
+      "step_property": 35499,
+      "step_item": 35487
+    },
+    "MTC324010002": {
+      "naziv": "Steel, Mild",
+      "step_property": 35501,
+      "step_item": 35488
+    },
+    "MTC324010102": {
+      "naziv": "Steel, Mild",
+      "step_property": 35503,
+      "step_item": 35489
+    },
+    "MTC324010201": {
+      "naziv": "Steel, Mild",
+      "step_property": 35505,
+      "step_item": 35490
+    },
+    "MTC324010301": {
+      "naziv": "Steel, Mild",
+      "step_property": 35507,
+      "step_item": 35491
+    },
+    "MTC324039900": {
+      "naziv": "Steel, Mild",
+      "step_property": 35509,
+      "step_item": 35492
+    },
+    "MTC324010802": {
+      "naziv": "Iveral",
+      "step_property": 35511,
+      "step_item": 35493
+    },
+    "MTC324011201": {
+      "naziv": "Steel, Mild",
+      "step_property": 35513,
+      "step_item": 35494
+    },
+    "MTC324011101": {
+      "naziv": "Iveral",
+      "step_property": 35515,
+      "step_item": 35495
+    },
+    "kolo_fi80_z zavoro TENTE": {
+      "naziv": "Generic",
+      "step_property": 35517,
+      "step_item": 35496
+    },
+    "MTC324079500": {
+      "naziv": "Stainless Steel AISI 304",
+      "step_property": 35519,
+      "step_item": 35497
+    },
+    "MTC324079400": {
+      "naziv": "Stainless Steel AISI 304",
+      "step_property": 35521,
+      "step_item": 35498
+    }
+  },
+  "manifold_solid_brep": 28,
+  "enote": [
+    "millimetre"
+  ],
+  "koren": "MLU123069200",
+  "bbox_mm": {
+    "min": [
+      -574.0,
+      -253.0,
+      459.10571
+    ],
+    "max": [
+      564.81187,
+      253.0,
+      1351.0
+    ]
+  },
+  "telesa_korena": 92,
+  "podsestavi": [
+    {
+      "pot": "MLU123069200/MLU124029200:1",
+      "stars": "MLU123069200",
+      "sifra": "MLU124029200",
+      "opis": "Ročaj vozička l-434 zvarjenec",
+      "step_nauo": 126
+    }
+  ],
+  "razlicni_listi": 12,
+  "trikotniki": 1080096,
+  "stiki_koles": [
+    {
+      "kolo": "P122",
+      "plosca": "P114",
+      "center_mm": [
+        -482.7513,
+        174.007,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P122",
+      "plosca": "P114",
+      "center_mm": [
+        -482.7513,
+        234.001,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P122",
+      "plosca": "P114",
+      "center_mm": [
+        -404.2592,
+        174.007,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P122",
+      "plosca": "P114",
+      "center_mm": [
+        -404.2592,
+        234.001,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P123",
+      "plosca": "P113",
+      "center_mm": [
+        -482.7513,
+        -233.993,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P123",
+      "plosca": "P113",
+      "center_mm": [
+        -482.7513,
+        -173.999,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P123",
+      "plosca": "P113",
+      "center_mm": [
+        -404.2592,
+        -233.993,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P123",
+      "plosca": "P113",
+      "center_mm": [
+        -404.2592,
+        -173.999,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P124",
+      "plosca": "P116",
+      "center_mm": [
+        405.2487,
+        174.007,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P124",
+      "plosca": "P116",
+      "center_mm": [
+        405.2487,
+        234.001,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P124",
+      "plosca": "P116",
+      "center_mm": [
+        483.7408,
+        174.007,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P124",
+      "plosca": "P116",
+      "center_mm": [
+        483.7408,
+        234.001,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P125",
+      "plosca": "P115",
+      "center_mm": [
+        405.2487,
+        -233.993,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P125",
+      "plosca": "P115",
+      "center_mm": [
+        405.2487,
+        -173.999,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P125",
+      "plosca": "P115",
+      "center_mm": [
+        483.7408,
+        -233.993,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    },
+    {
+      "kolo": "P125",
+      "plosca": "P115",
+      "center_mm": [
+        483.7408,
+        -173.999,
+        567.0
+      ],
+      "polno_na_globinah_mm": [
+        0.1,
+        1.5,
+        2.9
+      ]
+    }
+  ],
+  "stevilo_mest": {
+    "kolesa": 16,
+    "nosilci": 4,
+    "rocaj": 4,
+    "spodnja": 6,
+    "srednja": 16,
+    "zgornja": 26
+  }
+}

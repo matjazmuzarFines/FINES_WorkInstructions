@@ -1,0 +1,26 @@
+{
+  "ai_model": "claude-fable-5-2",
+  "zacetek": "2026-11-21T21:58:13+01:00",
+  "konec": "2026-11-21T22:37:09+01:00",
+  "status": "uspeh",
+  "povzetek": "Način spajanja razbran iz geometrije STEP (luknje + stiki): 52 spojev (34 varjenih, 10 vijačnih, 8 polica + vijaki). Vijačni material, ki ga v STEP ni, generiran kot predpostavka iz lukenj (16x M8, 8x M6, 8x zakovična matica M6, 20x lesni vijak). 13 korakov po sklopih z animacijo varjenja in vijačenja, napisi z imenom dela ob delu, PBR materiali. Video 129,7 s, 1920x1080. Zaporedje, spajanje in vijaki so predlog.",
+  "orodja": [
+    "Python 3.12.16 (uv, trening/okolje/fable)",
+    "cadquery-ocp 8.0.1.1.0 (OpenCascade 8.0, XCAF)",
+    "trimesh 5.2.1",
+    "numpy 2.5.5",
+    "VTK 9.6.2 (offscreen, PBR + SSAO)",
+    "ffmpeg 9.0.2 (libx264)"
+  ],
+  "tezave": [
+    "Zaporedje montaže, način spajanja in vijačni material so predlog - zahteva potrditev tehnologa.",
+    "Vijačnega materiala ni v STEP in kosovnice ni: vrsta, mera in dolžina vijakov ter zakovične matice so predpostavka iz lukenj.",
+    "Linija zvara je obod stične ploskve; vrsta, debelina in dolžina zvarov niso znane.",
+    "Plošče koles nimajo modeliranih lukenj - pritrditev koles (navoj / matica) ni znana.",
+    "Blender ni na voljo: tudi pip install bpy je zavrnil varnostni klasifikator Claude Code; render je VTK (brez pravih senc).",
+    "Videz lesa je predpostavka (STEP: material Iveral, skoraj črna barva); modra barva kolesa prikazana kot pocinkano jeklo.",
+    "Namen 80 prostih šestkotnih lukenj v nogah, 28 lukenj Ø4 in 10 šestkotnih lukenj 7,1 mm ni znan.",
+    "Pravila zaznave spojev so razvita na enem modelu - niso preverjena na drugem.",
+    "Poskus 01 je izdelal claude-opus-5-5, poskus 02 claude-fable-5-2 (model je bil vmes zamenjan)."
+  ]
+}

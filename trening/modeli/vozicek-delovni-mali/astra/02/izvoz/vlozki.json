@@ -1,0 +1,82 @@
+[
+  {
+    "id": "I001",
+    "vijak": "V017",
+    "skupina": "nosilci",
+    "center_mm": [
+      -483.0,
+      218.0,
+      955.5
+    ]
+  },
+  {
+    "id": "I002",
+    "vijak": "V018",
+    "skupina": "nosilci",
+    "center_mm": [
+      483.0,
+      218.0,
+      955.5
+    ]
+  },
+  {
+    "id": "I003",
+    "vijak": "V019",
+    "skupina": "nosilci",
+    "center_mm": [
+      -483.0,
+      -218.0,
+      955.5
+    ]
+  },
+  {
+    "id": "I004",
+    "vijak": "V020",
+    "skupina": "nosilci",
+    "center_mm": [
+      483.0,
+      -218.0,
+      955.5
+    ]
+  },
+  {
+    "id": "I005",
+    "vijak": "V021",
+    "skupina": "rocaj",
+    "center_mm": [
+      -483.0,
+      218.0,
+      1240.5
+    ]
+  },
+  {
+    "id": "I006",
+    "vijak": "V022",
+    "skupina": "rocaj",
+    "center_mm": [
+      -483.0,
+      218.0,
+      1285.5
+    ]
+  },
+  {
+    "id": "I007",
+    "vijak": "V023",
+    "skupina": "rocaj",
+    "center_mm": [
+      -483.0,
+      -218.0,
+      1240.5
+    ]
+  },
+  {
+    "id": "I008",
+    "vijak": "V024",
+    "skupina": "rocaj",
+    "center_mm": [
+      -483.0,
+      -218.0,
+      1285.5
+    ]
+  }
+]

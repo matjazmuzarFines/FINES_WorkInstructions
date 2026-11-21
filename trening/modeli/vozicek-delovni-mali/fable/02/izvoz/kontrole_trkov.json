@@ -1,0 +1,251 @@
+{
+  "korak_poti_mm": 5.0,
+  "prag": "1 mm3 + 1,3 x staticni presek para v CAD",
+  "staticna_prekrivanja_mm3": [
+    {
+      "par": [
+        "P009",
+        "P017"
+      ],
+      "presek_mm3": 5.311
+    },
+    {
+      "par": [
+        "P010",
+        "P017"
+      ],
+      "presek_mm3": 5.311
+    },
+    {
+      "par": [
+        "P011",
+        "P017"
+      ],
+      "presek_mm3": 2.636
+    },
+    {
+      "par": [
+        "P012",
+        "P017"
+      ],
+      "presek_mm3": 2.636
+    },
+    {
+      "par": [
+        "P019",
+        "P021"
+      ],
+      "presek_mm3": 4.855
+    },
+    {
+      "par": [
+        "P020",
+        "P021"
+      ],
+      "presek_mm3": 4.855
+    }
+  ],
+  "koraki": [
+    {
+      "st": 1,
+      "naslov": "Spodnji okvir",
+      "preizkusene_poti": [
+        {
+          "pot": "P001:-Y, P002:+Y, P003:+X, P004:-X",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 2,
+      "naslov": "Plošče koles",
+      "preizkusene_poti": [
+        {
+          "pot": "-Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 3,
+      "naslov": "Navpične noge",
+      "preizkusene_poti": [
+        {
+          "pot": "+Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 4,
+      "naslov": "Zgornje povezave",
+      "preizkusene_poti": [
+        {
+          "pot": "+Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 5,
+      "naslov": "Zakovične matice M6 v noge",
+      "preizkusene_poti": [],
+      "status": "ni premika delov iz STEP"
+    },
+    {
+      "st": 6,
+      "naslov": "Kolesa",
+      "preizkusene_poti": [
+        {
+          "pot": "-Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 7,
+      "naslov": "Spodnja polica",
+      "preizkusene_poti": [
+        {
+          "pot": "-Y",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 8,
+      "naslov": "Vmesna povezava – zadnja",
+      "preizkusene_poti": [
+        {
+          "pot": "-Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 9,
+      "naslov": "Vmesna polica",
+      "preizkusene_poti": [
+        {
+          "pot": "+Z",
+          "trkov": 16,
+          "primeri": [
+            {
+              "del": "P021",
+              "ovira": "P009",
+              "odmik_mm": [
+                0.0,
+                0.0,
+                365.0
+              ],
+              "presek_mm3": 21870.91
+            },
+            {
+              "del": "P021",
+              "ovira": "P010",
+              "odmik_mm": [
+                0.0,
+                0.0,
+                365.0
+              ],
+              "presek_mm3": 21870.91
+            },
+            {
+              "del": "P021",
+              "ovira": "P009",
+              "odmik_mm": [
+                0.0,
+                0.0,
+                360.0
+              ],
+              "presek_mm3": 61309.54
+            },
+            {
+              "del": "P021",
+              "ovira": "P010",
+              "odmik_mm": [
+                0.0,
+                0.0,
+                360.0
+              ],
+              "presek_mm3": 61309.54
+            }
+          ]
+        },
+        {
+          "pot": "-Y",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 10,
+      "naslov": "Vmesna povezava – sprednja",
+      "preizkusene_poti": [
+        {
+          "pot": "-Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 11,
+      "naslov": "Zgornja polica",
+      "preizkusene_poti": [
+        {
+          "pot": "+Z",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 12,
+      "naslov": "Ročaj – zvarjenec",
+      "preizkusene_poti": [
+        {
+          "pot": "P027:+Z, P026:+Y, P028:-Y",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "status": "brez trkov (preverjeno)"
+    },
+    {
+      "st": 13,
+      "naslov": "Montaža ročaja",
+      "preizkusene_poti": [
+        {
+          "pot": "skupina",
+          "trkov": 0,
+          "primeri": []
+        }
+      ],
+      "status": "brez trkov (preverjeno)"
+    }
+  ],
+  "vseh_spojev": 52,
+  "dodeljenih_spojev": 52,
+  "vseh_vijakov": 52,
+  "dodeljenih_vijakov": 52,
+  "cas_s": 10.2
+}

@@ -1,0 +1,2018 @@
+[
+  {
+    "id": "V001",
+    "skupina": "kolesa",
+    "nosilec": "P122",
+    "par": "P114",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -482.7513,
+      174.007,
+      567.0
+    ],
+    "glava_mm": [
+      -482.7513,
+      174.007,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V002",
+    "skupina": "kolesa",
+    "nosilec": "P122",
+    "par": "P114",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -482.7513,
+      234.001,
+      567.0
+    ],
+    "glava_mm": [
+      -482.7513,
+      234.001,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V003",
+    "skupina": "kolesa",
+    "nosilec": "P122",
+    "par": "P114",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -404.2592,
+      174.007,
+      567.0
+    ],
+    "glava_mm": [
+      -404.2592,
+      174.007,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V004",
+    "skupina": "kolesa",
+    "nosilec": "P122",
+    "par": "P114",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -404.2592,
+      234.001,
+      567.0
+    ],
+    "glava_mm": [
+      -404.2592,
+      234.001,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V005",
+    "skupina": "kolesa",
+    "nosilec": "P123",
+    "par": "P113",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -482.7513,
+      -233.993,
+      567.0
+    ],
+    "glava_mm": [
+      -482.7513,
+      -233.993,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V006",
+    "skupina": "kolesa",
+    "nosilec": "P123",
+    "par": "P113",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -482.7513,
+      -173.999,
+      567.0
+    ],
+    "glava_mm": [
+      -482.7513,
+      -173.999,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V007",
+    "skupina": "kolesa",
+    "nosilec": "P123",
+    "par": "P113",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -404.2592,
+      -233.993,
+      567.0
+    ],
+    "glava_mm": [
+      -404.2592,
+      -233.993,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V008",
+    "skupina": "kolesa",
+    "nosilec": "P123",
+    "par": "P113",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -404.2592,
+      -173.999,
+      567.0
+    ],
+    "glava_mm": [
+      -404.2592,
+      -173.999,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V009",
+    "skupina": "kolesa",
+    "nosilec": "P124",
+    "par": "P116",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      405.2487,
+      174.007,
+      567.0
+    ],
+    "glava_mm": [
+      405.2487,
+      174.007,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V010",
+    "skupina": "kolesa",
+    "nosilec": "P124",
+    "par": "P116",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      405.2487,
+      234.001,
+      567.0
+    ],
+    "glava_mm": [
+      405.2487,
+      234.001,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V011",
+    "skupina": "kolesa",
+    "nosilec": "P124",
+    "par": "P116",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      483.7408,
+      174.007,
+      567.0
+    ],
+    "glava_mm": [
+      483.7408,
+      174.007,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V012",
+    "skupina": "kolesa",
+    "nosilec": "P124",
+    "par": "P116",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      483.7408,
+      234.001,
+      567.0
+    ],
+    "glava_mm": [
+      483.7408,
+      234.001,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V013",
+    "skupina": "kolesa",
+    "nosilec": "P125",
+    "par": "P115",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      405.2487,
+      -233.993,
+      567.0
+    ],
+    "glava_mm": [
+      405.2487,
+      -233.993,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V014",
+    "skupina": "kolesa",
+    "nosilec": "P125",
+    "par": "P115",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      405.2487,
+      -173.999,
+      567.0
+    ],
+    "glava_mm": [
+      405.2487,
+      -173.999,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V015",
+    "skupina": "kolesa",
+    "nosilec": "P125",
+    "par": "P115",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      483.7408,
+      -233.993,
+      567.0
+    ],
+    "glava_mm": [
+      483.7408,
+      -233.993,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V016",
+    "skupina": "kolesa",
+    "nosilec": "P125",
+    "par": "P115",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      483.7408,
+      -173.999,
+      567.0
+    ],
+    "glava_mm": [
+      483.7408,
+      -173.999,
+      553.0
+    ],
+    "prikaz_dolzine_mm": 14,
+    "mera_odprtine_mm": [
+      10.6989,
+      9.1991
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Reža na prirobnici. Plošča okvirja je na osi polna. Konica prikaza se ustavi na stiku."
+  },
+  {
+    "id": "V017",
+    "skupina": "nosilci",
+    "nosilec": "P119",
+    "par": "P107",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -483.0,
+      214.5,
+      955.5
+    ],
+    "glava_mm": [
+      -483.0,
+      214.5,
+      955.5
+    ],
+    "prikaz_dolzine_mm": 10,
+    "mera_odprtine_mm": [
+      12.0,
+      6.5
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Središče odprtine nosilca se ujema z osjo šesterokotne odprtine stebra. Navojni vložek je možna izvedba."
+  },
+  {
+    "id": "V018",
+    "skupina": "nosilci",
+    "nosilec": "P119",
+    "par": "P105",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      483.0,
+      214.5,
+      955.5
+    ],
+    "glava_mm": [
+      483.0,
+      214.5,
+      955.5
+    ],
+    "prikaz_dolzine_mm": 10,
+    "mera_odprtine_mm": [
+      12.0,
+      6.5
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Središče odprtine nosilca se ujema z osjo šesterokotne odprtine stebra. Navojni vložek je možna izvedba."
+  },
+  {
+    "id": "V019",
+    "skupina": "nosilci",
+    "nosilec": "P120",
+    "par": "P108",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -483.0,
+      -214.5,
+      955.5
+    ],
+    "glava_mm": [
+      -483.0,
+      -214.5,
+      955.5
+    ],
+    "prikaz_dolzine_mm": 10,
+    "mera_odprtine_mm": [
+      12.0,
+      6.5
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Središče odprtine nosilca se ujema z osjo šesterokotne odprtine stebra. Navojni vložek je možna izvedba."
+  },
+  {
+    "id": "V020",
+    "skupina": "nosilci",
+    "nosilec": "P120",
+    "par": "P106",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      483.0,
+      -214.5,
+      955.5
+    ],
+    "glava_mm": [
+      483.0,
+      -214.5,
+      955.5
+    ],
+    "prikaz_dolzine_mm": 10,
+    "mera_odprtine_mm": [
+      12.0,
+      6.5
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Središče odprtine nosilca se ujema z osjo šesterokotne odprtine stebra. Navojni vložek je možna izvedba."
+  },
+  {
+    "id": "V021",
+    "skupina": "rocaj",
+    "nosilec": "P098",
+    "par": "P107",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -483.0,
+      214.4,
+      1240.5
+    ],
+    "glava_mm": [
+      -483.0,
+      214.4,
+      1240.5
+    ],
+    "prikaz_dolzine_mm": 10,
+    "mera_odprtine_mm": [
+      6.4,
+      6.4
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Središče odprtine nosilca se ujema z osjo šesterokotne odprtine stebra. Navojni vložek je možna izvedba."
+  },
+  {
+    "id": "V022",
+    "skupina": "rocaj",
+    "nosilec": "P098",
+    "par": "P107",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -483.0,
+      214.4,
+      1285.5
+    ],
+    "glava_mm": [
+      -483.0,
+      214.4,
+      1285.5
+    ],
+    "prikaz_dolzine_mm": 10,
+    "mera_odprtine_mm": [
+      6.4,
+      6.4
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Središče odprtine nosilca se ujema z osjo šesterokotne odprtine stebra. Navojni vložek je možna izvedba."
+  },
+  {
+    "id": "V023",
+    "skupina": "rocaj",
+    "nosilec": "P100",
+    "par": "P108",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -483.0,
+      -213.6,
+      1240.5
+    ],
+    "glava_mm": [
+      -483.0,
+      -213.6,
+      1240.5
+    ],
+    "prikaz_dolzine_mm": 10,
+    "mera_odprtine_mm": [
+      6.4,
+      6.4
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Središče odprtine nosilca se ujema z osjo šesterokotne odprtine stebra. Navojni vložek je možna izvedba."
+  },
+  {
+    "id": "V024",
+    "skupina": "rocaj",
+    "nosilec": "P100",
+    "par": "P108",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -483.0,
+      -213.6,
+      1285.5
+    ],
+    "glava_mm": [
+      -483.0,
+      -213.6,
+      1285.5
+    ],
+    "prikaz_dolzine_mm": 10,
+    "mera_odprtine_mm": [
+      6.4,
+      6.4
+    ],
+    "tip_prikaza": "vijak s šestrobo glavo",
+    "dokaz": "Središče odprtine nosilca se ujema z osjo šesterokotne odprtine stebra. Navojni vložek je možna izvedba."
+  },
+  {
+    "id": "V025",
+    "skupina": "spodnja",
+    "nosilec": "P101",
+    "par": "P118",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      350.0,
+      -233.0,
+      598.5
+    ],
+    "glava_mm": [
+      350.0,
+      -233.0,
+      598.5
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.5,
+      4.5
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V026",
+    "skupina": "spodnja",
+    "nosilec": "P101",
+    "par": "P118",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      0.0,
+      -233.0,
+      598.5
+    ],
+    "glava_mm": [
+      0.0,
+      -233.0,
+      598.5
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.5,
+      4.5
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V027",
+    "skupina": "spodnja",
+    "nosilec": "P101",
+    "par": "P118",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -350.0,
+      -233.0,
+      598.5
+    ],
+    "glava_mm": [
+      -350.0,
+      -233.0,
+      598.5
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.5,
+      4.5
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V028",
+    "skupina": "spodnja",
+    "nosilec": "P102",
+    "par": "P118",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -350.0,
+      233.0,
+      598.5
+    ],
+    "glava_mm": [
+      -350.0,
+      233.0,
+      598.5
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.5,
+      4.5
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V029",
+    "skupina": "spodnja",
+    "nosilec": "P102",
+    "par": "P118",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      0.0,
+      233.0,
+      598.5
+    ],
+    "glava_mm": [
+      0.0,
+      233.0,
+      598.5
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.5,
+      4.5
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V030",
+    "skupina": "spodnja",
+    "nosilec": "P102",
+    "par": "P118",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      350.0,
+      233.0,
+      598.5
+    ],
+    "glava_mm": [
+      350.0,
+      233.0,
+      598.5
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.5,
+      4.5
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V031",
+    "skupina": "srednja",
+    "nosilec": "P119",
+    "par": "P121",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -240.0,
+      247.5,
+      975.6
+    ],
+    "glava_mm": [
+      -240.0,
+      247.5,
+      975.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V032",
+    "skupina": "srednja",
+    "nosilec": "P119",
+    "par": "P121",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      240.0,
+      247.5,
+      975.6
+    ],
+    "glava_mm": [
+      240.0,
+      247.5,
+      975.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V033",
+    "skupina": "srednja",
+    "nosilec": "P119",
+    "par": "P121",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      457.5,
+      247.5,
+      975.6
+    ],
+    "glava_mm": [
+      457.5,
+      247.5,
+      975.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V034",
+    "skupina": "srednja",
+    "nosilec": "P119",
+    "par": "P121",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      0.0,
+      247.5,
+      975.6
+    ],
+    "glava_mm": [
+      0.0,
+      247.5,
+      975.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V035",
+    "skupina": "srednja",
+    "nosilec": "P119",
+    "par": "P121",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -457.5,
+      247.5,
+      975.6
+    ],
+    "glava_mm": [
+      -457.5,
+      247.5,
+      975.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V036",
+    "skupina": "srednja",
+    "nosilec": "P119",
+    "par": "P121",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      350.0,
+      228.5,
+      963.6
+    ],
+    "glava_mm": [
+      350.0,
+      228.5,
+      963.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V037",
+    "skupina": "srednja",
+    "nosilec": "P119",
+    "par": "P121",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      0.0,
+      228.5,
+      963.6
+    ],
+    "glava_mm": [
+      0.0,
+      228.5,
+      963.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V038",
+    "skupina": "srednja",
+    "nosilec": "P119",
+    "par": "P121",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -350.0,
+      228.5,
+      963.6
+    ],
+    "glava_mm": [
+      -350.0,
+      228.5,
+      963.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V039",
+    "skupina": "srednja",
+    "nosilec": "P120",
+    "par": "P121",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      240.0,
+      -247.5,
+      975.6
+    ],
+    "glava_mm": [
+      240.0,
+      -247.5,
+      975.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V040",
+    "skupina": "srednja",
+    "nosilec": "P120",
+    "par": "P121",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -240.0,
+      -247.5,
+      975.6
+    ],
+    "glava_mm": [
+      -240.0,
+      -247.5,
+      975.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V041",
+    "skupina": "srednja",
+    "nosilec": "P120",
+    "par": "P121",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -457.5,
+      -247.5,
+      975.6
+    ],
+    "glava_mm": [
+      -457.5,
+      -247.5,
+      975.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V042",
+    "skupina": "srednja",
+    "nosilec": "P120",
+    "par": "P121",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      0.0,
+      -247.5,
+      975.6
+    ],
+    "glava_mm": [
+      0.0,
+      -247.5,
+      975.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V043",
+    "skupina": "srednja",
+    "nosilec": "P120",
+    "par": "P121",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      457.5,
+      -247.5,
+      975.6
+    ],
+    "glava_mm": [
+      457.5,
+      -247.5,
+      975.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V044",
+    "skupina": "srednja",
+    "nosilec": "P120",
+    "par": "P121",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -350.0,
+      -228.5,
+      963.6
+    ],
+    "glava_mm": [
+      -350.0,
+      -228.5,
+      963.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V045",
+    "skupina": "srednja",
+    "nosilec": "P120",
+    "par": "P121",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      0.0,
+      -228.5,
+      963.6
+    ],
+    "glava_mm": [
+      0.0,
+      -228.5,
+      963.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V046",
+    "skupina": "srednja",
+    "nosilec": "P120",
+    "par": "P121",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      350.0,
+      -228.5,
+      963.6
+    ],
+    "glava_mm": [
+      350.0,
+      -228.5,
+      963.6
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V047",
+    "skupina": "zgornja",
+    "nosilec": "P109",
+    "par": "P117",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -240.0,
+      253.0,
+      1342.0
+    ],
+    "glava_mm": [
+      -240.0,
+      253.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V048",
+    "skupina": "zgornja",
+    "nosilec": "P109",
+    "par": "P117",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      240.0,
+      253.0,
+      1342.0
+    ],
+    "glava_mm": [
+      240.0,
+      253.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V049",
+    "skupina": "zgornja",
+    "nosilec": "P109",
+    "par": "P117",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      460.0,
+      253.0,
+      1342.0
+    ],
+    "glava_mm": [
+      460.0,
+      253.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V050",
+    "skupina": "zgornja",
+    "nosilec": "P109",
+    "par": "P117",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      0.0,
+      253.0,
+      1342.0
+    ],
+    "glava_mm": [
+      0.0,
+      253.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V051",
+    "skupina": "zgornja",
+    "nosilec": "P109",
+    "par": "P117",
+    "os": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -460.0,
+      253.0,
+      1342.0
+    ],
+    "glava_mm": [
+      -460.0,
+      253.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V052",
+    "skupina": "zgornja",
+    "nosilec": "P109",
+    "par": "P117",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      0.0,
+      234.0,
+      1330.0
+    ],
+    "glava_mm": [
+      0.0,
+      234.0,
+      1330.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V053",
+    "skupina": "zgornja",
+    "nosilec": "P109",
+    "par": "P117",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      350.0,
+      234.0,
+      1330.0
+    ],
+    "glava_mm": [
+      350.0,
+      234.0,
+      1330.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V054",
+    "skupina": "zgornja",
+    "nosilec": "P109",
+    "par": "P117",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -350.0,
+      234.0,
+      1330.0
+    ],
+    "glava_mm": [
+      -350.0,
+      234.0,
+      1330.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V055",
+    "skupina": "zgornja",
+    "nosilec": "P110",
+    "par": "P117",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      240.0,
+      -253.0,
+      1342.0
+    ],
+    "glava_mm": [
+      240.0,
+      -253.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V056",
+    "skupina": "zgornja",
+    "nosilec": "P110",
+    "par": "P117",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -240.0,
+      -253.0,
+      1342.0
+    ],
+    "glava_mm": [
+      -240.0,
+      -253.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V057",
+    "skupina": "zgornja",
+    "nosilec": "P110",
+    "par": "P117",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      -460.0,
+      -253.0,
+      1342.0
+    ],
+    "glava_mm": [
+      -460.0,
+      -253.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V058",
+    "skupina": "zgornja",
+    "nosilec": "P110",
+    "par": "P117",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      0.0,
+      -253.0,
+      1342.0
+    ],
+    "glava_mm": [
+      0.0,
+      -253.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V059",
+    "skupina": "zgornja",
+    "nosilec": "P110",
+    "par": "P117",
+    "os": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "stik_mm": [
+      460.0,
+      -253.0,
+      1342.0
+    ],
+    "glava_mm": [
+      460.0,
+      -253.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V060",
+    "skupina": "zgornja",
+    "nosilec": "P110",
+    "par": "P117",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      0.0,
+      -234.0,
+      1330.0
+    ],
+    "glava_mm": [
+      0.0,
+      -234.0,
+      1330.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V061",
+    "skupina": "zgornja",
+    "nosilec": "P110",
+    "par": "P117",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -350.0,
+      -234.0,
+      1330.0
+    ],
+    "glava_mm": [
+      -350.0,
+      -234.0,
+      1330.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V062",
+    "skupina": "zgornja",
+    "nosilec": "P110",
+    "par": "P117",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      350.0,
+      -234.0,
+      1330.0
+    ],
+    "glava_mm": [
+      350.0,
+      -234.0,
+      1330.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V063",
+    "skupina": "zgornja",
+    "nosilec": "P111",
+    "par": "P117",
+    "os": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "stik_mm": [
+      503.0,
+      -120.0,
+      1342.0
+    ],
+    "glava_mm": [
+      503.0,
+      -120.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V064",
+    "skupina": "zgornja",
+    "nosilec": "P111",
+    "par": "P117",
+    "os": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "stik_mm": [
+      503.0,
+      210.0,
+      1342.0
+    ],
+    "glava_mm": [
+      503.0,
+      210.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V065",
+    "skupina": "zgornja",
+    "nosilec": "P111",
+    "par": "P117",
+    "os": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "stik_mm": [
+      503.0,
+      120.0,
+      1342.0
+    ],
+    "glava_mm": [
+      503.0,
+      120.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V066",
+    "skupina": "zgornja",
+    "nosilec": "P111",
+    "par": "P117",
+    "os": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "stik_mm": [
+      503.0,
+      -210.0,
+      1342.0
+    ],
+    "glava_mm": [
+      503.0,
+      -210.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V067",
+    "skupina": "zgornja",
+    "nosilec": "P111",
+    "par": "P117",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      484.0,
+      0.0,
+      1330.0
+    ],
+    "glava_mm": [
+      484.0,
+      0.0,
+      1330.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V068",
+    "skupina": "zgornja",
+    "nosilec": "P112",
+    "par": "P117",
+    "os": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "stik_mm": [
+      -503.0,
+      120.0,
+      1342.0
+    ],
+    "glava_mm": [
+      -503.0,
+      120.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V069",
+    "skupina": "zgornja",
+    "nosilec": "P112",
+    "par": "P117",
+    "os": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "stik_mm": [
+      -503.0,
+      -210.0,
+      1342.0
+    ],
+    "glava_mm": [
+      -503.0,
+      -210.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V070",
+    "skupina": "zgornja",
+    "nosilec": "P112",
+    "par": "P117",
+    "os": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "stik_mm": [
+      -503.0,
+      -120.0,
+      1342.0
+    ],
+    "glava_mm": [
+      -503.0,
+      -120.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V071",
+    "skupina": "zgornja",
+    "nosilec": "P112",
+    "par": "P117",
+    "os": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "stik_mm": [
+      -503.0,
+      210.0,
+      1342.0
+    ],
+    "glava_mm": [
+      -503.0,
+      210.0,
+      1342.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      4.0,
+      4.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  },
+  {
+    "id": "V072",
+    "skupina": "zgornja",
+    "nosilec": "P112",
+    "par": "P117",
+    "os": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "stik_mm": [
+      -484.0,
+      0.0,
+      1330.0
+    ],
+    "glava_mm": [
+      -484.0,
+      0.0,
+      1330.0
+    ],
+    "prikaz_dolzine_mm": 11,
+    "mera_odprtine_mm": [
+      5.0,
+      5.0
+    ],
+    "tip_prikaza": "shematski vijak za ploščo",
+    "dokaz": "Os izvrtine v jeklu sega v iveral. Izbira uporabljenih izvrtin in vijakov je predlog."
+  }
+]

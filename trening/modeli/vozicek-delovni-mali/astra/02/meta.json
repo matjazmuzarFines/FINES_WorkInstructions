@@ -1,0 +1,22 @@
+{
+  "ai_model": "gpt-6.2-astra",
+  "zacetek": "2026-11-21T21:58:05+01:00",
+  "konec": "2026-11-21T22:17:39+01:00",
+  "status": "uspeh",
+  "povzetek": "12 prikazov v 75 s. Izvirnih 28 pojavitev in 92 teles. Štiri kolesa, 16 osi z nerazrešeno nasprotno ploščo ter 56 drugih mest za pregled.",
+  "orodja": [
+    "Python 3.12.14",
+    "cadquery-ocp-novtk 8.0.1.1.0",
+    "numpy 2.3.5",
+    "moderngl 5.13.0",
+    "glcontext 3.1.0",
+    "Pillow 13.0.0",
+    "imageio-ffmpeg 0.8.1",
+    "FFmpeg 9.0.2-essentials_build-www.gyan.dev"
+  ],
+  "tezave": [
+    "Plošče okvirja so na 16 oseh koles polne.",
+    "72 vijakov in 8 vložkov so shematske ponazoritve brez kosovnice.",
+    "Obseg varjenja, proizvodno zaporedje, momenti, tolerance in dostop orodja zahtevajo potrditev."
+  ]
+}

@@ -1,0 +1,1648 @@
+{
+  "surovi_step": {
+    "glava": {
+      "opis": "Voziček proizvodni montažni 1000x500 h=890",
+      "file_name": [
+        "MLU123069200.stp",
+        "2026-10-22T15:22:51+02:00",
+        "anzel",
+        "Fines d.o.o.",
+        "ST-DEVELOPER v20.1",
+        "Autodesk Inventor 2027",
+        ""
+      ],
+      "schema": "AUTOMOTIVE_DESIGN { 1 0 10303 214 3 1 1 }"
+    },
+    "enote_dolzine": [
+      "(LENGTH_UNIT()NAMED_UNIT(*)SI_UNIT(.MILLI.,.METRE.))",
+      "(LENGTH_UNIT()NAMED_UNIT(*)SI_UNIT(.CENTI.,.METRE.))"
+    ],
+    "stevilo_entitet": 66113,
+    "tipi": {
+      "CARTESIAN_POINT": 16329,
+      "DIRECTION": 10122,
+      "ORIENTED_EDGE": 10004,
+      "EDGE_CURVE": 5002,
+      "AXIS2_PLACEMENT_3D": 3783,
+      "VERTEX_POINT": 3243,
+      "LINE": 2556,
+      "VECTOR": 2556,
+      "EDGE_LOOP": 2091,
+      "FACE_OUTER_BOUND": 1859,
+      "ADVANCED_FACE": 1859,
+      "CIRCLE": 1672,
+      "STYLED_ITEM": 1473,
+      "PLANE": 798,
+      "CYLINDRICAL_SURFACE": 763,
+      "ELLIPSE": 381,
+      "B_SPLINE_CURVE_WITH_KNOTS": 362,
+      "(complex)": 239,
+      "FACE_BOUND": 232,
+      "TOROIDAL_SURFACE": 75,
+      "PRODUCT_DEFINITION_SHAPE": 43,
+      "CONICAL_SURFACE": 36,
+      "ITEM_DEFINED_TRANSFORMATION": 29,
+      "CONTEXT_DEPENDENT_SHAPE_REPRESENTATION": 29,
+      "NEXT_ASSEMBLY_USAGE_OCCURRENCE": 29,
+      "MANIFOLD_SOLID_BREP": 28,
+      "CLOSED_SHELL": 28,
+      "DERIVED_UNIT_ELEMENT": 24,
+      "PROPERTY_DEFINITION_REPRESENTATION": 24,
+      "REPRESENTATION": 24,
+      "PROPERTY_DEFINITION": 24,
+      "SPHERICAL_SURFACE": 15,
+      "UNCERTAINTY_MEASURE_WITH_UNIT": 15,
+      "B_SPLINE_SURFACE_WITH_KNOTS": 14,
+      "DATE_TIME_ROLE": 14,
+      "APPLIED_DATE_AND_TIME_ASSIGNMENT": 14,
+      "DATE_AND_TIME": 14,
+      "CALENDAR_DATE": 14,
+      "LOCAL_TIME": 14,
+      "COORDINATED_UNIVERSAL_TIME_OFFSET": 14,
+      "SHAPE_DEFINITION_REPRESENTATION": 14,
+      "SHAPE_REPRESENTATION": 14,
+      "PRODUCT_DEFINITION": 14,
+      "PRODUCT_DEFINITION_FORMATION": 14,
+      "PRODUCT_RELATED_PRODUCT_CATEGORY": 14,
+      "PRODUCT": 14,
+      "PRESENTATION_STYLE_ASSIGNMENT": 13,
+      "SURFACE_STYLE_USAGE": 13,
+      "SURFACE_STYLE_RENDERING_WITH_PROPERTIES": 13,
+      "SURFACE_STYLE_TRANSPARENT": 13,
+      "SURFACE_SIDE_STYLE": 13,
+      "SURFACE_STYLE_FILL_AREA": 13,
+      "FILL_AREA_STYLE": 13,
+      "FILL_AREA_STYLE_COLOUR": 13,
+      "COLOUR_RGB": 13,
+      "SHAPE_REPRESENTATION_RELATIONSHIP": 12,
+      "ADVANCED_BREP_SHAPE_REPRESENTATION": 12,
+      "DERIVED_UNIT": 12,
+      "MEASURE_REPRESENTATION_ITEM": 12,
+      "DESCRIPTIVE_REPRESENTATION_ITEM": 12,
+      "MECHANICAL_DESIGN_GEOMETRIC_PRESENTATION_REPRESENTATION": 1,
+      "DIMENSIONAL_EXPONENTS": 1,
+      "MASS_MEASURE_WITH_UNIT": 1,
+      "PRODUCT_DEFINITION_CONTEXT": 1,
+      "APPLICATION_PROTOCOL_DEFINITION": 1,
+      "APPLICATION_CONTEXT": 1,
+      "PRODUCT_CONTEXT": 1
+    },
+    "produkti": {
+      "MLU123069200": {
+        "id": "MLU123069200",
+        "naziv": "MLU123069200",
+        "opis": "Voziček proizvodni montažni 1000x500 h=890"
+      },
+      "MTC324009902": {
+        "id": "MTC324009902",
+        "naziv": "MTC324009902",
+        "opis": "Cev  30x30x1,5 l=993"
+      },
+      "MTC324010002": {
+        "id": "MTC324010002",
+        "naziv": "MTC324010002",
+        "opis": "CEv 30x30x1,5 l=493"
+      },
+      "MTC324010102": {
+        "id": "MTC324010102",
+        "naziv": "MTC324010102",
+        "opis": "CEv 30x30x1,5 l=730"
+      },
+      "MTC324010201": {
+        "id": "MTC324010201",
+        "naziv": "MTC324010201",
+        "opis": "Povezava zgornja 1000"
+      },
+      "MTC324010301": {
+        "id": "MTC324010301",
+        "naziv": "MTC324010301",
+        "opis": "Povezava zgornja 500"
+      },
+      "MTC324039900": {
+        "id": "MTC324039900",
+        "naziv": "MTC324039900",
+        "opis": "Plošča kolesa"
+      },
+      "MTC324010802": {
+        "id": "MTC324010802",
+        "naziv": "MTC324010802",
+        "opis": "Polica lesena 993x493x18"
+      },
+      "MTC324011201": {
+        "id": "MTC324011201",
+        "naziv": "MTC324011201",
+        "opis": "Povezava vmesna 1000"
+      },
+      "MTC324011101": {
+        "id": "MTC324011101",
+        "naziv": "MTC324011101",
+        "opis": "Polica lesena 930x482x18"
+      },
+      "kolo_fi80_z zavoro TENTE": {
+        "id": "kolo_fi80_z zavoro TENTE",
+        "naziv": "kolo_fi80_z zavoro TENTE",
+        "opis": "Kolo fi80 gibljivo z zavoro"
+      },
+      "MLU124029200": {
+        "id": "MLU124029200",
+        "naziv": "MLU124029200",
+        "opis": "Ročaj vozička l-434 zvarjenec"
+      },
+      "MTC324079500": {
+        "id": "MTC324079500",
+        "naziv": "MTC324079500",
+        "opis": "Cev inox fi30x1,5 l=428"
+      },
+      "MTC324079400": {
+        "id": "MTC324079400",
+        "naziv": "MTC324079400",
+        "opis": "Nosilec ročaja"
+      }
+    },
+    "pojavitve_nauo": [
+      {
+        "ime": "MTC324079400:1",
+        "stars": "MLU124029200",
+        "otrok": "MTC324079400"
+      },
+      {
+        "ime": "MTC324079500:1",
+        "stars": "MLU124029200",
+        "otrok": "MTC324079500"
+      },
+      {
+        "ime": "MTC324079400:2",
+        "stars": "MLU124029200",
+        "otrok": "MTC324079400"
+      },
+      {
+        "ime": "MTC324009902:1",
+        "stars": "MLU123069200",
+        "otrok": "MTC324009902"
+      },
+      {
+        "ime": "MTC324009902:2",
+        "stars": "MLU123069200",
+        "otrok": "MTC324009902"
+      },
+      {
+        "ime": "MTC324010002:1",
+        "stars": "MLU123069200",
+        "otrok": "MTC324010002"
+      },
+      {
+        "ime": "MTC324010002:2",
+        "stars": "MLU123069200",
+        "otrok": "MTC324010002"
+      },
+      {
+        "ime": "MTC324010102:1",
+        "stars": "MLU123069200",
+        "otrok": "MTC324010102"
+      },
+      {
+        "ime": "MTC324010102:2",
+        "stars": "MLU123069200",
+        "otrok": "MTC324010102"
+      },
+      {
+        "ime": "MTC324010102:3",
+        "stars": "MLU123069200",
+        "otrok": "MTC324010102"
+      },
+      {
+        "ime": "MTC324010102:4",
+        "stars": "MLU123069200",
+        "otrok": "MTC324010102"
+      },
+      {
+        "ime": "MTC324010201:1",
+        "stars": "MLU123069200",
+        "otrok": "MTC324010201"
+      },
+      {
+        "ime": "MTC324010201:2",
+        "stars": "MLU123069200",
+        "otrok": "MTC324010201"
+      },
+      {
+        "ime": "MTC324010301:1",
+        "stars": "MLU123069200",
+        "otrok": "MTC324010301"
+      },
+      {
+        "ime": "MTC324010301:2",
+        "stars": "MLU123069200",
+        "otrok": "MTC324010301"
+      },
+      {
+        "ime": "MTC324039900:1",
+        "stars": "MLU123069200",
+        "otrok": "MTC324039900"
+      },
+      {
+        "ime": "MTC324039900:2",
+        "stars": "MLU123069200",
+        "otrok": "MTC324039900"
+      },
+      {
+        "ime": "MTC324039900:3",
+        "stars": "MLU123069200",
+        "otrok": "MTC324039900"
+      },
+      {
+        "ime": "MTC324039900:4",
+        "stars": "MLU123069200",
+        "otrok": "MTC324039900"
+      },
+      {
+        "ime": "MTC324010802:1",
+        "stars": "MLU123069200",
+        "otrok": "MTC324010802"
+      },
+      {
+        "ime": "MTC324011101:1",
+        "stars": "MLU123069200",
+        "otrok": "MTC324011101"
+      },
+      {
+        "ime": "MTC324011201:1",
+        "stars": "MLU123069200",
+        "otrok": "MTC324011201"
+      },
+      {
+        "ime": "MTC324011201:2",
+        "stars": "MLU123069200",
+        "otrok": "MTC324011201"
+      },
+      {
+        "ime": "MTC324011101:2",
+        "stars": "MLU123069200",
+        "otrok": "MTC324011101"
+      },
+      {
+        "ime": "kolo_fi80_z zavoro TENTE:1",
+        "stars": "MLU123069200",
+        "otrok": "kolo_fi80_z zavoro TENTE"
+      },
+      {
+        "ime": "kolo_fi80_z zavoro TENTE:2",
+        "stars": "MLU123069200",
+        "otrok": "kolo_fi80_z zavoro TENTE"
+      },
+      {
+        "ime": "kolo_fi80_z zavoro TENTE:3",
+        "stars": "MLU123069200",
+        "otrok": "kolo_fi80_z zavoro TENTE"
+      },
+      {
+        "ime": "kolo_fi80_z zavoro TENTE:4",
+        "stars": "MLU123069200",
+        "otrok": "kolo_fi80_z zavoro TENTE"
+      },
+      {
+        "ime": "MLU124029200:1",
+        "stars": "MLU123069200",
+        "otrok": "MLU124029200"
+      }
+    ],
+    "materiali": {
+      "MTC324009902": {
+        "material": "Steel, Mild",
+        "gostota_g_cm3": 7.85
+      },
+      "MTC324010002": {
+        "material": "Steel, Mild",
+        "gostota_g_cm3": 7.85
+      },
+      "MTC324010102": {
+        "material": "Steel, Mild",
+        "gostota_g_cm3": 7.85
+      },
+      "MTC324010201": {
+        "material": "Steel, Mild",
+        "gostota_g_cm3": 7.85
+      },
+      "MTC324010301": {
+        "material": "Steel, Mild",
+        "gostota_g_cm3": 7.85
+      },
+      "MTC324039900": {
+        "material": "Steel, Mild",
+        "gostota_g_cm3": 7.85
+      },
+      "MTC324010802": {
+        "material": "Iveral",
+        "gostota_g_cm3": 0.719678
+      },
+      "MTC324011201": {
+        "material": "Steel, Mild",
+        "gostota_g_cm3": 7.85
+      },
+      "MTC324011101": {
+        "material": "Iveral",
+        "gostota_g_cm3": 0.719678
+      },
+      "kolo_fi80_z zavoro TENTE": {
+        "material": "Generic",
+        "gostota_g_cm3": 1.0
+      },
+      "MTC324079500": {
+        "material": "Stainless Steel AISI 304",
+        "gostota_g_cm3": 8.0
+      },
+      "MTC324079400": {
+        "material": "Stainless Steel AISI 304",
+        "gostota_g_cm3": 8.0
+      }
+    }
+  },
+  "drevo_xcaf": [
+    {
+      "pojavitev": "MTC324009902:1",
+      "produkt": "MTC324009902",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324009902:1"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0,
+          -233.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          585.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P001"
+    },
+    {
+      "pojavitev": "MTC324009902:2",
+      "produkt": "MTC324009902",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324009902:2"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          233.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          585.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P002"
+    },
+    {
+      "pojavitev": "MTC324010002:1",
+      "produkt": "MTC324010002",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324010002:1"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          483.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          585.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P003"
+    },
+    {
+      "pojavitev": "MTC324010002:2",
+      "produkt": "MTC324010002",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324010002:2"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          -483.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          585.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P004"
+    },
+    {
+      "pojavitev": "MTC324010102:1",
+      "produkt": "MTC324010102",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324010102:1"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          483.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          233.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          965.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P005"
+    },
+    {
+      "pojavitev": "MTC324010102:2",
+      "produkt": "MTC324010102",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324010102:2"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          483.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -233.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          965.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P006"
+    },
+    {
+      "pojavitev": "MTC324010102:3",
+      "produkt": "MTC324010102",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324010102:3"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -483.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          233.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          965.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P007"
+    },
+    {
+      "pojavitev": "MTC324010102:4",
+      "produkt": "MTC324010102",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324010102:4"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -483.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -233.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          965.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P008"
+    },
+    {
+      "pojavitev": "MTC324010201:1",
+      "produkt": "MTC324010201",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324010201:1"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          1.0,
+          0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          253.0
+        ],
+        [
+          -0.0,
+          0.0,
+          -1.0,
+          1330.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P009"
+    },
+    {
+      "pojavitev": "MTC324010201:2",
+      "produkt": "MTC324010201",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324010201:2"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0,
+          -253.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          1330.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P010"
+    },
+    {
+      "pojavitev": "MTC324010301:1",
+      "produkt": "MTC324010301",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324010301:1"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          0.0,
+          -1.0,
+          0.0,
+          503.0
+        ],
+        [
+          -1.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -1.0,
+          1330.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P011"
+    },
+    {
+      "pojavitev": "MTC324010301:2",
+      "produkt": "MTC324010301",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324010301:2"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          -0.0,
+          1.0,
+          -0.0,
+          -503.0
+        ],
+        [
+          1.0,
+          0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -1.0,
+          1330.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P012"
+    },
+    {
+      "pojavitev": "MTC324039900:1",
+      "produkt": "MTC324039900",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324039900:1"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -444.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -204.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          567.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P013"
+    },
+    {
+      "pojavitev": "MTC324039900:2",
+      "produkt": "MTC324039900",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324039900:2"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -444.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          204.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          567.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P014"
+    },
+    {
+      "pojavitev": "MTC324039900:3",
+      "produkt": "MTC324039900",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324039900:3"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          444.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -204.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          567.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P015"
+    },
+    {
+      "pojavitev": "MTC324039900:4",
+      "produkt": "MTC324039900",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324039900:4"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          444.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          204.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          567.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P016"
+    },
+    {
+      "pojavitev": "MTC324010802:1",
+      "produkt": "MTC324010802",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324010802:1"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1333.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P017"
+    },
+    {
+      "pojavitev": "MTC324011101:1",
+      "produkt": "MTC324011101",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324011101:1"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          600.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P018"
+    },
+    {
+      "pojavitev": "MTC324011201:1",
+      "produkt": "MTC324011201",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324011201:1"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          247.5
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          963.6
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P019"
+    },
+    {
+      "pojavitev": "MTC324011201:2",
+      "produkt": "MTC324011201",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324011201:2"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -247.5
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          963.6
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P020"
+    },
+    {
+      "pojavitev": "MTC324011101:2",
+      "produkt": "MTC324011101",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MTC324011101:2"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          966.6
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P021"
+    },
+    {
+      "pojavitev": "kolo_fi80_z zavoro TENTE:1",
+      "produkt": "kolo_fi80_z zavoro TENTE",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "kolo_fi80_z zavoro TENTE:1"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -440.974504
+        ],
+        [
+          1.0,
+          -0.0,
+          -0.0,
+          204.004
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          525.540704
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P022"
+    },
+    {
+      "pojavitev": "kolo_fi80_z zavoro TENTE:2",
+      "produkt": "kolo_fi80_z zavoro TENTE",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "kolo_fi80_z zavoro TENTE:2"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -440.974504
+        ],
+        [
+          1.0,
+          -0.0,
+          -0.0,
+          -203.996
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          525.540704
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P023"
+    },
+    {
+      "pojavitev": "kolo_fi80_z zavoro TENTE:3",
+      "produkt": "kolo_fi80_z zavoro TENTE",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "kolo_fi80_z zavoro TENTE:3"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          447.025496
+        ],
+        [
+          1.0,
+          -0.0,
+          -0.0,
+          204.004
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          525.540704
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P024"
+    },
+    {
+      "pojavitev": "kolo_fi80_z zavoro TENTE:4",
+      "produkt": "kolo_fi80_z zavoro TENTE",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "kolo_fi80_z zavoro TENTE:4"
+      ],
+      "globina": 1,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          447.025496
+        ],
+        [
+          1.0,
+          -0.0,
+          -0.0,
+          -203.996
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          525.540704
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P025"
+    },
+    {
+      "pojavitev": "MLU124029200:1",
+      "produkt": "MLU124029200",
+      "stars": "MLU123069200",
+      "pot": [
+        "MLU123069200",
+        "MLU124029200:1"
+      ],
+      "globina": 1,
+      "sestav": true,
+      "matrika_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "pojavitev": "MTC324079400:1",
+      "produkt": "MTC324079400",
+      "stars": "MLU124029200:1",
+      "pot": [
+        "MLU123069200",
+        "MLU124029200:1",
+        "MTC324079400:1"
+      ],
+      "globina": 2,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          -483.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          214.4
+        ],
+        [
+          -0.0,
+          0.0,
+          -1.0,
+          1285.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P026"
+    },
+    {
+      "pojavitev": "MTC324079500:1",
+      "produkt": "MTC324079500",
+      "stars": "MLU124029200:1",
+      "pot": [
+        "MLU123069200",
+        "MLU124029200:1",
+        "MTC324079500:1"
+      ],
+      "globina": 2,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          0.0,
+          -1.0,
+          0.0,
+          -559.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.4
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1285.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P027"
+    },
+    {
+      "pojavitev": "MTC324079400:2",
+      "produkt": "MTC324079400",
+      "stars": "MLU124029200:1",
+      "pot": [
+        "MLU123069200",
+        "MLU124029200:1",
+        "MTC324079400:2"
+      ],
+      "globina": 2,
+      "sestav": false,
+      "matrika_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          -483.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -216.6
+        ],
+        [
+          -0.0,
+          0.0,
+          -1.0,
+          1285.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "id": "P028"
+    }
+  ],
+  "kontrole": {
+    "stevilo_produktov_step": 14,
+    "stevilo_nauo_step": 29,
+    "stevilo_listnih_nauo_step": 28,
+    "stevilo_delov_xcaf": 28,
+    "stevilo_manifold_solid_brep_step": 28,
+    "vsota_teles_po_produktih_unikatno": 28,
+    "glb_vozlisca_z_geometrijo": 28,
+    "glb_id_ujemanje": true,
+    "sestav_bbox_mm": {
+      "min": [
+        -574.0,
+        -253.0,
+        459.106
+      ],
+      "max": [
+        564.812,
+        253.0,
+        1351.0
+      ]
+    },
+    "glb_bounds_m_Ygor": [
+      [
+        -0.5739934158325195,
+        0.45911293147802734,
+        -0.253
+      ],
+      [
+        0.564811872953125,
+        1.351,
+        0.253
+      ]
+    ],
+    "nastavitve_mreze": {
+      "lin_defl_mm": 0.03,
+      "ang_defl_rad": 0.12
+    },
+    "mreze": {
+      "MTC324009902": {
+        "trikotnikov": 3512,
+        "ploskev_brep": 34,
+        "ploskev_brez_mreze": 0,
+        "vodotesna": true,
+        "volumen_brep_mm3": 161366.0,
+        "volumen_mreza_mm3": 161359.3,
+        "odstopanje_volumna_pct": -0.004,
+        "stevilo_teles": 1,
+        "barve_ploskev": {}
+      },
+      "MTC324010002": {
+        "trikotnikov": 968,
+        "ploskev_brep": 28,
+        "ploskev_brez_mreze": 0,
+        "vodotesna": true,
+        "volumen_brep_mm3": 78056.0,
+        "volumen_mreza_mm3": 78052.6,
+        "odstopanje_volumna_pct": -0.004,
+        "stevilo_teles": 1,
+        "barve_ploskev": {}
+      },
+      "MTC324010102": {
+        "trikotnikov": 1944,
+        "ploskev_brep": 153,
+        "ploskev_brez_mreze": 0,
+        "vodotesna": true,
+        "volumen_brep_mm3": 120084.0,
+        "volumen_mreza_mm3": 120079.2,
+        "odstopanje_volumna_pct": -0.004,
+        "stevilo_teles": 1,
+        "barve_ploskev": {}
+      },
+      "MTC324010201": {
+        "trikotnikov": 4760,
+        "ploskev_brep": 69,
+        "ploskev_brez_mreze": 0,
+        "vodotesna": true,
+        "volumen_brep_mm3": 174303.9,
+        "volumen_mreza_mm3": 174249.7,
+        "odstopanje_volumna_pct": -0.031,
+        "stevilo_teles": 1,
+        "barve_ploskev": {}
+      },
+      "MTC324010301": {
+        "trikotnikov": 3348,
+        "ploskev_brep": 36,
+        "ploskev_brez_mreze": 0,
+        "vodotesna": true,
+        "volumen_brep_mm3": 84700.6,
+        "volumen_mreza_mm3": 84674.0,
+        "odstopanje_volumna_pct": -0.031,
+        "stevilo_teles": 1,
+        "barve_ploskev": {}
+      },
+      "MTC324039900": {
+        "trikotnikov": 444,
+        "ploskev_brep": 10,
+        "ploskev_brez_mreze": 0,
+        "vodotesna": true,
+        "volumen_brep_mm3": 28419.3,
+        "volumen_mreza_mm3": 28419.1,
+        "odstopanje_volumna_pct": -0.001,
+        "stevilo_teles": 1,
+        "barve_ploskev": {}
+      },
+      "MTC324010802": {
+        "trikotnikov": 12,
+        "ploskev_brep": 6,
+        "ploskev_brez_mreze": 0,
+        "vodotesna": true,
+        "volumen_brep_mm3": 8811882.0,
+        "volumen_mreza_mm3": 8811882.0,
+        "odstopanje_volumna_pct": 0.0,
+        "stevilo_teles": 1,
+        "barve_ploskev": {}
+      },
+      "MTC324011101": {
+        "trikotnikov": 12,
+        "ploskev_brep": 6,
+        "ploskev_brez_mreze": 0,
+        "vodotesna": true,
+        "volumen_brep_mm3": 8068680.0,
+        "volumen_mreza_mm3": 8068680.0,
+        "odstopanje_volumna_pct": 0.0,
+        "stevilo_teles": 1,
+        "barve_ploskev": {}
+      },
+      "MTC324011201": {
+        "trikotnikov": 5388,
+        "ploskev_brep": 48,
+        "ploskev_brez_mreze": 0,
+        "vodotesna": true,
+        "volumen_brep_mm3": 170838.2,
+        "volumen_mreza_mm3": 170811.2,
+        "odstopanje_volumna_pct": -0.016,
+        "stevilo_teles": 1,
+        "barve_ploskev": {}
+      },
+      "kolo_fi80_z zavoro TENTE": {
+        "trikotnikov": 424750,
+        "ploskev_brep": 1453,
+        "ploskev_brez_mreze": 1,
+        "vodotesna": false,
+        "volumen_brep_mm3": 232776.1,
+        "volumen_mreza_mm3": 232693.3,
+        "odstopanje_volumna_pct": -0.036,
+        "stevilo_teles": 17,
+        "barve_ploskev": {
+          "(0.784, 0.784, 0.212)": 104,
+          "(0.604, 0.604, 1.0)": 704,
+          "(0.091, 0.095, 0.1)": 492,
+          "(0.22, 0.246, 0.262)": 47,
+          "(0.402, 0.429, 0.445)": 58,
+          "(0.604, 0.604, 0.604)": 11,
+          "(0.13, 0.871, 0.171)": 1,
+          "(0.434, 0.552, 0.73)": 8,
+          "(0.033, 0.033, 0.033)": 20
+        }
+      },
+      "MTC324079400": {
+        "trikotnikov": 1500,
+        "ploskev_brep": 12,
+        "ploskev_brez_mreze": 0,
+        "vodotesna": true,
+        "volumen_brep_mm3": 12211.1,
+        "volumen_mreza_mm3": 12210.1,
+        "odstopanje_volumna_pct": -0.008,
+        "stevilo_teles": 1,
+        "barve_ploskev": {}
+      },
+      "MTC324079500": {
+        "trikotnikov": 840,
+        "ploskev_brep": 4,
+        "ploskev_brez_mreze": 0,
+        "vodotesna": true,
+        "volumen_brep_mm3": 57481.7,
+        "volumen_mreza_mm3": 57447.4,
+        "odstopanje_volumna_pct": -0.06,
+        "stevilo_teles": 1,
+        "barve_ploskev": {}
+      }
+    }
+  }
+}

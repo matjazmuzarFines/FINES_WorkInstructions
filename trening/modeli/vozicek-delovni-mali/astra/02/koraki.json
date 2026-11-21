@@ -1,0 +1,1880 @@
+[
+  {
+    "st": 1,
+    "kljuc": "okvir",
+    "naslov": "Stiki ogrodja",
+    "opis": "Poravnaj stebre s spodnjim okvirom. Označeni stiki so kandidati za varjenje.",
+    "deli": [
+      "P101",
+      "P102",
+      "P103",
+      "P104",
+      "P105",
+      "P106",
+      "P107",
+      "P108",
+      "P109",
+      "P110",
+      "P111",
+      "P112",
+      "P113",
+      "P114",
+      "P115",
+      "P116"
+    ],
+    "referencni_deli": [],
+    "prikaz": "PREDLOG SPOJA",
+    "gibanje": {
+      "tip": "var",
+      "trajanje_s": 5,
+      "od_mm": [
+        0,
+        0,
+        0
+      ],
+      "do_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    "kamera": {
+      "pogled": "izometrija in detajl stika"
+    },
+    "opozorila": [
+      "Vrsto in dolžino zvara določi varilni načrt."
+    ],
+    "potrditev": "ni znano / zahteva potrditev",
+    "vir_postopka": "Geometrija in opisi STEP, predlog postopka za tehnologa."
+  },
+  {
+    "st": 2,
+    "kljuc": "stiki",
+    "naslov": "Kje se deli stikajo",
+    "opis": "Sled pokaže rob, ki ga delita dve CAD-telesi. Prikazani so štirje značilni stiki ogrodja.",
+    "deli": [
+      "P101",
+      "P104",
+      "P113",
+      "P108",
+      "P110",
+      "P112"
+    ],
+    "referencni_deli": [],
+    "prikaz": "STIK IZ CAD · ZVAR JE PREDLOG",
+    "gibanje": {
+      "tip": "var",
+      "trajanje_s": 6,
+      "od_mm": [
+        0,
+        0,
+        0
+      ],
+      "do_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    "kamera": {
+      "pogled": "izometrija in detajl stika"
+    },
+    "opozorila": [
+      "Prikazani robovi so kandidati za varjenje. Obseg, stran in zaporedje varjenja zahtevajo varilno risbo."
+    ],
+    "potrditev": "ni znano / zahteva potrditev",
+    "vir_postopka": "Geometrija in opisi STEP, predlog postopka za tehnologa."
+  },
+  {
+    "st": 3,
+    "kljuc": "poravnava",
+    "naslov": "Poravnava štirih koles",
+    "opis": "Prirobnico vsakega kolesa približaj spodnji strani njegove plošče.",
+    "deli": [
+      "P122",
+      "P123",
+      "P124",
+      "P125"
+    ],
+    "referencni_deli": [
+      "P113",
+      "P114",
+      "P115",
+      "P116"
+    ],
+    "prikaz": "LEGA IZ STEP",
+    "gibanje": {
+      "tip": "kolo",
+      "trajanje_s": 5,
+      "od_mm": [
+        0,
+        0,
+        -38
+      ],
+      "do_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    "kamera": {
+      "pogled": "štirje lokalni pogledi"
+    },
+    "opozorila": [
+      "Lega je iz CAD. Podpiranje vozička zahteva potrditev."
+    ],
+    "potrditev": "ni znano / zahteva potrditev",
+    "vir_postopka": "Vijačenje koles je potrdil uporabnik v oceni astra/01. Izvedba pritrdila ostaja odprta."
+  },
+  {
+    "st": 4,
+    "kljuc": "kolesa",
+    "naslov": "Vijačenje koles",
+    "opis": "Za vsako kolo so prikazani štirje vijaki. Konice se ustavijo na stiku z nosilno ploščo.",
+    "deli": [
+      "V001",
+      "V002",
+      "V003",
+      "V004",
+      "V005",
+      "V006",
+      "V007",
+      "V008",
+      "V009",
+      "V010",
+      "V011",
+      "V012",
+      "V013",
+      "V014",
+      "V015",
+      "V016"
+    ],
+    "referencni_deli": [
+      "P122",
+      "P123",
+      "P124",
+      "P125",
+      "P113",
+      "P114",
+      "P115",
+      "P116"
+    ],
+    "prikaz": "16 MEST · VIJAKI SO PREDLOG",
+    "gibanje": {
+      "tip": "vijak",
+      "trajanje_s": 7,
+      "po_delih": {
+        "V001": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V002": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V003": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V004": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V005": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V006": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V007": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V008": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V009": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V010": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V011": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V012": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V013": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V014": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V015": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V016": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -22.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        }
+      }
+    },
+    "kamera": {
+      "pogled": "detajl in pregled mest"
+    },
+    "opozorila": [
+      "Na vseh 16 oseh je plošča v modelu polna. Izvedbo izvrtin, navojev ali matic mora potrditi konstruktor."
+    ],
+    "potrditev": "ni znano / zahteva potrditev",
+    "vir_postopka": "Vijačenje koles je potrdil uporabnik v oceni astra/01. Izvedba pritrdila ostaja odprta."
+  },
+  {
+    "st": 5,
+    "kljuc": "prerez",
+    "naslov": "Zakaj se vijak ustavi",
+    "opis": "Prirobnica ima režo. Na isti osi jo zapira 3 mm debela jeklena plošča okvirja. Enako velja za vsa štiri kolesa.",
+    "deli": [
+      "P123",
+      "P113"
+    ],
+    "referencni_deli": [
+      "V001",
+      "V002",
+      "V003",
+      "V004",
+      "V005",
+      "V006",
+      "V007",
+      "V008",
+      "V009",
+      "V010",
+      "V011",
+      "V012",
+      "V013",
+      "V014",
+      "V015",
+      "V016"
+    ],
+    "prikaz": "PREGLED SPOJA",
+    "gibanje": {
+      "tip": "prerez",
+      "trajanje_s": 5,
+      "od_mm": [
+        0,
+        0,
+        0
+      ],
+      "do_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    "kamera": {
+      "pogled": "lokalni pogled"
+    },
+    "opozorila": [
+      "Pred montažo preveri dejansko ploščo in risbo pritrditve. V navodilu manjkajoče izvrtine niso dodane."
+    ],
+    "potrditev": "ni znano / zahteva potrditev",
+    "vir_postopka": "Vijačenje koles je potrdil uporabnik v oceni astra/01. Izvedba pritrdila ostaja odprta."
+  },
+  {
+    "st": 6,
+    "kljuc": "zvar_rocaja",
+    "naslov": "Zvarjenec ročaja",
+    "opis": "Cev se konča na nosilcih. Sled na obeh koncih prikazuje možni potek zvara.",
+    "deli": [
+      "P098",
+      "P099",
+      "P100"
+    ],
+    "referencni_deli": [],
+    "prikaz": "ZVARJENEC IZ STEP",
+    "gibanje": {
+      "tip": "var",
+      "trajanje_s": 5,
+      "od_mm": [
+        0,
+        0,
+        0
+      ],
+      "do_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    "kamera": {
+      "pogled": "izometrija in detajl stika"
+    },
+    "opozorila": [
+      "STEP opisuje ročaj kot zvarjenec. Potek in velikost zvara zahtevata varilno risbo."
+    ],
+    "potrditev": "ni znano / zahteva potrditev",
+    "vir_postopka": "Geometrija in opisi STEP, predlog postopka za tehnologa."
+  },
+  {
+    "st": 7,
+    "kljuc": "rocaj",
+    "naslov": "Pritrditev ročaja",
+    "opis": "Vsak nosilec ima dve odprtini. Štirje vijaki so poravnani z odprtinami v stebrih.",
+    "deli": [
+      "V021",
+      "V022",
+      "V023",
+      "V024"
+    ],
+    "referencni_deli": [
+      "P098",
+      "P100",
+      "P107",
+      "P108",
+      "I005",
+      "I006",
+      "I007",
+      "I008"
+    ],
+    "prikaz": "4 MESTA · PREDLOG IZVEDBE",
+    "gibanje": {
+      "tip": "vijak",
+      "trajanje_s": 6,
+      "po_delih": {
+        "V021": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V022": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V023": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V024": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        }
+      }
+    },
+    "kamera": {
+      "pogled": "detajl in pregled mest"
+    },
+    "opozorila": [
+      "Šesterokotna odprtina dopušča navojni vložek. Njegova izvedba in vijak zahtevata kosovnico."
+    ],
+    "potrditev": "ni znano / zahteva potrditev",
+    "vir_postopka": "Geometrija in opisi STEP, predlog postopka za tehnologa."
+  },
+  {
+    "st": 8,
+    "kljuc": "nosilci",
+    "naslov": "Vmesni povezavi",
+    "opis": "Na vsakem koncu povezave se podolgovata odprtina ujema z odprtino stebra.",
+    "deli": [
+      "V017",
+      "V018",
+      "V019",
+      "V020"
+    ],
+    "referencni_deli": [
+      "P119",
+      "P120",
+      "P105",
+      "P106",
+      "P107",
+      "P108",
+      "I001",
+      "I002",
+      "I003",
+      "I004"
+    ],
+    "prikaz": "4 MESTA · PREDLOG IZVEDBE",
+    "gibanje": {
+      "tip": "vijak",
+      "trajanje_s": 6,
+      "po_delih": {
+        "V017": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V018": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V019": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V020": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        }
+      }
+    },
+    "kamera": {
+      "pogled": "detajl in pregled mest"
+    },
+    "opozorila": [
+      "Izvedbo nasprotnega navoja ali vložka potrdi s kosovnico."
+    ],
+    "potrditev": "ni znano / zahteva potrditev",
+    "vir_postopka": "Geometrija in opisi STEP, predlog postopka za tehnologa."
+  },
+  {
+    "st": 9,
+    "kljuc": "spodnja",
+    "naslov": "Spodnja polica",
+    "opis": "Šest manjših izvrtin gleda proti spodnji polici. Večje odprtine na spodnji steni cevi omogočajo dostop.",
+    "deli": [
+      "V025",
+      "V026",
+      "V027",
+      "V028",
+      "V029",
+      "V030"
+    ],
+    "referencni_deli": [
+      "P118",
+      "P101",
+      "P102"
+    ],
+    "prikaz": "6 MEST · PREDLOG IZVEDBE",
+    "gibanje": {
+      "tip": "vijak",
+      "trajanje_s": 6,
+      "po_delih": {
+        "V025": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -46.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V026": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -46.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V027": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -46.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V028": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -46.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V029": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -46.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V030": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -46.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        }
+      }
+    },
+    "kamera": {
+      "pogled": "detajl in pregled mest"
+    },
+    "opozorila": [
+      "Vijaki in njihova dolžina so shematski. Izbor mest zahteva potrditev."
+    ],
+    "potrditev": "ni znano / zahteva potrditev",
+    "vir_postopka": "Geometrija in opisi STEP, predlog postopka za tehnologa."
+  },
+  {
+    "st": 10,
+    "kljuc": "srednja",
+    "naslov": "Srednja polica",
+    "opis": "Na povezavah je šest spodnjih in deset bočnih izvrtin, usmerjenih v iveral.",
+    "deli": [
+      "V031",
+      "V032",
+      "V033",
+      "V034",
+      "V035",
+      "V036",
+      "V037",
+      "V038",
+      "V039",
+      "V040",
+      "V041",
+      "V042",
+      "V043",
+      "V044",
+      "V045",
+      "V046"
+    ],
+    "referencni_deli": [
+      "P121",
+      "P119",
+      "P120"
+    ],
+    "prikaz": "16 MEST · PREDLOG IZVEDBE",
+    "gibanje": {
+      "tip": "vijak",
+      "trajanje_s": 6,
+      "po_delih": {
+        "V031": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V032": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V033": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V034": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V035": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V036": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V037": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V038": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V039": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V040": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V041": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V042": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V043": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V044": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V045": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V046": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        }
+      }
+    },
+    "kamera": {
+      "pogled": "detajl in pregled mest"
+    },
+    "opozorila": [
+      "Končni izbor spodnjih in bočnih mest mora potrditi tehnolog."
+    ],
+    "potrditev": "ni znano / zahteva potrditev",
+    "vir_postopka": "Geometrija in opisi STEP, predlog postopka za tehnologa."
+  },
+  {
+    "st": 11,
+    "kljuc": "polaganje",
+    "naslov": "Lega zgornje police",
+    "opis": "Daljši rob police poravnaj z daljšo stranico okvirja. Prikaz se konča v legi STEP.",
+    "deli": [
+      "P117"
+    ],
+    "referencni_deli": [
+      "P109",
+      "P110",
+      "P111",
+      "P112"
+    ],
+    "prikaz": "LEGA IZ STEP",
+    "gibanje": {
+      "tip": "polica",
+      "trajanje_s": 5,
+      "od_mm": [
+        0,
+        0,
+        110
+      ],
+      "do_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    "kamera": {
+      "pogled": "izometrija zgoraj"
+    },
+    "opozorila": [
+      "CAD v končni legi pokaže majhna prekrivanja na štirih zgornjih povezavah."
+    ],
+    "potrditev": "ni znano / zahteva potrditev",
+    "vir_postopka": "Geometrija in opisi STEP, predlog postopka za tehnologa."
+  },
+  {
+    "st": 12,
+    "kljuc": "zgornja",
+    "naslov": "Zgornja polica",
+    "opis": "Osem spodnjih in osemnajst bočnih izvrtin je usmerjenih proti polici. Prikazane so vse možne pritrdilne točke.",
+    "deli": [
+      "V047",
+      "V048",
+      "V049",
+      "V050",
+      "V051",
+      "V052",
+      "V053",
+      "V054",
+      "V055",
+      "V056",
+      "V057",
+      "V058",
+      "V059",
+      "V060",
+      "V061",
+      "V062",
+      "V063",
+      "V064",
+      "V065",
+      "V066",
+      "V067",
+      "V068",
+      "V069",
+      "V070",
+      "V071",
+      "V072"
+    ],
+    "referencni_deli": [
+      "P117",
+      "P109",
+      "P110",
+      "P111",
+      "P112"
+    ],
+    "prikaz": "26 MEST · PREDLOG IZVEDBE",
+    "gibanje": {
+      "tip": "vijak",
+      "trajanje_s": 7,
+      "po_delih": {
+        "V047": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V048": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V049": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V050": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V051": {
+          "odmik_od_mm": [
+            -0.0,
+            15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V052": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V053": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V054": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V055": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V056": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V057": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V058": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V059": {
+          "odmik_od_mm": [
+            -0.0,
+            -15.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V060": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V061": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V062": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V063": {
+          "odmik_od_mm": [
+            15.0,
+            -0.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V064": {
+          "odmik_od_mm": [
+            15.0,
+            -0.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V065": {
+          "odmik_od_mm": [
+            15.0,
+            -0.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V066": {
+          "odmik_od_mm": [
+            15.0,
+            -0.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V067": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V068": {
+          "odmik_od_mm": [
+            -15.0,
+            -0.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V069": {
+          "odmik_od_mm": [
+            -15.0,
+            -0.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V070": {
+          "odmik_od_mm": [
+            -15.0,
+            -0.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V071": {
+          "odmik_od_mm": [
+            -15.0,
+            -0.0,
+            -0.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        },
+        "V072": {
+          "odmik_od_mm": [
+            -0.0,
+            -0.0,
+            -15.0
+          ],
+          "odmik_do_mm": [
+            0,
+            0,
+            0
+          ],
+          "os": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "obrati_prikaza": 1.75,
+          "vir": "shematski premik"
+        }
+      }
+    },
+    "kamera": {
+      "pogled": "detajl in pregled mest"
+    },
+    "opozorila": [
+      "Izbiro mest in dolžino vijaka je treba preveriti na risbi ali prototipu."
+    ],
+    "potrditev": "ni znano / zahteva potrditev",
+    "vir_postopka": "Geometrija in opisi STEP, predlog postopka za tehnologa."
+  }
+]

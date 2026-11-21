@@ -1,0 +1,24 @@
+{
+  "astra/01": {
+    "kriteriji": {
+      "uvoz": 3,
+      "sledljivost": 4,
+      "animacija": 3,
+      "razumljivost": 2,
+      "postenost": 2
+    },
+    "komentar": "Geometrija je dosto ok. Jaz bi izboljšal kvaliteto. V pripetem stepu verjetno ne bo vedno definirano kateri material je posamezna komponenta. Tudi ne vem ali je to v stepu sploh mogoče, da se razbere. zato je potrebno poskrbeti, da so komponente najboljše kvalitete - vizuelne. Splošen grobi 3d model prikaz ni zadovoljiv ker bo pri kompleksnejših komponentah majhkalo detajlov.\n\nPotem sami proces sestave ima veliko napak. Če vidiš vsaka komponenta ki se sestavi skupaj se mora sestaviti na določen način. Če ni sestavnih elementov gre verjetno za varjenje. Če so elemeni ali luknje gre za vijake ali kaj podobnega. v določenih primerih bojo matice ali posebnosti objemke ipd. Vsako vijačenje vsakega elementa mora imeti prikaz. Mora biti visoke kvalitete. Če gre na isti element v isti sestavni točki več istih komponent je lahko skupen prikaz vijačenja v smislu, da se skupaj vijači vse. Recimo v trenutnem primeru lahko vijačiš v 3d modelu vsa 4 kolesa, ki so pritrjena z vijaki.\n\nVijaki verjetno ne bojo v vseh 3D modelih in bojo v kosovnicah zato bo potrebno razbrati po luknjah kam gre kateri vijak oz. bo vsaj čimbolje potrebno predpostaviti kje je kateri element. Tudi če elementov ni v 3D modelu in bojo v kosovnici ali tudi v kosovnici niso jih moraš vseeno prikazati. Samozavest v katerem primeru je kateri element boš dobil skozi izkušnje. recimo kolesa se vedno vijačijo in to bo šlo verjetno v standard prej kot slej. zato to ne boš več ugibal.\n\n",
+    "datum": "2026-11-21T20:41:20.876Z"
+  },
+  "fable/01": {
+    "kriteriji": {
+      "uvoz": 4,
+      "sledljivost": 5,
+      "animacija": 5,
+      "razumljivost": 4,
+      "postenost": 4
+    },
+    "komentar": "Postopek je dober. razumel si kako se naredi montaža.\n\nkakovost komponent bi jaz izboljšal. po step modelu boš moral predpostaviti kaj je les, železo, pločevina, vijačni material ipd. in posledično izboljšati in narediti vse komponente čim bolj kakovostnega izgleda.\n\nPri vsaki animaciji mora biti zraven tudi način kako se to zmontira. recimo v primeru vozička je potrebno dodati pri vsaki animaciji tudi na kakšen način komponente pašejo skupaj. plošča se položi v okvir kar je ok. ampak kolesa se privijačijo, cevi, okvirji in ostala pločevina se vari skupaj. to montaža potrebuje v navodilih.\n\nčrke in številke P.... niso najbolj jasne. sicer je spodaj levo v kotu objasnitev ampak mogoče bi lahko bila bolj jasna, da ker po tvoji logiki mora oseba gledati animacijo, si zapomniti številko in gledati potem spodaj v kot kateri element je to. kar ni smiselno za montažo. ",
+    "datum": "2026-11-21T20:54:09.381Z"
+  }
+}
