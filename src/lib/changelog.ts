@@ -9,6 +9,15 @@ export type ChangelogEntry = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    verzija: "4.03",
+    datum: "21. 11. 2026",
+    spremembe: [
+      "AI trening: gumb Oceni ob videu odpre velik video z obrazcem za oceno v istem oknu (na širokem zaslonu drug ob drugem, sicer video zgoraj in ostane viden med pisanjem).",
+      "Video v oknu nadaljuje, kjer je bil ustavljen; gumb Vstavi čas doda trenutni čas videa (npr. [1:23]) v komentar.",
+      "Ob zapiranju okna z neshranjeno oceno aplikacija vpraša za potrditev.",
+    ],
+  },
+  {
     verzija: "4.02",
     datum: "21. 11. 2026",
     spremembe: [

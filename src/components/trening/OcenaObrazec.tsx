@@ -1,19 +1,29 @@
 "use client";
 
-import { useState } from "react";
-import { Save } from "lucide-react";
+import { useId, useRef, useState, type RefObject } from "react";
+import { Clock, Save } from "lucide-react";
 import { KRITERIJI, povprecje, type KriterijKoda, type Ocena } from "@/lib/trening";
 import { Button } from "@/components/ui/Button";
 import { WarningText } from "@/components/ui/Notice";
+import { useNeshranjeno } from "@/lib/neshranjeno";
 import { datumCas } from "./oblika";
+
+/** 83.4 s -> "1:23" */
+function oznakaCasa(s: number) {
+  const t = Math.floor(s);
+  return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "0")}`;
+}
 
 /** Ocena poskusa: kriteriji 1-5 in komentar. Shrani se v trening/modeli/<model>/ocene.json. */
 export function OcenaObrazec({
   ocena,
   onShrani,
+  video,
 }: {
   ocena: Ocena | undefined;
   onShrani: (o: Ocena) => Promise<void>;
+  /** Video ob obrazcu: omogoči vstavljanje trenutnega časa v komentar. */
+  video?: RefObject<HTMLVideoElement | null>;
 }) {
   const [kriteriji, setKriteriji] = useState<Ocena["kriteriji"]>(ocena?.kriteriji ?? {});
   const [komentar, setKomentar] = useState(ocena?.komentar ?? "");
@@ -23,6 +33,26 @@ export function OcenaObrazec({
     komentar !== (ocena?.komentar ?? "") ||
     KRITERIJI.some((k) => kriteriji[k.koda] !== ocena?.kriteriji?.[k.koda]);
   const pov = povprecje({ kriteriji, komentar, datum: "" });
+  const polje = useRef<HTMLTextAreaElement>(null);
+  const idPolja = useId();
+  useNeshranjeno(spremenjeno);
+
+  function vstaviCas() {
+    const v = video?.current;
+    const ta = polje.current;
+    if (!v || !ta) return;
+    const oznaka = `[${oznakaCasa(v.currentTime)}] `;
+    const zac = ta.selectionStart ?? komentar.length;
+    const kon = ta.selectionEnd ?? komentar.length;
+    const pred = komentar.slice(0, zac);
+    const presledek = pred && !/\s$/.test(pred) ? "\n" : "";
+    setKomentar(pred + presledek + oznaka + komentar.slice(kon));
+    const poz = zac + presledek.length + oznaka.length;
+    requestAnimationFrame(() => {
+      ta.focus();
+      ta.setSelectionRange(poz, poz);
+    });
+  }
 
   function nastavi(k: KriterijKoda, v: number) {
     setKriteriji((s) => ({ ...s, [k]: s[k] === v ? undefined : v }));
@@ -69,17 +99,32 @@ export function OcenaObrazec({
           </div>
         </div>
       ))}
-      <label className="flex flex-col gap-1 text-xs font-semibold text-ink-600">
-        Komentar
+      <div className="flex flex-col gap-1 text-xs font-semibold text-ink-600">
+        <span className="flex flex-wrap items-center justify-between gap-2">
+          <label htmlFor={idPolja}>Komentar</label>
+          {video && (
+            <Button
+              icon={Clock}
+              hint="Vstavi trenutni čas videa v komentar"
+              onClick={vstaviCas}
+              onMouseDown={(e) => e.preventDefault()}
+              className="!h-8 !px-3 !text-xs"
+            >
+              Vstavi čas
+            </Button>
+          )}
+        </span>
         <textarea
+          ref={polje}
+          id={idPolja}
           value={komentar}
           onChange={(e) => setKomentar(e.target.value)}
-          rows={4}
+          rows={video ? 8 : 4}
           title="Kaj je dobro, kaj je narobe, kaj popraviti"
           placeholder="Kaj je dobro, kaj je narobe, kaj naj popravi v naslednjem poskusu ..."
           className="rounded-lg border border-ink-200 p-3 text-sm font-normal text-ink-800 focus:border-fines-500 focus:outline-none focus:ring-2 focus:ring-fines-100"
         />
-      </label>
+      </div>
       {spremenjeno && <WarningText>Neshranjene spremembe ocene.</WarningText>}
       <div className="flex flex-wrap items-center justify-between gap-2">
         <span className="text-sm text-ink-600" title="Povprečje vpisanih kriterijev">

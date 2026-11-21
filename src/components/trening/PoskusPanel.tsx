@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, type CSSProperties, type Ref } from "react";
-import { Boxes, ClipboardCopy, FileText, Files, Lightbulb, ListOrdered, Star, VideoOff } from "lucide-react";
+import { useRef, useState, type CSSProperties } from "react";
+import { Boxes, ClipboardCopy, FileText, Files, Lightbulb, ListOrdered, Maximize2, Star, VideoOff } from "lucide-react";
 import {
   AI_JI,
   zagonskiPrompt,
@@ -18,6 +18,7 @@ import { ErrorText, WarningText } from "@/components/ui/Notice";
 import { useToast } from "@/components/ui/Toast";
 import { Zavihki } from "@/components/ui/Zavihki";
 import { OcenaObrazec } from "./OcenaObrazec";
+import { OcenaVideoOkno } from "./OcenaVideoOkno";
 import { BARVA_AI, STATUS, casGeneracije, datumCas, napakaJson, podatki, trajanje, velikost } from "./oblika";
 
 type Pogled = "povzetek" | "spoznanja" | "koraki" | "deli" | "datoteke" | "ocena";
@@ -45,11 +46,19 @@ export function PoskusPanel({
   ocena: Ocena | undefined;
   onShraniOceno: (o: Ocena) => Promise<void>;
   zeton: string;
-  videoRef: Ref<HTMLVideoElement>;
+  videoRef: (el: HTMLVideoElement | null) => void;
   onDolzina: (s: number | null) => void;
 }) {
   const notify = useToast();
   const [pogled, setPogled] = useState<Pogled>("povzetek");
+  const [okno, setOkno] = useState<number | null>(null);
+  const video = useRef<HTMLVideoElement | null>(null);
+
+  function odpriOkno() {
+    const v = video.current;
+    v?.pause();
+    setOkno(v?.currentTime ?? 0);
+  }
   const info = AI_JI.find((a) => a.koda === ai)!;
   const barva = BARVA_AI[ai];
 
@@ -113,7 +122,10 @@ export function PoskusPanel({
             {izbran.video ? (
               <video
                 key={izbran.video}
-                ref={videoRef}
+                ref={(el) => {
+                  video.current = el;
+                  videoRef(el);
+                }}
                 src={urlDatoteke(izbran.video, zeton)}
                 poster={izbran.predogled ? urlDatoteke(izbran.predogled, zeton) : undefined}
                 controls
@@ -138,6 +150,15 @@ export function PoskusPanel({
               </div>
             )}
           </div>
+
+          {izbran.video && (
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <p className="text-xs text-ink-500">Celozaslonski prikaz: gumb v predvajalniku ali dvoklik na video.</p>
+              <Button variant="neutral" icon={Maximize2} hint="Odpri velik video z obrazcem za oceno" onClick={odpriOkno}>
+                Oceni ob videu
+              </Button>
+            </div>
+          )}
 
           <div className="grid grid-cols-3 gap-2 text-center">
             <Kazalnik naslov="Deli" vrednost={deli?.length} hint="Število delov v deli.json" />
@@ -170,10 +191,25 @@ export function PoskusPanel({
               {pogled === "koraki" && <Koraki napaka={napakaJson(izbran.koraki)} koraki={koraki} />}
               {pogled === "deli" && <Deli napaka={napakaJson(izbran.deli)} deli={deli} />}
               {pogled === "datoteke" && <SeznamDatotek poskus={izbran} zeton={zeton} />}
-              {pogled === "ocena" && <OcenaObrazec key={`${ai}/${izbran.poskus}`} ocena={ocena} onShrani={onShraniOceno} />}
+              {pogled === "ocena" && <OcenaObrazec key={`${ai}/${izbran.poskus}/${ocena?.datum ?? ""}`} ocena={ocena} onShrani={onShraniOceno} />}
             </div>
           </div>
         </>
+      )}
+      {izbran?.video && okno !== null && (
+        <OcenaVideoOkno
+          open
+          naslov={`Ocena - ${info.naziv}, poskus ${izbran.poskus}`}
+          video={urlDatoteke(izbran.video, zeton)}
+          poster={izbran.predogled ? urlDatoteke(izbran.predogled, zeton) : undefined}
+          zacetek={okno}
+          ocena={ocena}
+          onShrani={onShraniOceno}
+          onClose={(cas) => {
+            if (video.current) video.current.currentTime = cas;
+            setOkno(null);
+          }}
+        />
       )}
     </section>
   );
