@@ -56,8 +56,12 @@ async function akcija<T>(telo: Record<string, unknown>): Promise<T> {
 /** Objavi trening na produkcijo (samo lokalni strežnik). */
 export const objaviTrening = () => akcija<{ modelov: number; poskusov: number; datotek: number }>({ akcija: "objavi" });
 
-/** Zahtevo AI video creation prenese v nov model treninga (samo lokalni strežnik). */
-export const zahtevaVTrening = (id: number) => akcija<{ koda: string; datotek: number }>({ akcija: "zahteva", id });
+/** Zahtevo AI video creation prenese v nov model treninga (samo lokalni strežnik) in ustvari sličico iz STEP. */
+export const zahtevaVTrening = (id: number) =>
+  akcija<{ koda: string; datotek: number; slikaNapaka: string | null }>({ akcija: "zahteva", id });
+
+/** (Ponovno) ustvari sličico modela iz STEP (samo lokalni strežnik). */
+export const ustvariSliko = (model: string) => akcija<{ ok: true }>({ akcija: "slika", model });
 
 /** Ali aplikacija teče na lokalnem strežniku (mapa trening/ in lokalne akcije). */
 export async function jeLokalno(): Promise<boolean> {

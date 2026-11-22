@@ -97,6 +97,8 @@ export type TreningModel = {
   id: string;
   info: Json<ModelInfo>;
   vhod: Datoteka[];
+  /** Sličica modela iz STEP (modeli/<id>/slika.png, trening/orodja/slika_modela.py); null, če je še ni. */
+  slika: string | null;
   poskusi: Record<AiKoda, Poskus[]>;
   ocene: Record<string, Ocena>;
 };

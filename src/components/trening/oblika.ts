@@ -1,9 +1,9 @@
 import type { AiKoda, Json } from "@/lib/trening";
 
-/** Barva AI-ja na strani (trak, značka) - Fines barve: Astra temno siva, Fable oranžna. */
-export const BARVA_AI: Record<AiKoda, { trak: string; znacka: string; crka: string }> = {
-  astra: { trak: "border-t-ink-700", znacka: "bg-ink-700 text-white", crka: "A" },
-  fable: { trak: "border-t-fines-500", znacka: "bg-fines-500 text-white", crka: "F" },
+/** Barva traku AI-ja na panelu poskusa - Fines barve: Astra temno siva, Fable oranžna (logotip: AiLogo). */
+export const BARVA_AI: Record<AiKoda, { trak: string }> = {
+  astra: { trak: "border-t-ink-700" },
+  fable: { trak: "border-t-fines-500" },
 };
 
 export function velikost(b: number) {

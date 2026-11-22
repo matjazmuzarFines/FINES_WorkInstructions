@@ -99,6 +99,7 @@ export function AiVideo() {
     try {
       const r = await zahtevaVTrening(z.id);
       notify("success", `Zahteva #${z.id} je v treningu kot model ${r.koda} (${r.datotek} datotek).`);
+      if (r.slikaNapaka) notify("error", r.slikaNapaka);
       await nalozi();
     } catch (e) {
       notify("error", (e as Error).message);

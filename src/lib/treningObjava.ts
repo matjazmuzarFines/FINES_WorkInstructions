@@ -20,7 +20,15 @@ const BUCKET = "wi_trening";
 /** Podpisani URL-ji veljajo 6 ur (stran je odprta na sestanku). */
 const VELJAVNOST_S = 6 * 3600;
 
-type ModelVrstica = { id: number; koda: string; naziv: string; opis: string | null; zahteva_id: number | null; objavljeno_at: string | null };
+type ModelVrstica = {
+  id: number;
+  koda: string;
+  naziv: string;
+  opis: string | null;
+  zahteva_id: number | null;
+  slika: string | null;
+  objavljeno_at: string | null;
+};
 type PoskusVrstica = {
   model_id: number;
   ai: string;
@@ -49,7 +57,7 @@ export type ObjavljenTrening = {
 export async function naloziObjavljeno(): Promise<ObjavljenTrening> {
   const sb = db();
   const [m, p, z] = await Promise.all([
-    sb.from("wi_ai_modeli").select("id, koda, naziv, opis, zahteva_id, objavljeno_at").eq("visible", true).order("koda"),
+    sb.from("wi_ai_modeli").select("id, koda, naziv, opis, zahteva_id, slika, objavljeno_at").eq("visible", true).order("koda"),
     sb
       .from("wi_ai_poskusi")
       .select("model_id, ai, poskus, meta, deli, koraki, porocilo, spoznanja, video, video_velikost, predogled, ocena, updated_at")
@@ -62,7 +70,7 @@ export async function naloziObjavljeno(): Promise<ObjavljenTrening> {
   const modeliV = (m.data ?? []) as ModelVrstica[];
   const poskusiV = (p.data ?? []) as PoskusVrstica[];
 
-  const poti = poskusiV.flatMap((x) => [x.video, x.predogled]).filter((x): x is string => !!x);
+  const poti = [...modeliV.map((x) => x.slika), ...poskusiV.flatMap((x) => [x.video, x.predogled])].filter((x): x is string => !!x);
   const urlji: Record<string, string> = {};
   if (poti.length) {
     const { data, error } = await sb.storage.from(BUCKET).createSignedUrls(poti, VELJAVNOST_S);
@@ -95,7 +103,7 @@ export async function naloziObjavljeno(): Promise<ObjavljenTrening> {
       if (x.ocena) ocene[kljucOcene(ai, x.poskus)] = x.ocena;
     }
     const info: ModelInfo = { naziv: mv.naziv, opis: mv.opis ?? undefined, zahteva_id: mv.zahteva_id ?? undefined };
-    return { id: mv.koda, info: { podatki: info }, vhod: [], poskusi, ocene };
+    return { id: mv.koda, info: { podatki: info }, vhod: [], slika: mv.slika, poskusi, ocene };
   });
 
   const objavljeno = modeliV.map((x) => x.objavljeno_at).filter((x): x is string => !!x).sort().pop() ?? null;

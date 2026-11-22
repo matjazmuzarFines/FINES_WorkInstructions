@@ -186,6 +186,7 @@ async function beriModel(id: string): Promise<TreningModel> {
     id,
     info: await beriJson<ModelInfo>(path.join(m, "model.json")),
     vhod: await datoteke(path.join(m, "vhod")),
+    slika: (await obstaja(path.join(m, "slika.png"))) ? `modeli/${id}/slika.png` : null,
     poskusi,
     ocene: ocene && "podatki" in ocene ? ocene.podatki : {},
   };
@@ -215,6 +216,26 @@ export async function shraniOceno(model: string, kljuc: string, ocena: Ocena) {
 }
 
 export type VhodnaDatoteka = { ime: string; podatki: Buffer };
+
+const PYTHON = path.join(KOREN, "okolje", "fable", process.platform === "win32" ? "venv312/Scripts/python.exe" : "venv312/bin/python");
+const SKRIPTA_SLIKA = path.join(KOREN, "orodja", "slika_modela.py");
+
+/**
+ * Sličica modela iz STEP (trening/orodja/slika_modela.py v okolju trening/okolje/fable).
+ * Vrne null ob uspehu, sicer opis napake (npr. okolje ni nameščeno).
+ */
+export async function ustvariSliko(id: string): Promise<string | null> {
+  if (!jeVarnoIme(id)) return "Neveljaven model.";
+  if (!(await obstaja(PYTHON))) return `Ni Python okolja (${path.relative(process.cwd(), PYTHON)}) - sličico ustvari ročno s trening/orodja/slika_modela.py.`;
+  const { execFile } = await import("node:child_process");
+  return new Promise((resolve) => {
+    execFile(PYTHON, [SKRIPTA_SLIKA, id], { cwd: process.cwd(), timeout: 5 * 60_000, windowsHide: true }, (napaka, _izhod, err) => {
+      if (!napaka) return resolve(null);
+      const zadnja = String(err || napaka.message).trim().split(/\r?\n/).pop();
+      resolve(`Sličice ni bilo mogoče ustvariti: ${zadnja}`);
+    });
+  });
+}
 
 /** Ustvari mapo modela (model.json, vhod/, astra/, fable/) in shrani datoteke v vhod/ (podmape dovoljene, npr. slike/x.png). */
 export async function ustvariModel(id: string, info: ModelInfo, vhod: VhodnaDatoteka[]) {
@@ -256,6 +277,9 @@ const BUCKET_VHOD = "wi_ai_vhod";
 
 function sbNapaka(e: { message: string; code?: string } | null, kje: string) {
   if (!e) return;
+  if (/column/i.test(e.message) && /slika/i.test(e.message)) {
+    throw new Error("Stolpec za sličico ne obstaja - zaženi migracijo supabase/migrations/005_ai_slika_modela.sql.");
+  }
   if (e.code === "42P01" || /does not exist|schema cache/i.test(e.message)) {
     throw new Error("Tabele AI orodij ne obstajajo - zaženi migracijo supabase/migrations/004_ai_orodja.sql.");
   }
@@ -288,6 +312,23 @@ export async function objaviNaProdukcijo(zeton: string) {
       .single();
     sbNapaka(error, `Model ${m.id}`);
     const modelId = (vrstica as { id: number }).id;
+
+    // sličica modela (iz STEP) -> <model>/slika.png v bucketu
+    if (m.slika) {
+      const abs = varnaPot(m.slika);
+      const st = abs ? await fs.stat(abs) : null;
+      if (abs && st) {
+        const cilj = `${m.id}/slika.png`;
+        const { data: obst } = await sb.storage.from(BUCKET_TRENING).list(m.id, { search: "slika.png" });
+        if (Number(obst?.find((o) => o.name === "slika.png")?.metadata?.size ?? -1) !== st.size) {
+          const { error: e } = await sb.storage.from(BUCKET_TRENING).upload(cilj, await fs.readFile(abs), { upsert: true, contentType: "image/png" });
+          sbNapaka(e, `Nalaganje ${cilj}`);
+          datotek++;
+        }
+        const { error: e1 } = await sb.from("wi_ai_modeli").update({ slika: cilj }).eq("id", modelId);
+        sbNapaka(e1, `Sličica ${m.id}`);
+      }
+    }
 
     for (const { koda } of AI_JI) {
       for (const p of m.poskusi[koda]) {

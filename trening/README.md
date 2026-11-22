@@ -18,9 +18,19 @@ API ključi niso potrebni: AI-ja delata v VS Code, aplikacija samo bere mapo z d
 5. Za izboljšavo kopiraj *Prompt 02*. AI prebere svojo oceno in komentar, poišče vzrok težav in boljšo rešitev ter naredi nov poskus. Diagnozo zapiše na začetek poročila.
 6. **Znanje**: v zavihku *Spoznanja* AI predlaga, kaj se je naučil. Dobre predloge prenesi v [ZNANJE.md](ZNANJE.md) (ročno ali prosi enega od AI-jev). Ta datoteka velja za oba AI-ja in vse naslednje poskuse, zato vanjo sodijo tudi tvoja pravila (npr. kateri sklopi so polizdelki).
 
+## Sličica modela
+
+Pregled treningov pokaže sličico sestava iz STEP (`modeli/<id>/slika.png`, 640 × 480, izometrični pogled, barve iz CAD, brez besedila). Izriše jo skripta `orodja/slika_modela.py` v okolju `okolje/fable` (OpenCascade + VTK):
+
+```
+trening/okolje/fable/venv312/Scripts/python.exe trening/orodja/slika_modela.py <id> [--gor z|y]
+```
+
+Aplikacija jo zažene sama ob *Nov model* in ob prenosu zahteve v trening, ročno pa z gumbom *Sličica iz STEP* v zavihku Primerjava. Privzeto je os Z navzgor (STEP sestav); če model leži, uporabi `--gor y`.
+
 ## Produkcija (objava)
 
-Na Vercelu mape `trening/` ni. Gumb **Objavi na produkcijo** (samo lokalno) prenese modele, poskuse (meta, deli, koraki, poročila, spoznanja), ocene in ZNANJE.md v tabele `wi_ai_*`, video in predogled pa v zaseben bucket `wi_trening` (največ 50 MB na datoteko). Produkcija jih pokaže samo za branje, prijavljenim adminom. Že naloženih datotek z isto velikostjo ponovna objava ne nalaga znova.
+Na Vercelu mape `trening/` ni. Gumb **Objavi na produkcijo** (samo lokalno) prenese modele, poskuse (meta, deli, koraki, poročila, spoznanja), ocene in ZNANJE.md v tabele `wi_ai_*`, video, predogled in sličico modela pa v zaseben bucket `wi_trening` (največ 50 MB na datoteko). Produkcija jih pokaže samo za branje, prijavljenim adminom. Že naloženih datotek z isto velikostjo ponovna objava ne nalaga znova.
 
 ## Zahteve razvojnikov (AI video creation)
 

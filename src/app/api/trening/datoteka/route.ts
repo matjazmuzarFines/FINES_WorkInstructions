@@ -20,7 +20,7 @@ const TIPI: Record<string, string> = {
 };
 
 /**
- * GET ?pot=modeli/<model>/<ai>/<poskus>/<datoteka>&t=<žeton>
+ * GET ?pot=modeli/<model>/<ai>/<poskus>/<datoteka>&t=<žeton> (ali modeli/<model>/slika.png)
  * Vrne izhodno datoteko poskusa. Podpira Range (premikanje po videu).
  * Vhodnih CAD datotek ne vrača - te ostanejo samo na disku.
  */
@@ -31,7 +31,7 @@ export async function GET(req: Request) {
   if (ni) return new Response(ni, { status: 401 });
 
   const pot = new URL(req.url).searchParams.get("pot") ?? "";
-  if (!/^modeli\/[^/]+\/(astra|fable)\/[^/]+\/.+/.test(pot)) return new Response("Neveljavna pot.", { status: 400 });
+  if (!/^modeli\/[^/]+\/((astra|fable)\/[^/]+\/.+|slika\.png)$/.test(pot)) return new Response("Neveljavna pot.", { status: 400 });
   const abs = varnaPot(pot);
   if (!abs) return new Response("Neveljavna pot.", { status: 400 });
 

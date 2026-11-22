@@ -9,6 +9,23 @@ export type ChangelogEntry = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    verzija: "5.04",
+    datum: "22. 11. 2026",
+    spremembe: [
+      "AI trening - Pregled treningov: v stolpcu Model je sličica sestava, izrisana iz STEP (izometrični pogled, barve iz CAD); klik odpre primerjavo.",
+      "Primerjava: večja sličica modela; lokalno gumb Sličica iz STEP / Nova sličica izriše sličico znova.",
+      "Sličica se izriše sama ob novem modelu in ob prenosu zahteve v trening; ob objavi gre na produkcijo.",
+    ],
+  },
+  {
+    verzija: "5.03",
+    datum: "22. 11. 2026",
+    spremembe: [
+      "AI trening - Pregled treningov: stolpci so združeni v skupini Astra in Fable z logotipom ChatGPT / Claude, imenom AI-ja in orodjem; skupine ločuje navpična črta.",
+      "Logotipa ChatGPT in Claude sta tudi v glavi panela poskusa in v tabeli Primerjava (namesto črk A / F).",
+    ],
+  },
+  {
     verzija: "5.02",
     datum: "22. 11. 2026",
     spremembe: [

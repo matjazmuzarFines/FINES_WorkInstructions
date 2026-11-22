@@ -3,7 +3,8 @@
 import { Fragment, type ReactNode } from "react";
 import { AI_JI, KRITERIJI, kljucOcene, povprecje, type AiKoda, type Ocena, type Poskus } from "@/lib/trening";
 import { TabelaOkvir } from "@/components/ui/Tabela";
-import { BARVA_AI, STATUS, casGeneracije, podatki, trajanje } from "./oblika";
+import { AiLogo } from "./AiLogo";
+import { STATUS, casGeneracije, podatki, trajanje } from "./oblika";
 
 type Stran = { poskus: Poskus | null; ocena: Ocena | undefined; dolzina: number | null };
 
@@ -42,8 +43,8 @@ export function PrimerjavaTabela({ strani }: { strani: Record<AiKoda, Stran> }) 
               <th className="px-3 py-2">Kriterij</th>
               {AI_JI.map((a) => (
                 <th key={a.koda} className="px-3 py-2 text-center">
-                  <span className={`mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full text-[10px] ${BARVA_AI[a.koda].znacka}`}>
-                    {BARVA_AI[a.koda].crka}
+                  <span className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-md bg-white p-0.5 align-middle">
+                    <AiLogo ai={a.koda} className="h-5 w-5" />
                   </span>
                   {a.naziv}
                   {strani[a.koda].poskus && <span className="ml-1 font-normal text-ink-300">· {strani[a.koda].poskus!.poskus}</span>}

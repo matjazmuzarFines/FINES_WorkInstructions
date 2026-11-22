@@ -10,7 +10,7 @@ Navodila za delo v proizvodnji in montaži (Fines - Work Instructions). Next.js 
 ## Baza
 
 1. Supabase -> Authentication -> Users -> Add user: admin uporabnik (Auto Confirm). Gesla se ne pišejo v kodo ali git.
-2. Supabase -> SQL Editor: zaženi migracije po vrsti (`supabase/migrations/001_schema.sql`, `002_priprava.sql`, `003_koncna_slika.sql`, `004_ai_orodja.sql`; idempotentno).
+2. Supabase -> SQL Editor: zaženi migracije po vrsti (`supabase/migrations/001_schema.sql`, `002_priprava.sql`, `003_koncna_slika.sql`, `004_ai_orodja.sql`, `005_ai_slika_modela.sql`; idempotentno).
 3. V aplikaciji: admin dostop (ikona ščita) -> Admin -> Nastavitve -> Uvoz šifer -> `sifre.xls`.
 
 Tabele: `wi_` (projekt), `ln_wi_` (povezovalne), `spl_identi` (šifrant artiklov, skupna tabela).

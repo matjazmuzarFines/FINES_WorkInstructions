@@ -8,6 +8,7 @@ import {
   razlogIzklopa,
   shraniOceno,
   ustvariModel,
+  ustvariSliko,
   zahtevaVTrening,
   zetonIz,
 } from "@/lib/treningStreznik";
@@ -30,6 +31,7 @@ export async function GET(req: Request) {
  * POST multipart (akcija=model, id, naziv, opis, datoteke) - ustvari nov model.
  * POST JSON { akcija: "objavi" } - objavi trening na produkcijo (Supabase).
  * POST JSON { akcija: "zahteva", id } - zahtevo AI video creation prenese v nov model treninga.
+ * POST JSON { akcija: "slika", model } - (ponovno) ustvari sličico modela iz STEP.
  */
 export async function POST(req: Request) {
   const izklop = razlogIzklopa();
@@ -50,14 +52,20 @@ export async function POST(req: Request) {
         { naziv, opis: String(f.get("opis") ?? "").trim(), ustvarjen: new Date().toISOString() },
         await Promise.all(datoteke.map(izFile)),
       );
-      return Response.json({ ok: true, id });
+      return Response.json({ ok: true, id, slikaNapaka: await ustvariSliko(id) });
     }
 
     const b = (await req.json()) as { akcija?: string; model?: string; ai?: string; poskus?: string; ocena?: Ocena; id?: number };
     if (b.akcija === "objavi") return Response.json({ ok: true, ...(await objaviNaProdukcijo(zetonIz(req)!)) });
     if (b.akcija === "zahteva") {
       if (!Number.isInteger(b.id)) return napaka("Neveljavna zahteva.");
-      return Response.json({ ok: true, ...(await zahtevaVTrening(zetonIz(req)!, b.id!)) });
+      const r = await zahtevaVTrening(zetonIz(req)!, b.id!);
+      return Response.json({ ok: true, ...r, slikaNapaka: await ustvariSliko(r.koda) });
+    }
+    if (b.akcija === "slika") {
+      if (!b.model || !jeVarnoIme(b.model)) return napaka("Neveljaven model.");
+      const n = await ustvariSliko(b.model);
+      return n ? napaka(n, 500) : Response.json({ ok: true });
     }
     if (b.akcija !== "ocena") return napaka("Neznana akcija.");
     if (!b.model || !jeVarnoIme(b.model) || !jeAiKoda(b.ai) || !b.poskus || !jeVarnoIme(b.poskus)) {

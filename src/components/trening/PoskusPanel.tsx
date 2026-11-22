@@ -19,6 +19,7 @@ import { FilterIzbira } from "@/components/ui/Filtri";
 import { ErrorText, WarningText } from "@/components/ui/Notice";
 import { useToast } from "@/components/ui/Toast";
 import { Zavihki } from "@/components/ui/Zavihki";
+import { AiLogo } from "./AiLogo";
 import { OcenaObrazec } from "./OcenaObrazec";
 import { OcenaVideoOkno } from "./OcenaVideoOkno";
 import { BARVA_AI, STATUS, casGeneracije, datumCas, napakaJson, podatki, trajanje, velikost } from "./oblika";
@@ -82,8 +83,8 @@ export function PoskusPanel({
     <section className={`fp-card flex min-w-0 flex-col gap-3 border-t-4 p-3 sm:p-4 ${barva.trak}`} aria-label={info.naziv}>
       <div className="flex flex-wrap items-end gap-3">
         <div className="flex min-w-[min(100%,14rem)] flex-1 items-center gap-3">
-          <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-bold ${barva.znacka}`} title={info.naziv}>
-            {barva.crka}
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-ink-200 bg-white p-1.5" title={info.naziv}>
+            <AiLogo ai={ai} className="h-7 w-7" />
           </span>
           <div className="min-w-0">
             <h2 className="truncate text-lg font-bold text-ink-900">{info.naziv}</h2>

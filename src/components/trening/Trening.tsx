@@ -1,9 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { BookOpen, ChevronDown, CloudUpload, FileBox, FolderOpen, LayoutList, Pause, Play, Plus, RefreshCw, SplitSquareHorizontal } from "lucide-react";
+import { BookOpen, ChevronDown, CloudUpload, FileBox, FolderOpen, Image as ImageIcon, LayoutList, Pause, Play, Plus, RefreshCw, SplitSquareHorizontal } from "lucide-react";
 import { AI_JI, naslednjiPoskus, type AiKoda, type Ocena, type TreningIndeks } from "@/lib/trening";
-import { naloziIndeks, objaviTrening, shraniOceno, urlDatoteke } from "@/lib/treningApi";
+import { naloziIndeks, objaviTrening, shraniOceno, urlDatoteke, ustvariSliko } from "@/lib/treningApi";
 import { naloziObjavljeno, zadnjaObjava } from "@/lib/treningObjava";
 import { Button } from "@/components/ui/Button";
 import { FilterIzbira, FilterPolje, FilterVrstica } from "@/components/ui/Filtri";
@@ -14,6 +14,7 @@ import { NovModelOkno } from "./NovModelOkno";
 import { Besedilo, PoskusPanel } from "./PoskusPanel";
 import { PrimerjavaTabela, ocenaZa } from "./PrimerjavaTabela";
 import { TreningPregled } from "./TreningPregled";
+import { SlikaModela } from "./SlikaModela";
 import { datumCas, napakaJson, podatki, velikost } from "./oblika";
 
 const SPOMIN_MODEL = "wi-trening-model";
@@ -31,6 +32,7 @@ export function Trening() {
   const [url, setUrl] = useState<{ f: (pot: string) => string }>({ f: () => "" });
   const [objavljeno, setObjavljeno] = useState<string | null>(null);
   const [objavljam, setObjavljam] = useState(false);
+  const [risem, setRisem] = useState(false);
   const [pogled, setPogled] = useState<Pogled>("pregled");
   const [napaka, setNapaka] = useState<string | null>(null);
   const [osvezujem, setOsvezujem] = useState(false);
@@ -82,6 +84,19 @@ export function Trening() {
     setModelId(id);
     setIzbira({});
     setDolzine({});
+  }
+
+  async function izrisiSliko(id: string) {
+    setRisem(true);
+    try {
+      await ustvariSliko(id);
+      notify("success", "Sličica modela je izrisana iz STEP.");
+      await nalozi();
+    } catch (e) {
+      notify("error", (e as Error).message);
+    } finally {
+      setRisem(false);
+    }
   }
 
   async function objavi() {
@@ -177,6 +192,7 @@ export function Trening() {
             <>
               <TreningPregled
                 modeli={modeli}
+                url={url.f}
                 onOdpri={(id) => {
                   izberiModel(id);
                   setPogled("primerjava");
@@ -243,6 +259,14 @@ export function Trening() {
               </FilterVrstica>
 
               <section className="flex flex-wrap gap-4 rounded-lg border border-ink-200 bg-ink-50 p-3" aria-label="Model">
+                <div className="flex w-full max-w-[16rem] flex-col gap-2">
+                  <SlikaModela src={model.slika ? url.f(model.slika) || null : null} naziv={info?.naziv ?? model.id} velikost="velika" />
+                  {lokalno && (
+                    <Button icon={ImageIcon} hint="Izriši sličico modela iz STEP datoteke" onClick={() => izrisiSliko(model.id)} disabled={risem}>
+                      {risem ? "Rišem ..." : model.slika ? "Nova sličica" : "Sličica iz STEP"}
+                    </Button>
+                  )}
+                </div>
                 <div className="min-w-[min(100%,18rem)] flex-1">
                   <h2 className="text-lg font-bold text-ink-900">{info?.naziv ?? model.id}</h2>
                   <p className="font-mono text-xs text-ink-400" title="Mapa modela v projektu">
