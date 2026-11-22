@@ -55,8 +55,29 @@ export function NovModelOkno({ open, onClose, onUstvarjen }: { open: boolean; on
   }
 
   return (
-    <Modal open={open} title="Nov model za trening" onClose={onClose}>
-      <form onSubmit={poslji} className="flex flex-col gap-3">
+    <Modal
+      open={open}
+      title="Nov model za trening"
+      onClose={onClose}
+      noga={
+        <div className="flex justify-end gap-2">
+          <Button variant="neutral" hint="Zapri okno brez shranjevanja" onClick={onClose}>
+            Prekliči
+          </Button>
+          <Button
+            type="submit"
+            form="wi-nov-model"
+            variant="success"
+            icon={Plus}
+            hint="Ustvari mapo modela in shrani datoteke"
+            disabled={delam || !id || !naziv}
+          >
+            {delam ? "Shranjujem ..." : "Dodaj model"}
+          </Button>
+        </div>
+      }
+    >
+      <form id="wi-nov-model" onSubmit={poslji} className="flex flex-col gap-3">
         <label className="flex flex-col gap-1 text-xs font-semibold text-ink-600">
           Naziv
           <input
@@ -144,14 +165,6 @@ export function NovModelOkno({ open, onClose, onUstvarjen }: { open: boolean; on
         </div>
 
         {napaka && <ErrorText>{napaka}</ErrorText>}
-        <div className="flex justify-end gap-2">
-          <Button variant="neutral" hint="Zapri okno brez shranjevanja" onClick={onClose}>
-            Prekliči
-          </Button>
-          <Button type="submit" variant="success" icon={Plus} hint="Ustvari mapo modela in shrani datoteke" disabled={delam || !id || !naziv}>
-            {delam ? "Shranjujem ..." : "Dodaj model"}
-          </Button>
-        </div>
       </form>
     </Modal>
   );

@@ -9,6 +9,17 @@ export type ChangelogEntry = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    verzija: "5.02",
+    datum: "22. 11. 2026",
+    spremembe: [
+      "AI trening: zavihka Pregled in Primerjava sta povezana s kartico pod njima (po standardu); filtri so pod zavihki, skupno znanje je v zavihku Pregled.",
+      "Pregled treningov po standardu tabel: razvrščanje po vseh stolpcih, filtri Iskanje in Ocena (Vsi / Ocenjeni / Neocenjeni), izvoz v Excel, številke desno, temna vrstica Skupaj.",
+      "AI video creation - tabela zahtev: razvrščanje, filtri Iskanje, Status in Oddal, izvoz v Excel.",
+      "Tabela delov poskusa ima razvrščanje in stolpec Kos; primerjava je v standardnem okvirju tabele.",
+      "Usklajene standardne komponente s FINES_Production: glava tabel (navadne črke, ločila med stolpci, oranžna črta), filtri, izvoz in okna (gumbi v nogi okna, na telefonu cel zaslon).",
+    ],
+  },
+  {
     verzija: "5.01",
     datum: "22. 11. 2026",
     spremembe: [

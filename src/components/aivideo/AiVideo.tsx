@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, type CSSProperties, type FormEvent } from "react";
+import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
 import {
   Ban,
   Box,
@@ -32,7 +32,11 @@ import { jeLokalno, zahtevaVTrening } from "@/lib/treningApi";
 import { Button } from "@/components/ui/Button";
 import { Modal } from "@/components/ui/Modal";
 import { ErrorText, Loading, WarningText } from "@/components/ui/Notice";
-import { TabelaOkvir } from "@/components/ui/Tabela";
+import { SortTh, TabelaOkvir, useRazvrscanje } from "@/components/ui/Tabela";
+import { FilterIskanje, FilterIzbira, FilterPolje, FilterPreklopnik, FilterVrstica } from "@/components/ui/Filtri";
+import { Izvoz } from "@/components/ui/Izvoz";
+import { ujemaIskanje } from "@/lib/iskanje";
+import { danesIso, prenesiXlsx } from "@/lib/excel";
 import { useToast } from "@/components/ui/Toast";
 import { datumCas, velikost } from "@/components/trening/oblika";
 
@@ -167,7 +171,7 @@ export function AiVideo() {
         </div>
       </div>
 
-      <section className="fp-card flex flex-col gap-3 p-3 sm:p-4" aria-label="Zahteve">
+      <section className="fp-card flex min-w-0 flex-col gap-3 p-3 sm:p-4" aria-label="Zahteve">
         <div>
           <h2 className="text-lg font-bold text-ink-900">Zahteve</h2>
           <p className="text-sm text-ink-500">
@@ -175,102 +179,15 @@ export function AiVideo() {
             {!lokalno && " Prenos v trening je mogoč samo na lokalnem strežniku."}
           </p>
         </div>
-        {zahteve.length === 0 ? (
-          <p className="rounded-lg border border-dashed border-ink-300 bg-ink-50 p-6 text-center text-sm text-ink-600">Še ni zahtev.</p>
-        ) : (
-          <TabelaOkvir className="rounded-lg">
-            <table className="w-full min-w-[56rem] text-sm" style={{ "--fp-thead-top": "0px" } as CSSProperties}>
-              <thead className="fp-thead">
-                <tr>
-                  <th className="px-2 py-2 text-left">#</th>
-                  <th className="px-2 py-2 text-left">Zahteva</th>
-                  <th className="px-2 py-2 text-left">Oddal</th>
-                  <th className="px-2 py-2 text-left">Datoteke</th>
-                  <th className="px-2 py-2 text-left">Status</th>
-                  <th className="px-2 py-2 text-right">Akcije</th>
-                </tr>
-              </thead>
-              <tbody>
-                {zahteve.map((z) => {
-                  const odprta = z.status === "oddano" || z.status === "v_delu";
-                  return (
-                    <tr key={z.id} className="border-b border-ink-100 align-top">
-                      <td className="px-2 py-2 font-mono text-xs text-ink-500">{z.id}</td>
-                      <td className="max-w-[22rem] px-2 py-2">
-                        <p className="font-semibold text-ink-900">{z.naziv}</p>
-                        {z.opis && (
-                          <p className="line-clamp-3 whitespace-pre-wrap text-xs text-ink-600" title={z.opis}>
-                            {z.opis}
-                          </p>
-                        )}
-                        {z.model_koda && <p className="mt-1 font-mono text-[11px] text-ink-400">trening/modeli/{z.model_koda}/</p>}
-                        {z.opomba && <p className="mt-1 text-xs text-nok-600">Opomba: {z.opomba}</p>}
-                      </td>
-                      <td className="px-2 py-2 text-xs text-ink-600">
-                        {z.oddal}
-                        <span className="block text-ink-400">{datumCas(z.created_at)}</span>
-                      </td>
-                      <td className="px-2 py-2">
-                        <ul className="flex flex-col gap-0.5 text-xs">
-                          {z.datoteke.map((d) => (
-                            <li key={d.id}>
-                              <button
-                                type="button"
-                                title={`Prenesi ${d.ime}`}
-                                onClick={() => prenesi(d.pot)}
-                                className="max-w-[14rem] truncate text-left text-fines-600 hover:underline"
-                              >
-                                {d.ime}
-                              </button>
-                              {d.velikost !== null && <span className="ml-1 text-ink-400">{velikost(d.velikost)}</span>}
-                            </li>
-                          ))}
-                          {!z.datoteke.length && <li className="text-ink-400">-</li>}
-                        </ul>
-                      </td>
-                      <td className="px-2 py-2">
-                        <span className={`whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-semibold ${STATUSI[z.status].cls}`}>
-                          {STATUSI[z.status].label}
-                        </span>
-                        <span className="mt-1 block text-[11px] text-ink-400">{z.nacin === "api" ? "API krediti" : "lokalno (naročnina)"}</span>
-                      </td>
-                      <td className="px-2 py-2">
-                        <div className="flex flex-wrap justify-end gap-2">
-                          {lokalno && z.status === "oddano" && !z.model_koda && (
-                            <Button
-                              icon={FolderInput}
-                              hint="Prenesi datoteke v nov model AI treninga"
-                              onClick={() => vTrening(z)}
-                              disabled={delam === z.id}
-                            >
-                              V trening
-                            </Button>
-                          )}
-                          {odprta && (
-                            <>
-                              <Button
-                                variant="success"
-                                icon={CheckCircle2}
-                                hint="Označi zahtevo kot končano"
-                                onClick={() => status(z, "koncano")}
-                                disabled={delam === z.id}
-                              >
-                                Končano
-                              </Button>
-                              <Button variant="danger" icon={Ban} hint="Zavrni zahtevo z obrazložitvijo" onClick={() => setZavrni(z)} disabled={delam === z.id}>
-                                Zavrni
-                              </Button>
-                            </>
-                          )}
-                        </div>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </TabelaOkvir>
-        )}
+        <ZahteveTabela
+          zahteve={zahteve}
+          lokalno={lokalno}
+          delam={delam}
+          onVTrening={vTrening}
+          onKoncano={(z) => status(z, "koncano")}
+          onZavrni={setZavrni}
+          onPrenesi={prenesi}
+        />
       </section>
 
       <ZavrniOkno
@@ -282,6 +199,226 @@ export function AiVideo() {
           await status(z, "zavrnjeno", opomba);
         }}
       />
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------
+
+type StatusFilter = "vse" | Zahteva["status"];
+type ZKljuc = "id" | "naziv" | "oddal" | "oddano" | "datoteke" | "status";
+const RED_STATUSA: Record<Zahteva["status"], number> = { oddano: 0, v_delu: 1, koncano: 2, zavrnjeno: 3 };
+
+/** Standardna tabela zahtev: filtri (iskanje, status, oddal) z izvozom, razvrščanje po vseh stolpcih s podatki. */
+function ZahteveTabela({
+  zahteve,
+  lokalno,
+  delam,
+  onVTrening,
+  onKoncano,
+  onZavrni,
+  onPrenesi,
+}: {
+  zahteve: Zahteva[];
+  lokalno: boolean;
+  delam: number | null;
+  onVTrening: (z: Zahteva) => void;
+  onKoncano: (z: Zahteva) => void;
+  onZavrni: (z: Zahteva) => void;
+  onPrenesi: (pot: string) => void;
+}) {
+  const [iskanje, setIskanje] = useState("");
+  const [status, setStatus] = useState<StatusFilter>("vse");
+  const [oddal, setOddal] = useState("vsi");
+
+  const sort = useRazvrscanje<Zahteva, ZKljuc>({
+    id: (z) => z.id,
+    naziv: (z) => z.naziv,
+    oddal: (z) => z.oddal,
+    oddano: (z) => z.created_at,
+    datoteke: (z) => z.datoteke.length,
+    status: (z) => RED_STATUSA[z.status],
+  });
+
+  const oddajniki = [...new Set(zahteve.map((z) => z.oddal))].sort((a, b) => a.localeCompare(b, "sl"));
+  const poIskanju = zahteve.filter(
+    (z) =>
+      ujemaIskanje(`${z.id} ${z.naziv} ${z.opis ?? ""} ${z.model_koda ?? ""} ${z.datoteke.map((d) => d.ime).join(" ")}`, iskanje) &&
+      (oddal === "vsi" || z.oddal === oddal),
+  );
+  const vrstice = sort.razvrsti(poIskanju.filter((z) => status === "vse" || z.status === status));
+  const imaFilter = !!iskanje || status !== "vse" || oddal !== "vsi";
+
+  function izvoziExcel() {
+    return prenesiXlsx(
+      [
+        {
+          ime: "Zahteve",
+          vrstice: vrstice.map((z) => ({
+            "#": z.id,
+            Zahteva: z.naziv,
+            Pojasnila: z.opis ?? "",
+            Oddal: z.oddal,
+            Oddano: datumCas(z.created_at),
+            Datoteke: z.datoteke.map((d) => d.ime).join(", "),
+            Status: STATUSI[z.status].label,
+            Način: z.nacin === "api" ? "API krediti" : "lokalno",
+            "Model v treningu": z.model_koda ?? "",
+            Opomba: z.opomba ?? "",
+          })),
+        },
+      ],
+      `AI_video_zahteve_${danesIso()}`,
+    );
+  }
+
+  return (
+    <div className="flex flex-col gap-3">
+      <FilterVrstica>
+        <FilterIskanje value={iskanje} onChange={setIskanje} placeholder="Naziv, pojasnila, datoteka" hint="Išči po nazivu, pojasnilih in datotekah" />
+        <FilterPreklopnik<StatusFilter>
+          label="Status"
+          value={status}
+          onChange={setStatus}
+          options={[
+            { value: "vse", label: "Vse", hint: "Pokaži zahteve v vseh statusih", stevilo: poIskanju.length },
+            ...(Object.keys(STATUSI) as Zahteva["status"][]).map((s) => ({
+              value: s,
+              label: STATUSI[s].label,
+              hint: `Pokaži samo zahteve s statusom ${STATUSI[s].label.toLowerCase()}`,
+              stevilo: poIskanju.filter((z) => z.status === s).length,
+            })),
+          ]}
+        />
+        <FilterIzbira
+          label="Oddal"
+          value={oddal}
+          options={[{ value: "vsi", label: "Vsi" }, ...oddajniki.map((o) => ({ value: o, label: o }))]}
+          onChange={setOddal}
+          hint="Pokaži zahteve izbranega razvojnika"
+        />
+        {imaFilter && (
+          <FilterPolje>
+            <Button
+              variant="neutral"
+              hint="Ponastavi iskanje, status in oddajnika"
+              onClick={() => {
+                setIskanje("");
+                setStatus("vse");
+                setOddal("vsi");
+              }}
+            >
+              Ponastavi filtre
+            </Button>
+          </FilterPolje>
+        )}
+        <Izvoz
+          className="ml-auto"
+          spomin="ai-video-zahteve"
+          formati={[{ koda: "xlsx", label: "Excel (.xlsx)", hint: "Prenesi prikazane zahteve v Excel", akcija: izvoziExcel }]}
+        />
+      </FilterVrstica>
+
+      <TabelaOkvir>
+        <table className="w-full min-w-[60rem] text-sm">
+          <thead className="fp-thead">
+            <tr>
+              <SortTh sort={sort} kljuc="id" desno hint="Razvrsti po številki zahteve">
+                #
+              </SortTh>
+              <SortTh sort={sort} kljuc="naziv">
+                Zahteva
+              </SortTh>
+              <SortTh sort={sort} kljuc="oddal">
+                Oddal
+              </SortTh>
+              <SortTh sort={sort} kljuc="oddano">
+                Oddano
+              </SortTh>
+              <SortTh sort={sort} kljuc="datoteke" hint="Razvrsti po številu datotek">
+                Datoteke
+              </SortTh>
+              <SortTh sort={sort} kljuc="status" className="text-center">
+                Status
+              </SortTh>
+              <th className="px-2 py-2 text-right">Akcije</th>
+            </tr>
+          </thead>
+          <tbody>
+            {vrstice.map((z) => {
+              const odprta = z.status === "oddano" || z.status === "v_delu";
+              return (
+                <tr key={z.id} className="border-b border-ink-100 align-top hover:bg-ink-50">
+                  <td className="px-2 py-1.5 text-right font-mono text-xs tabular-nums text-ink-500">{z.id}</td>
+                  <td className="max-w-[22rem] px-2 py-1.5">
+                    <p className="font-semibold text-ink-900">{z.naziv}</p>
+                    {z.opis && (
+                      <p className="line-clamp-3 whitespace-pre-wrap text-xs text-ink-600" title={z.opis}>
+                        {z.opis}
+                      </p>
+                    )}
+                    {z.model_koda && <p className="mt-1 font-mono text-xs text-ink-400">trening/modeli/{z.model_koda}/</p>}
+                    {z.opomba && <p className="mt-1 text-xs text-nok-600">Opomba: {z.opomba}</p>}
+                  </td>
+                  <td className="px-2 py-1.5 text-xs text-ink-600">{z.oddal}</td>
+                  <td className="whitespace-nowrap px-2 py-1.5 text-xs text-ink-600">{datumCas(z.created_at)}</td>
+                  <td className="px-2 py-1.5">
+                    <ul className="flex flex-col gap-0.5 text-xs">
+                      {z.datoteke.map((d) => (
+                        <li key={d.id} className="flex items-baseline gap-1">
+                          <button
+                            type="button"
+                            title={`Prenesi ${d.ime}`}
+                            onClick={() => onPrenesi(d.pot)}
+                            className="max-w-[14rem] truncate text-left text-fines-600 hover:underline"
+                          >
+                            {d.ime}
+                          </button>
+                          {d.velikost !== null && <span className="shrink-0 tabular-nums text-ink-400">{velikost(d.velikost)}</span>}
+                        </li>
+                      ))}
+                    </ul>
+                  </td>
+                  <td className="px-2 py-1.5 text-center">
+                    <span
+                      className={`whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-bold ${STATUSI[z.status].cls}`}
+                      title={z.nacin === "api" ? "Generiranje prek API kreditov" : "Generiranje lokalno (naročnina v VS Code)"}
+                    >
+                      {STATUSI[z.status].label}
+                    </span>
+                  </td>
+                  <td className="px-2 py-1.5">
+                    <div className="flex flex-wrap justify-end gap-2">
+                      {lokalno && z.status === "oddano" && !z.model_koda && (
+                        <Button icon={FolderInput} hint="Prenesi datoteke v nov model AI treninga" onClick={() => onVTrening(z)} disabled={delam === z.id}>
+                          V trening
+                        </Button>
+                      )}
+                      {odprta && (
+                        <>
+                          <Button variant="success" icon={CheckCircle2} hint="Označi zahtevo kot končano" onClick={() => onKoncano(z)} disabled={delam === z.id}>
+                            Končano
+                          </Button>
+                          <Button variant="danger" icon={Ban} hint="Zavrni zahtevo z obrazložitvijo" onClick={() => onZavrni(z)} disabled={delam === z.id}>
+                            Zavrni
+                          </Button>
+                        </>
+                      )}
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+            {vrstice.length === 0 && (
+              <tr>
+                <td colSpan={7} className="px-2 py-8 text-center text-sm text-ink-400">
+                  {zahteve.length ? "Ni zahtev za izbrane filtre." : "Še ni zahtev."}
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </TabelaOkvir>
     </div>
   );
 }
@@ -360,7 +497,7 @@ function NovaZahteva({ poraba, onOddano }: { poraba: Poraba; onOddano: (id: numb
             {datoteke.map((d) => (
               <li key={`${d.vrsta}/${d.file.name}`} className="flex items-center justify-between gap-2 px-3 py-1.5">
                 <span className="min-w-0 truncate">
-                  <span className="mr-2 rounded bg-ink-100 px-1.5 py-0.5 text-[10px] font-bold uppercase text-ink-600">{d.vrsta}</span>
+                  <span className="mr-2 rounded bg-ink-100 px-1.5 py-0.5 text-xs font-bold text-ink-600">{d.vrsta}</span>
                   {d.file.name}
                 </span>
                 <span className="flex shrink-0 items-center gap-2 text-xs text-ink-500">
@@ -580,8 +717,24 @@ function PorabaKartica({ poraba, onShranjeno }: { poraba: Poraba; onShranjeno: (
 function ZavrniOkno({ zahteva, onClose, onPotrdi }: { zahteva: Zahteva | null; onClose: () => void; onPotrdi: (opomba: string) => Promise<void> }) {
   const [opomba, setOpomba] = useState("");
   return (
-    <Modal open={!!zahteva} title={`Zavrni zahtevo #${zahteva?.id ?? ""}`} onClose={onClose} sirina="max-w-md">
+    <Modal
+      open={!!zahteva}
+      title={`Zavrni zahtevo #${zahteva?.id ?? ""}`}
+      onClose={onClose}
+      sirina="max-w-md"
+      noga={
+        <div className="flex justify-end gap-2">
+          <Button variant="neutral" hint="Zapri okno brez spremembe" onClick={onClose}>
+            Prekliči
+          </Button>
+          <Button type="submit" form="wi-zavrni-zahtevo" variant="danger" icon={Ban} hint="Zavrni zahtevo z vpisanim razlogom">
+            Zavrni
+          </Button>
+        </div>
+      }
+    >
       <form
+        id="wi-zavrni-zahtevo"
         onSubmit={async (e) => {
           e.preventDefault();
           await onPotrdi(opomba.trim());
@@ -601,14 +754,6 @@ function ZavrniOkno({ zahteva, onClose, onPotrdi }: { zahteva: Zahteva | null; o
             className="rounded-lg border border-ink-200 p-3 text-sm font-normal focus:border-fines-500 focus:outline-none focus:ring-2 focus:ring-fines-100"
           />
         </label>
-        <div className="flex justify-end gap-2">
-          <Button variant="neutral" hint="Zapri okno brez spremembe" onClick={onClose}>
-            Prekliči
-          </Button>
-          <Button type="submit" variant="danger" icon={Ban} hint="Zavrni zahtevo z vpisanim razlogom">
-            Zavrni
-          </Button>
-        </div>
       </form>
     </Modal>
   );

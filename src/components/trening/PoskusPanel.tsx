@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, type CSSProperties } from "react";
+import { useRef, useState } from "react";
 import { Boxes, ClipboardCopy, FileText, Files, Lightbulb, ListOrdered, Maximize2, Star, VideoOff } from "lucide-react";
 import {
   AI_JI,
@@ -14,6 +14,7 @@ import {
   type Poskus,
 } from "@/lib/trening";
 import { Button } from "@/components/ui/Button";
+import { SortTh, useRazvrscanje } from "@/components/ui/Tabela";
 import { FilterIzbira } from "@/components/ui/Filtri";
 import { ErrorText, WarningText } from "@/components/ui/Notice";
 import { useToast } from "@/components/ui/Toast";
@@ -315,30 +316,48 @@ function Koraki({ koraki, napaka }: { koraki: Korak[] | null; napaka: string | n
 
 const mm = (n: number) => n.toLocaleString("sl-SI", { maximumFractionDigits: 1 });
 
+const dimenzije = (d: Del) => {
+  const b = d.bbox_mm;
+  return b?.min?.length === 3 && b?.max?.length === 3 ? b.max.map((v, j) => v - b.min[j]) : null;
+};
+
 function Deli({ deli, napaka }: { deli: Del[] | null; napaka: string | null }) {
+  const sort = useRazvrscanje<Del, "id" | "ime" | "kolicina" | "tip" | "velikost">({
+    id: (d) => d.id,
+    ime: (d) => d.ime,
+    kolicina: (d) => d.kolicina ?? 1,
+    tip: (d) => d.tip,
+    velikost: (d) => {
+      const m = dimenzije(d);
+      return m ? Math.max(...m) : null;
+    },
+  });
   if (napaka) return <ErrorText>deli.json: {napaka}</ErrorText>;
   if (!deli?.length) return <p className="text-sm text-ink-500">Ni delov (deli.json).</p>;
   return (
-    <div className="max-h-[32rem] overflow-auto rounded-lg" style={{ "--fp-thead-top": "0px" } as CSSProperties}>
-      <table className="w-full min-w-[28rem] text-sm">
+    <div className="max-h-[32rem] overflow-auto pb-3 [--fp-thead-top:0px]">
+      <table className="w-full min-w-[30rem] text-sm">
         <thead className="fp-thead">
           <tr>
-            <th className="px-3 py-2">ID</th>
-            <th className="px-3 py-2">Ime</th>
-            <th className="px-3 py-2">Tip</th>
-            <th className="px-3 py-2 text-right">Velikost (mm)</th>
+            <SortTh sort={sort} kljuc="id">ID</SortTh>
+            <SortTh sort={sort} kljuc="ime">Ime</SortTh>
+            <SortTh sort={sort} kljuc="kolicina" desno>Kos</SortTh>
+            <SortTh sort={sort} kljuc="tip">Tip</SortTh>
+            <SortTh sort={sort} kljuc="velikost" desno hint="Razvrsti po največji izmeri dela">
+              Velikost (mm)
+            </SortTh>
           </tr>
         </thead>
         <tbody>
-          {deli.map((d, i) => {
-            const b = d.bbox_mm;
-            const dim = b?.min?.length === 3 && b?.max?.length === 3 ? b.max.map((v, j) => mm(v - b.min[j])).join(" × ") : "";
+          {sort.razvrsti(deli).map((d, i) => {
+            const m = dimenzije(d);
             return (
-              <tr key={`${d.id}-${i}`} className="border-b border-ink-100" title={d.opomba}>
-                <td className="px-3 py-1.5 font-mono text-xs">{d.id}</td>
-                <td className="px-3 py-1.5">{d.ime ?? ""}{d.kolicina && d.kolicina > 1 ? ` × ${d.kolicina}` : ""}</td>
-                <td className="px-3 py-1.5 text-ink-600">{d.tip ?? ""}</td>
-                <td className="px-3 py-1.5 text-right text-ink-600">{dim}</td>
+              <tr key={`${d.id}-${i}`} className="border-b border-ink-100 hover:bg-ink-50" title={d.opomba}>
+                <td className="whitespace-nowrap px-2 py-1.5 font-mono text-xs">{d.id}</td>
+                <td className="px-2 py-1.5">{d.ime ?? ""}</td>
+                <td className="px-2 py-1.5 text-right tabular-nums">{d.kolicina ?? 1}</td>
+                <td className="px-2 py-1.5 text-ink-600">{d.tip ?? ""}</td>
+                <td className="whitespace-nowrap px-2 py-1.5 text-right tabular-nums text-ink-600">{m ? m.map(mm).join(" × ") : ""}</td>
               </tr>
             );
           })}

@@ -6,7 +6,7 @@ import { AI_JI, naslednjiPoskus, type AiKoda, type Ocena, type TreningIndeks } f
 import { naloziIndeks, objaviTrening, shraniOceno, urlDatoteke } from "@/lib/treningApi";
 import { naloziObjavljeno, zadnjaObjava } from "@/lib/treningObjava";
 import { Button } from "@/components/ui/Button";
-import { FilterIzbira } from "@/components/ui/Filtri";
+import { FilterIzbira, FilterPolje, FilterVrstica } from "@/components/ui/Filtri";
 import { ErrorText, Loading, WarningText } from "@/components/ui/Notice";
 import { Zavihki } from "@/components/ui/Zavihki";
 import { useToast } from "@/components/ui/Toast";
@@ -132,23 +132,12 @@ export function Trening() {
         <div className="min-w-[min(100%,18rem)] flex-1">
           <h1 className="text-xl font-bold text-ink-900">AI trening</h1>
           <p className="text-sm text-ink-500">
-            Isti 3D model obdelata Astra in Fable, tukaj primerjaš video navodila in jih oceniš.
-          </p>
-          <p className="mt-1 text-xs text-ink-500">
-            {lokalno ? "Lokalni strežnik - podatki z diska. " : "Produkcija - objavljena kopija, samo pregled. "}
+            Isti 3D model obdelata Astra in Fable, tukaj primerjaš video navodila in jih oceniš.{" "}
+            {lokalno ? "Lokalni strežnik - podatki z diska." : "Produkcija - objavljena kopija, samo pregled."}{" "}
             {objavljeno ? `Zadnja objava: ${datumCas(objavljeno)}.` : lokalno ? "Na produkciji še ni objave." : ""}
           </p>
         </div>
         <div className="flex flex-wrap items-end gap-2">
-          {pogled === "primerjava" && modeli.length > 0 && model && (
-            <FilterIzbira
-              label="Model"
-              value={model.id}
-              options={modeli.map((m) => ({ value: m.id, label: podatki(m.info)?.naziv ?? m.id }))}
-              onChange={izberiModel}
-              hint="Izberi 3D model za primerjavo"
-            />
-          )}
           <Button
             variant="sync"
             icon={RefreshCw}
@@ -173,139 +162,157 @@ export function Trening() {
 
       {napaka && <ErrorText>{napaka}</ErrorText>}
 
-      <details className="fp-card group p-3 sm:p-4">
-        <summary
-          className="flex cursor-pointer list-none items-center gap-2 text-sm font-bold text-ink-800"
-          title="Pokaži skupno znanje, ki ga bereta oba AI-ja"
-        >
-          <BookOpen className="h-4 w-4 text-fines-500" aria-hidden />
-          Skupno znanje (trening/ZNANJE.md)
-          <ChevronDown className="ml-auto h-4 w-4 text-ink-500 transition-transform group-open:rotate-180" aria-hidden />
-        </summary>
-        <p className="mt-2 text-xs text-ink-500">
-          Potrjena pravila in spoznanja, ki jih bereta oba AI-ja. Predloge AI-ja najdeš v zavihku Spoznanja; dobre prenesi v ZNANJE.md.
-        </p>
-        <div className="mt-2">{indeks.znanje ? <Besedilo>{indeks.znanje}</Besedilo> : <WarningText>Manjka trening/ZNANJE.md.</WarningText>}</div>
-      </details>
-
-      <Zavihki<Pogled>
-        label="Pogled AI treninga"
-        value={pogled}
-        onChange={setPogled}
-        zavihki={[
-          { koda: "pregled", label: "Pregled", icon: LayoutList, hint: "Pregled vseh treningov in poskusov" },
-          { koda: "primerjava", label: "Primerjava", icon: SplitSquareHorizontal, hint: "Primerjaj poskusa Astre in Fable" },
-        ]}
-      />
-
-      {pogled === "pregled" ? (
-        <TreningPregled
-          modeli={modeli}
-          onOdpri={(id) => {
-            izberiModel(id);
-            setPogled("primerjava");
-          }}
+      <div>
+        <Zavihki<Pogled>
+          label="Pogled AI treninga"
+          value={pogled}
+          onChange={setPogled}
+          zavihki={[
+            { koda: "pregled", label: "Pregled", icon: LayoutList, hint: "Pregled vseh treningov in poskusov" },
+            { koda: "primerjava", label: "Primerjava", icon: SplitSquareHorizontal, hint: "Primerjaj poskusa Astre in Fable" },
+          ]}
         />
-      ) : !model ? (
-        <div className="fp-card mx-auto flex max-w-xl flex-col items-center gap-3 p-8 text-center">
-          <FileBox className="h-12 w-12 text-fines-500" aria-hidden />
-          <h2 className="text-xl font-bold text-ink-900">Še ni modelov</h2>
-          {lokalno ? (
+        <div className="fp-card flex min-w-0 flex-col gap-4 rounded-tl-none p-3 sm:p-4">
+          {pogled === "pregled" ? (
             <>
-              <p className="text-sm text-ink-600">
-                Dodaj prvi 3D model (STEP). Aplikacija ustvari mapo <code className="rounded bg-ink-100 px-1">trening/modeli/&lt;id&gt;/</code>,
-                nato v oba chata prilepiš prompt in primerjaš rezultate.
-              </p>
-              <Button variant="success" icon={Plus} hint="Dodaj nov 3D model za trening" onClick={() => setNovModel(true)}>
-                Nov model
-              </Button>
+              <TreningPregled
+                modeli={modeli}
+                onOdpri={(id) => {
+                  izberiModel(id);
+                  setPogled("primerjava");
+                }}
+              />
+              <details className="group rounded-lg border border-ink-200 p-3">
+                <summary
+                  className="flex cursor-pointer list-none items-center gap-2 text-sm font-bold text-ink-800"
+                  title="Pokaži skupno znanje, ki ga bereta oba AI-ja"
+                >
+                  <BookOpen className="h-4 w-4 text-fines-500" aria-hidden />
+                  Skupno znanje (trening/ZNANJE.md)
+                  <ChevronDown className="ml-auto h-4 w-4 text-ink-500 transition-transform group-open:rotate-180" aria-hidden />
+                </summary>
+                <p className="mt-2 text-xs text-ink-500">
+                  Potrjena pravila in spoznanja, ki jih bereta oba AI-ja. Predloge AI-ja najdeš v zavihku Spoznanja; dobre prenesi v ZNANJE.md.
+                </p>
+                <div className="mt-2">
+                  {indeks.znanje ? <Besedilo>{indeks.znanje}</Besedilo> : <WarningText>Manjka trening/ZNANJE.md.</WarningText>}
+                </div>
+              </details>
             </>
-          ) : (
-            <p className="text-sm text-ink-600">Na produkcijo še ni objavljen noben trening.</p>
-          )}
-        </div>
-      ) : (
-        <>
-          <section className="fp-card flex flex-wrap gap-4 p-3 sm:p-4" aria-label="Model">
-            <div className="min-w-[min(100%,18rem)] flex-1">
-              <h2 className="text-lg font-bold text-ink-900">{info?.naziv ?? model.id}</h2>
-              <p className="font-mono text-xs text-ink-400" title="Mapa modela v projektu">
-                trening/modeli/{model.id}/
-                {info?.zahteva_id ? ` · zahteva #${info.zahteva_id}` : ""}
-                {info?.oddal ? ` · oddal ${info.oddal}` : ""}
-              </p>
-              {info?.opis && <p className="mt-2 whitespace-pre-wrap text-sm text-ink-700">{info.opis}</p>}
-              {napakaJson(model.info) && <ErrorText className="mt-2">model.json: {napakaJson(model.info)}</ErrorText>}
-            </div>
-            {lokalno && (
-            <div className="min-w-[min(100%,16rem)]">
-              <div className="mb-1 flex items-center gap-1 text-xs font-semibold text-ink-600">
-                <FolderOpen className="h-4 w-4" aria-hidden /> Vhod (vhod/)
-              </div>
-              {model.vhod.length === 0 ? (
-                <WarningText>V vhod/ ni STEP datoteke - dodaj jo v mapo.</WarningText>
+          ) : !model ? (
+            <div className="flex flex-col items-center gap-3 p-8 text-center">
+              <FileBox className="h-12 w-12 text-fines-500" aria-hidden />
+              <h2 className="text-xl font-bold text-ink-900">Še ni modelov</h2>
+              {lokalno ? (
+                <>
+                  <p className="text-sm text-ink-600">
+                    Dodaj prvi 3D model (STEP). Aplikacija ustvari mapo{" "}
+                    <code className="rounded bg-ink-100 px-1">trening/modeli/&lt;id&gt;/</code>, nato v oba chata prilepiš prompt in
+                    primerjaš rezultate.
+                  </p>
+                  <Button variant="success" icon={Plus} hint="Dodaj nov 3D model za trening" onClick={() => setNovModel(true)}>
+                    Nov model
+                  </Button>
+                </>
               ) : (
-                <ul className="flex flex-col gap-1 text-sm">
-                  {model.vhod.map((d) => (
-                    <li key={d.pot} className="flex justify-between gap-3" title={`Spremenjeno ${datumCas(d.cas)}`}>
-                      <span className="min-w-0 truncate font-mono text-xs">{d.ime}</span>
-                      <span className="shrink-0 text-xs text-ink-500">{velikost(d.velikost)}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-sm text-ink-600">Na produkcijo še ni objavljen noben trening.</p>
               )}
             </div>
-            )}
-          </section>
+          ) : (
+            <>
+              <FilterVrstica>
+                <FilterIzbira
+                  label="Model"
+                  value={model.id}
+                  options={modeli.map((m) => ({ value: m.id, label: podatki(m.info)?.naziv ?? m.id }))}
+                  onChange={izberiModel}
+                  hint="Izberi 3D model za primerjavo"
+                />
+                {obaVidea && (
+                  <FilterPolje label="Videa">
+                    <div className="flex flex-wrap gap-2">
+                      <Button icon={Play} hint="Predvajaj oba videa hkrati od začetka" onClick={predvajajOba}>
+                        Predvajaj oba
+                      </Button>
+                      <Button variant="neutral" icon={Pause} hint="Ustavi predvajanje obeh videov" onClick={ustaviOba}>
+                        Ustavi oba
+                      </Button>
+                    </div>
+                  </FilterPolje>
+                )}
+              </FilterVrstica>
 
-          {obaVidea && (
-            <div className="flex flex-wrap items-end gap-2">
-              <Button icon={Play} hint="Predvajaj oba videa hkrati od začetka" onClick={predvajajOba}>
-                Predvajaj oba
-              </Button>
-              <Button variant="neutral" icon={Pause} hint="Ustavi predvajanje obeh videov" onClick={ustaviOba}>
-                Ustavi oba
-              </Button>
-            </div>
-          )}
+              <section className="flex flex-wrap gap-4 rounded-lg border border-ink-200 bg-ink-50 p-3" aria-label="Model">
+                <div className="min-w-[min(100%,18rem)] flex-1">
+                  <h2 className="text-lg font-bold text-ink-900">{info?.naziv ?? model.id}</h2>
+                  <p className="font-mono text-xs text-ink-400" title="Mapa modela v projektu">
+                    trening/modeli/{model.id}/
+                    {info?.zahteva_id ? ` · zahteva #${info.zahteva_id}` : ""}
+                    {info?.oddal ? ` · oddal ${info.oddal}` : ""}
+                  </p>
+                  {info?.opis && <p className="mt-2 whitespace-pre-wrap text-sm text-ink-700">{info.opis}</p>}
+                  {napakaJson(model.info) && <ErrorText className="mt-2">model.json: {napakaJson(model.info)}</ErrorText>}
+                </div>
+                {lokalno && (
+                  <div className="min-w-[min(100%,16rem)]">
+                    <div className="mb-1 flex items-center gap-1 text-xs font-semibold text-ink-600">
+                      <FolderOpen className="h-4 w-4" aria-hidden /> Vhod (vhod/)
+                    </div>
+                    {model.vhod.length === 0 ? (
+                      <WarningText>V vhod/ ni STEP datoteke - dodaj jo v mapo.</WarningText>
+                    ) : (
+                      <ul className="flex flex-col gap-1 text-sm">
+                        {model.vhod.map((d) => (
+                          <li key={d.pot} className="flex justify-between gap-3" title={`Spremenjeno ${datumCas(d.cas)}`}>
+                            <span className="min-w-0 truncate font-mono text-xs">{d.ime}</span>
+                            <span className="shrink-0 text-xs tabular-nums text-ink-500">{velikost(d.velikost)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                )}
+              </section>
 
-          <div className="grid items-start gap-4 lg:grid-cols-2">
-            {AI_JI.map((a) => (
-              <PoskusPanel
-                key={`${model.id}/${a.koda}`}
-                ai={a.koda}
-                modelId={model.id}
-                poskusi={model.poskusi[a.koda]}
-                izbran={izbran(a.koda)}
-                onIzberi={(p) => {
-                  setIzbira((s) => ({ ...s, [a.koda]: p }));
-                  setDolzine((s) => ({ ...s, [a.koda]: null }));
-                }}
-                naslednji={naslednjiPoskus(model.poskusi[a.koda])}
-                ocena={ocenaZa(model.ocene, a.koda, izbran(a.koda))}
-                onShraniOceno={(o) => oceni(a.koda, o)}
-                url={url.f}
-                samoBranje={!lokalno}
-                videoRef={(el) => {
-                  videi.current[a.koda] = el;
-                }}
-                onDolzina={(s) => setDolzine((d) => ({ ...d, [a.koda]: s }))}
+              <div className="grid items-start gap-4 lg:grid-cols-2">
+                {AI_JI.map((a) => (
+                  <PoskusPanel
+                    key={`${model.id}/${a.koda}`}
+                    ai={a.koda}
+                    modelId={model.id}
+                    poskusi={model.poskusi[a.koda]}
+                    izbran={izbran(a.koda)}
+                    onIzberi={(p) => {
+                      setIzbira((s) => ({ ...s, [a.koda]: p }));
+                      setDolzine((s) => ({ ...s, [a.koda]: null }));
+                    }}
+                    naslednji={naslednjiPoskus(model.poskusi[a.koda])}
+                    ocena={ocenaZa(model.ocene, a.koda, izbran(a.koda))}
+                    onShraniOceno={(o) => oceni(a.koda, o)}
+                    url={url.f}
+                    samoBranje={!lokalno}
+                    videoRef={(el) => {
+                      videi.current[a.koda] = el;
+                    }}
+                    onDolzina={(s) => setDolzine((d) => ({ ...d, [a.koda]: s }))}
+                  />
+                ))}
+              </div>
+
+              <PrimerjavaTabela
+                strani={
+                  Object.fromEntries(
+                    AI_JI.map((a) => [
+                      a.koda,
+                      { poskus: izbran(a.koda), ocena: ocenaZa(model.ocene, a.koda, izbran(a.koda)), dolzina: dolzine[a.koda] ?? null },
+                    ]),
+                  ) as Record<AiKoda, { poskus: ReturnType<typeof izbran>; ocena: Ocena | undefined; dolzina: number | null }>
+                }
               />
-            ))}
-          </div>
-
-          <PrimerjavaTabela
-            strani={
-              Object.fromEntries(
-                AI_JI.map((a) => [
-                  a.koda,
-                  { poskus: izbran(a.koda), ocena: ocenaZa(model.ocene, a.koda, izbran(a.koda)), dolzina: dolzine[a.koda] ?? null },
-                ]),
-              ) as Record<AiKoda, { poskus: ReturnType<typeof izbran>; ocena: Ocena | undefined; dolzina: number | null }>
-            }
-          />
-        </>
-      )}
+            </>
+          )}
+        </div>
+      </div>
 
       <NovModelOkno
         open={novModel}

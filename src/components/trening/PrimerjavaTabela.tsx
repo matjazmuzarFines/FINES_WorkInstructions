@@ -1,7 +1,8 @@
 "use client";
 
-import { Fragment, type CSSProperties, type ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 import { AI_JI, KRITERIJI, kljucOcene, povprecje, type AiKoda, type Ocena, type Poskus } from "@/lib/trening";
+import { TabelaOkvir } from "@/components/ui/Tabela";
 import { BARVA_AI, STATUS, casGeneracije, podatki, trajanje } from "./oblika";
 
 type Stran = { poskus: Poskus | null; ocena: Ocena | undefined; dolzina: number | null };
@@ -31,10 +32,10 @@ export function PrimerjavaTabela({ strani }: { strani: Record<AiKoda, Stran> }) 
   const ocena = (s: Stran, k: (typeof KRITERIJI)[number]["koda"]) => s.ocena?.kriteriji?.[k] ?? null;
 
   return (
-    <section className="fp-card p-3 sm:p-4" aria-label="Primerjava">
+    <section aria-label="Primerjava">
       <h2 className="text-lg font-bold text-ink-900">Primerjava</h2>
-      <p className="mb-3 text-sm text-ink-500">Izbrana poskusa drug ob drugem. Zeleno je boljša ocena.</p>
-      <div className="overflow-x-auto rounded-lg" style={{ "--fp-thead-top": "0px" } as CSSProperties}>
+      <p className="mb-3 text-sm text-ink-500">Izbrana poskusa drug ob drugem (kriteriji v vrsticah, zato brez razvrščanja). Zeleno je boljša ocena.</p>
+      <TabelaOkvir>
         <table className="w-full min-w-[26rem] text-sm">
           <thead className="fp-thead">
             <tr>
@@ -45,7 +46,7 @@ export function PrimerjavaTabela({ strani }: { strani: Record<AiKoda, Stran> }) 
                     {BARVA_AI[a.koda].crka}
                   </span>
                   {a.naziv}
-                  {strani[a.koda].poskus && <span className="ml-1 font-normal normal-case text-ink-300">· {strani[a.koda].poskus!.poskus}</span>}
+                  {strani[a.koda].poskus && <span className="ml-1 font-normal text-ink-300">· {strani[a.koda].poskus!.poskus}</span>}
                 </th>
               ))}
             </tr>
@@ -77,7 +78,7 @@ export function PrimerjavaTabela({ strani }: { strani: Record<AiKoda, Stran> }) 
             )}
           </tbody>
         </table>
-      </div>
+      </TabelaOkvir>
     </section>
   );
 }
