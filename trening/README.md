@@ -5,7 +5,7 @@ Igrišče za primerjavo dveh AI-jev pri izdelavi 3D video navodil za montažo iz
 - **GPT-6.2 Astra** - chat v Codexu (VS Code),
 - **Claude Fable 5.2** - chat v Claude Code (VS Code).
 
-Oba dobita isti model in isto nalogo ([NALOGA_ZA_AI.md](NALOGA_ZA_AI.md)), vsak piše v svojo mapo. Rezultate primerjaš in oceniš v aplikaciji: **Admin → Orodja → AI trening** (`/admin/trening`).
+Oba dobita isti model in isto nalogo ([NALOGA_ZA_AI.md](NALOGA_ZA_AI.md)), vsak piše v svojo mapo. Rezultate primerjaš in oceniš v aplikaciji: **Admin → AI orodja → AI trening** (`/admin/trening`). Zavihek *Pregled* pokaže vse treninge (poskusi, ocene, čas), zavihek *Primerjava* posamezen model.
 
 API ključi niso potrebni: AI-ja delata v VS Code, aplikacija samo bere mapo z diska.
 
@@ -17,6 +17,14 @@ API ključi niso potrebni: AI-ja delata v VS Code, aplikacija samo bere mapo z d
 4. Primerjaj videa (*Predvajaj oba*), poročila, korake in dele. Vsak poskus oceni v zavihku **Ocena**.
 5. Za izboljšavo kopiraj *Prompt 02*. AI prebere svojo oceno in komentar, poišče vzrok težav in boljšo rešitev ter naredi nov poskus. Diagnozo zapiše na začetek poročila.
 6. **Znanje**: v zavihku *Spoznanja* AI predlaga, kaj se je naučil. Dobre predloge prenesi v [ZNANJE.md](ZNANJE.md) (ročno ali prosi enega od AI-jev). Ta datoteka velja za oba AI-ja in vse naslednje poskuse, zato vanjo sodijo tudi tvoja pravila (npr. kateri sklopi so polizdelki).
+
+## Produkcija (objava)
+
+Na Vercelu mape `trening/` ni. Gumb **Objavi na produkcijo** (samo lokalno) prenese modele, poskuse (meta, deli, koraki, poročila, spoznanja), ocene in ZNANJE.md v tabele `wi_ai_*`, video in predogled pa v zaseben bucket `wi_trening` (največ 50 MB na datoteko). Produkcija jih pokaže samo za branje, prijavljenim adminom. Že naloženih datotek z isto velikostjo ponovna objava ne nalaga znova.
+
+## Zahteve razvojnikov (AI video creation)
+
+Razvojnik na strani **AI orodja → AI video creation** naloži STEP, kosovnico, slike in pojasnila (bucket `wi_ai_vhod`). Značka v meniju pokaže čakajoče zahteve. Lokalno gumb **V trening** ustvari model `modeli/z<id>-<naziv>/` (datoteke v `vhod/step`, `vhod/kosovnica`, `vhod/slike`, pojasnila v `model.json`), nato naprej po zgornjem postopku.
 
 ## Struktura
 

@@ -12,6 +12,7 @@ import {
   type Poskus,
   type TreningIndeks,
   type TreningModel,
+  kljucOcene,
 } from "./trening";
 
 export const KOREN = path.join(process.cwd(), "trening");
@@ -195,7 +196,7 @@ export async function beriIndeks(): Promise<TreningIndeks> {
   if (razlog) return { omogoceno: false, razlog };
   if (!(await obstaja(KOREN))) return { omogoceno: false, razlog: "Mapa trening/ ne obstaja v projektu." };
   const modeli = await Promise.all((await mape(MODELI)).map(beriModel));
-  return { omogoceno: true, koren: KOREN, modeli, znanje: await beriBesedilo(path.join(KOREN, "ZNANJE.md")) };
+  return { omogoceno: true, vir: "lokalno", koren: KOREN, modeli, znanje: await beriBesedilo(path.join(KOREN, "ZNANJE.md")) };
 }
 
 // ---------- pisanje (samo aplikacija: ocene in nov model) ----------
@@ -213,15 +214,181 @@ export async function shraniOceno(model: string, kljuc: string, ocena: Ocena) {
   await zapisiJson(p, { ...(obstojece?.podatki ?? {}), [kljuc]: ocena });
 }
 
-/** Ustvari mapo modela (model.json, vhod/, astra/, fable/) in shrani naložene datoteke v vhod/. */
-export async function ustvariModel(id: string, info: ModelInfo, vhod: File[]) {
+export type VhodnaDatoteka = { ime: string; podatki: Buffer };
+
+/** Ustvari mapo modela (model.json, vhod/, astra/, fable/) in shrani datoteke v vhod/ (podmape dovoljene, npr. slike/x.png). */
+export async function ustvariModel(id: string, info: ModelInfo, vhod: VhodnaDatoteka[]) {
   const m = path.join(MODELI, id);
   if (await obstaja(m)) throw new Error(`Model "${id}" že obstaja.`);
   await fs.mkdir(path.join(m, "vhod"), { recursive: true });
   for (const { koda } of AI_JI) await fs.mkdir(path.join(m, koda), { recursive: true });
   await zapisiJson(path.join(m, "model.json"), info);
   for (const f of vhod) {
-    const ime = path.basename(f.name).replace(/[^\w.\- ]/g, "_");
-    await fs.writeFile(path.join(m, "vhod", ime), Buffer.from(await f.arrayBuffer()));
+    const deli = f.ime.split("/").map((d) => path.basename(d).replace(/[^\w.\- ]/g, "_")).filter((d) => d && d !== "." && d !== "..");
+    if (!deli.length) continue;
+    const cilj = path.join(m, "vhod", ...deli);
+    await fs.mkdir(path.dirname(cilj), { recursive: true });
+    await fs.writeFile(cilj, f.podatki);
   }
+}
+
+export async function izFile(f: File): Promise<VhodnaDatoteka> {
+  return { ime: f.name, podatki: Buffer.from(await f.arrayBuffer()) };
+}
+
+// ---------- Supabase z žetonom prijavljenega admina (RLS velja kot v brskalniku) ----------
+
+export function zetonIz(req: Request): string | null {
+  const glava = req.headers.get("authorization");
+  return glava?.startsWith("Bearer ") ? glava.slice(7) : new URL(req.url).searchParams.get("t");
+}
+
+function sbZa(zeton: string) {
+  if (!URL_SB || !KLJUC_SB) throw new Error("Supabase ni nastavljen (.env.local).");
+  return createClient(URL_SB, KLJUC_SB, {
+    global: { headers: { Authorization: `Bearer ${zeton}` } },
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+}
+
+const BUCKET_TRENING = "wi_trening";
+const BUCKET_VHOD = "wi_ai_vhod";
+
+function sbNapaka(e: { message: string; code?: string } | null, kje: string) {
+  if (!e) return;
+  if (e.code === "42P01" || /does not exist|schema cache/i.test(e.message)) {
+    throw new Error("Tabele AI orodij ne obstajajo - zaženi migracijo supabase/migrations/004_ai_orodja.sql.");
+  }
+  throw new Error(`${kje}: ${e.message}`);
+}
+
+const VRSTA_VSEBINE: Record<string, string> = { ".mp4": "video/mp4", ".webm": "video/webm", ".png": "image/png", ".jpg": "image/jpeg" };
+
+/**
+ * Objavi trening na produkcijo: modeli, poskusi (meta, deli, koraki, poročila, ocene) in ZNANJE.md v tabele,
+ * video in predogled v bucket wi_trening. Datoteke, ki so že naložene z isto velikostjo, preskoči.
+ */
+export async function objaviNaProdukcijo(zeton: string) {
+  const sb = sbZa(zeton);
+  const indeks = await beriIndeks();
+  if (!indeks.omogoceno) throw new Error(indeks.razlog);
+  const zdaj = new Date().toISOString();
+  let poskusov = 0;
+  let datotek = 0;
+
+  for (const m of indeks.modeli) {
+    const info = m.info && "podatki" in m.info ? m.info.podatki : null;
+    const { data: vrstica, error } = await sb
+      .from("wi_ai_modeli")
+      .upsert(
+        { koda: m.id, naziv: info?.naziv ?? m.id, opis: info?.opis ?? null, zahteva_id: info?.zahteva_id ?? null, objavljeno_at: zdaj, visible: true },
+        { onConflict: "koda" },
+      )
+      .select("id")
+      .single();
+    sbNapaka(error, `Model ${m.id}`);
+    const modelId = (vrstica as { id: number }).id;
+
+    for (const { koda } of AI_JI) {
+      for (const p of m.poskusi[koda]) {
+        const mapa = `${m.id}/${koda}/${p.poskus}`;
+        const { data: obstojece } = await sb.storage.from(BUCKET_TRENING).list(mapa);
+        const velikosti = new Map((obstojece ?? []).map((o) => [o.name, Number(o.metadata?.size ?? -1)]));
+
+        const nalozi = async (pot: string | null): Promise<{ pot: string; velikost: number } | null> => {
+          if (!pot) return null;
+          const abs = varnaPot(pot);
+          if (!abs) return null;
+          const ime = path.basename(abs);
+          const cilj = `${mapa}/${ime}`;
+          const st = await fs.stat(abs);
+          if (velikosti.get(ime) !== st.size) {
+            const { error: e } = await sb.storage
+              .from(BUCKET_TRENING)
+              .upload(cilj, await fs.readFile(abs), {
+                upsert: true,
+                contentType: VRSTA_VSEBINE[path.extname(ime).toLowerCase()] ?? "application/octet-stream",
+              });
+            sbNapaka(e, `Nalaganje ${cilj}`);
+            datotek++;
+          }
+          return { pot: cilj, velikost: st.size };
+        };
+
+        const video = await nalozi(p.video);
+        const predogled = await nalozi(p.predogled);
+        const { error: e2 } = await sb.from("wi_ai_poskusi").upsert(
+          {
+            model_id: modelId,
+            ai: koda,
+            poskus: p.poskus,
+            meta: p.meta && "podatki" in p.meta ? p.meta.podatki : null,
+            deli: p.deli && "podatki" in p.deli ? p.deli.podatki : null,
+            koraki: p.koraki && "podatki" in p.koraki ? p.koraki.podatki : null,
+            porocilo: p.porocilo,
+            spoznanja: p.spoznanja,
+            video: video?.pot ?? null,
+            video_velikost: video?.velikost ?? null,
+            predogled: predogled?.pot ?? null,
+            ocena: m.ocene[kljucOcene(koda, p.poskus)] ?? null,
+            visible: true,
+          },
+          { onConflict: "model_id,ai,poskus" },
+        );
+        sbNapaka(e2, `Poskus ${mapa}`);
+        poskusov++;
+      }
+    }
+  }
+
+  const { error: e3 } = await sb.from("wi_ai_besedila").upsert({ kljuc: "znanje", vsebina: indeks.znanje, visible: true }, { onConflict: "kljuc" });
+  sbNapaka(e3, "ZNANJE.md");
+  return { modelov: indeks.modeli.length, poskusov, datotek };
+}
+
+/** "Omara FBM-40S" -> "omara-fbm-40s" */
+const vSlug = (s: string) =>
+  s
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 50);
+
+/**
+ * Zahteva AI video creation -> nov model v treningu: prenese datoteke iz bucketa wi_ai_vhod v
+ * trening/modeli/<koda>/vhod/ (step/, kosovnica/, slike/), opis gre v model.json, zahteva dobi status v_delu.
+ */
+export async function zahtevaVTrening(zeton: string, zahtevaId: number) {
+  const sb = sbZa(zeton);
+  const { data: z, error } = await sb.from("wi_ai_zahteve").select("id, naziv, opis, oddal, model_koda").eq("id", zahtevaId).single();
+  sbNapaka(error, "Zahteva");
+  const zahteva = z as { id: number; naziv: string; opis: string | null; oddal: string; model_koda: string | null };
+  if (zahteva.model_koda) throw new Error(`Zahteva je že v treningu (model ${zahteva.model_koda}).`);
+
+  const { data: dat, error: e2 } = await sb
+    .from("wi_ai_zahteve_datoteke")
+    .select("vrsta, ime, pot")
+    .eq("zahteva_id", zahtevaId)
+    .eq("visible", true);
+  sbNapaka(e2, "Datoteke zahteve");
+
+  const MAPA: Record<string, string> = { step: "step", kosovnica: "kosovnica", slika: "slike", drugo: "drugo" };
+  const vhod: VhodnaDatoteka[] = [];
+  for (const d of (dat ?? []) as { vrsta: string; ime: string; pot: string }[]) {
+    const { data: blob, error: e3 } = await sb.storage.from(BUCKET_VHOD).download(d.pot);
+    sbNapaka(e3, `Prenos ${d.ime}`);
+    vhod.push({ ime: `${MAPA[d.vrsta] ?? "drugo"}/${d.ime}`, podatki: Buffer.from(await blob!.arrayBuffer()) });
+  }
+
+  const koda = `z${zahteva.id}-${vSlug(zahteva.naziv) || "model"}`;
+  await ustvariModel(
+    koda,
+    { naziv: zahteva.naziv, opis: zahteva.opis ?? "", ustvarjen: new Date().toISOString(), zahteva_id: zahteva.id, oddal: zahteva.oddal },
+    vhod,
+  );
+  const { error: e4 } = await sb.from("wi_ai_zahteve").update({ status: "v_delu", model_koda: koda }).eq("id", zahtevaId);
+  sbNapaka(e4, "Status zahteve");
+  return { koda, datotek: vhod.length };
 }

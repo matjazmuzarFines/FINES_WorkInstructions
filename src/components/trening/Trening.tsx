@@ -1,28 +1,37 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { BookOpen, ChevronDown, FileBox, FolderOpen, Pause, Play, Plus, RefreshCw } from "lucide-react";
+import { BookOpen, ChevronDown, CloudUpload, FileBox, FolderOpen, LayoutList, Pause, Play, Plus, RefreshCw, SplitSquareHorizontal } from "lucide-react";
 import { AI_JI, naslednjiPoskus, type AiKoda, type Ocena, type TreningIndeks } from "@/lib/trening";
-import { naloziIndeks, shraniOceno } from "@/lib/treningApi";
+import { naloziIndeks, objaviTrening, shraniOceno, urlDatoteke } from "@/lib/treningApi";
+import { naloziObjavljeno, zadnjaObjava } from "@/lib/treningObjava";
 import { Button } from "@/components/ui/Button";
 import { FilterIzbira } from "@/components/ui/Filtri";
 import { ErrorText, Loading, WarningText } from "@/components/ui/Notice";
+import { Zavihki } from "@/components/ui/Zavihki";
 import { useToast } from "@/components/ui/Toast";
 import { NovModelOkno } from "./NovModelOkno";
 import { Besedilo, PoskusPanel } from "./PoskusPanel";
 import { PrimerjavaTabela, ocenaZa } from "./PrimerjavaTabela";
+import { TreningPregled } from "./TreningPregled";
 import { datumCas, napakaJson, podatki, velikost } from "./oblika";
 
 const SPOMIN_MODEL = "wi-trening-model";
 
+type Pogled = "pregled" | "primerjava";
+
 /**
  * AI trening (training ground): isti 3D model obdelata GPT-6.2 Astra in Claude Fable 5.2
  * (vsak v svojem chatu v VS Code), tukaj pa izhode primerjaš drug ob drugem in jih oceniš.
+ * Lokalno: vse akcije (prompt, ocena, nov model, objava). Produkcija: objavljena kopija, samo pregled.
  */
 export function Trening() {
   const notify = useToast();
   const [indeks, setIndeks] = useState<TreningIndeks | null>(null);
-  const [zeton, setZeton] = useState("");
+  const [url, setUrl] = useState<{ f: (pot: string) => string }>({ f: () => "" });
+  const [objavljeno, setObjavljeno] = useState<string | null>(null);
+  const [objavljam, setObjavljam] = useState(false);
+  const [pogled, setPogled] = useState<Pogled>("pregled");
   const [napaka, setNapaka] = useState<string | null>(null);
   const [osvezujem, setOsvezujem] = useState(false);
   const [modelId, setModelId] = useState<string | null>(null);
@@ -35,8 +44,16 @@ export function Trening() {
     setOsvezujem(true);
     try {
       const r = await naloziIndeks();
-      setIndeks(r.indeks);
-      setZeton(r.zeton);
+      if (!r.indeks.omogoceno && r.indeks.produkcija) {
+        const o = await naloziObjavljeno();
+        setIndeks(o.indeks);
+        setUrl({ f: (pot) => o.urlji[pot] ?? "" });
+        setObjavljeno(o.objavljeno);
+      } else {
+        setIndeks(r.indeks);
+        setUrl({ f: (pot) => urlDatoteke(pot, r.zeton) });
+        setObjavljeno(await zadnjaObjava());
+      }
       setNapaka(null);
     } catch (e) {
       setNapaka((e as Error).message);
@@ -55,6 +72,7 @@ export function Trening() {
   if (!indeks.omogoceno) return <WarningText>{indeks.razlog}</WarningText>;
 
   const modeli = indeks.modeli;
+  const lokalno = indeks.vir === "lokalno";
   const shranjen = typeof window !== "undefined" ? window.localStorage.getItem(SPOMIN_MODEL) : null;
   const model =
     modeli.find((m) => m.id === modelId) ?? modeli.find((m) => m.id === shranjen) ?? modeli[modeli.length - 1] ?? null;
@@ -64,6 +82,19 @@ export function Trening() {
     setModelId(id);
     setIzbira({});
     setDolzine({});
+  }
+
+  async function objavi() {
+    setObjavljam(true);
+    try {
+      const r = await objaviTrening();
+      notify("success", `Objavljeno: ${r.modelov} modelov, ${r.poskusov} poskusov, naloženih datotek ${r.datotek}.`);
+      setObjavljeno(await zadnjaObjava());
+    } catch (e) {
+      notify("error", (e as Error).message);
+    } finally {
+      setObjavljam(false);
+    }
   }
 
   const izbran = (ai: AiKoda) => {
@@ -103,9 +134,13 @@ export function Trening() {
           <p className="text-sm text-ink-500">
             Isti 3D model obdelata Astra in Fable, tukaj primerjaš video navodila in jih oceniš.
           </p>
+          <p className="mt-1 text-xs text-ink-500">
+            {lokalno ? "Lokalni strežnik - podatki z diska. " : "Produkcija - objavljena kopija, samo pregled. "}
+            {objavljeno ? `Zadnja objava: ${datumCas(objavljeno)}.` : lokalno ? "Na produkciji še ni objave." : ""}
+          </p>
         </div>
         <div className="flex flex-wrap items-end gap-2">
-          {modeli.length > 0 && model && (
+          {pogled === "primerjava" && modeli.length > 0 && model && (
             <FilterIzbira
               label="Model"
               value={model.id}
@@ -114,12 +149,25 @@ export function Trening() {
               hint="Izberi 3D model za primerjavo"
             />
           )}
-          <Button variant="sync" icon={RefreshCw} hint="Ponovno preberi mapo trening z diska" onClick={nalozi} disabled={osvezujem}>
+          <Button
+            variant="sync"
+            icon={RefreshCw}
+            hint={lokalno ? "Ponovno preberi mapo trening z diska" : "Ponovno preberi objavljene podatke"}
+            onClick={nalozi}
+            disabled={osvezujem}
+          >
             {osvezujem ? "Berem ..." : "Osveži"}
           </Button>
-          <Button variant="success" icon={Plus} hint="Dodaj nov 3D model za trening" onClick={() => setNovModel(true)}>
-            Nov model
-          </Button>
+          {lokalno && (
+            <>
+              <Button variant="sync" icon={CloudUpload} hint="Objavi treninge in videe na produkcijo" onClick={objavi} disabled={objavljam}>
+                {objavljam ? "Objavljam ..." : "Objavi na produkcijo"}
+              </Button>
+              <Button variant="success" icon={Plus} hint="Dodaj nov 3D model za trening" onClick={() => setNovModel(true)}>
+                Nov model
+              </Button>
+            </>
+          )}
         </div>
       </div>
 
@@ -140,17 +188,41 @@ export function Trening() {
         <div className="mt-2">{indeks.znanje ? <Besedilo>{indeks.znanje}</Besedilo> : <WarningText>Manjka trening/ZNANJE.md.</WarningText>}</div>
       </details>
 
-      {!model ? (
+      <Zavihki<Pogled>
+        label="Pogled AI treninga"
+        value={pogled}
+        onChange={setPogled}
+        zavihki={[
+          { koda: "pregled", label: "Pregled", icon: LayoutList, hint: "Pregled vseh treningov in poskusov" },
+          { koda: "primerjava", label: "Primerjava", icon: SplitSquareHorizontal, hint: "Primerjaj poskusa Astre in Fable" },
+        ]}
+      />
+
+      {pogled === "pregled" ? (
+        <TreningPregled
+          modeli={modeli}
+          onOdpri={(id) => {
+            izberiModel(id);
+            setPogled("primerjava");
+          }}
+        />
+      ) : !model ? (
         <div className="fp-card mx-auto flex max-w-xl flex-col items-center gap-3 p-8 text-center">
           <FileBox className="h-12 w-12 text-fines-500" aria-hidden />
           <h2 className="text-xl font-bold text-ink-900">Še ni modelov</h2>
-          <p className="text-sm text-ink-600">
-            Dodaj prvi 3D model (STEP). Aplikacija ustvari mapo <code className="rounded bg-ink-100 px-1">trening/modeli/&lt;id&gt;/</code>,
-            nato v oba chata prilepiš prompt in primerjaš rezultate.
-          </p>
-          <Button variant="success" icon={Plus} hint="Dodaj nov 3D model za trening" onClick={() => setNovModel(true)}>
-            Nov model
-          </Button>
+          {lokalno ? (
+            <>
+              <p className="text-sm text-ink-600">
+                Dodaj prvi 3D model (STEP). Aplikacija ustvari mapo <code className="rounded bg-ink-100 px-1">trening/modeli/&lt;id&gt;/</code>,
+                nato v oba chata prilepiš prompt in primerjaš rezultate.
+              </p>
+              <Button variant="success" icon={Plus} hint="Dodaj nov 3D model za trening" onClick={() => setNovModel(true)}>
+                Nov model
+              </Button>
+            </>
+          ) : (
+            <p className="text-sm text-ink-600">Na produkcijo še ni objavljen noben trening.</p>
+          )}
         </div>
       ) : (
         <>
@@ -159,10 +231,13 @@ export function Trening() {
               <h2 className="text-lg font-bold text-ink-900">{info?.naziv ?? model.id}</h2>
               <p className="font-mono text-xs text-ink-400" title="Mapa modela v projektu">
                 trening/modeli/{model.id}/
+                {info?.zahteva_id ? ` · zahteva #${info.zahteva_id}` : ""}
+                {info?.oddal ? ` · oddal ${info.oddal}` : ""}
               </p>
               {info?.opis && <p className="mt-2 whitespace-pre-wrap text-sm text-ink-700">{info.opis}</p>}
               {napakaJson(model.info) && <ErrorText className="mt-2">model.json: {napakaJson(model.info)}</ErrorText>}
             </div>
+            {lokalno && (
             <div className="min-w-[min(100%,16rem)]">
               <div className="mb-1 flex items-center gap-1 text-xs font-semibold text-ink-600">
                 <FolderOpen className="h-4 w-4" aria-hidden /> Vhod (vhod/)
@@ -180,6 +255,7 @@ export function Trening() {
                 </ul>
               )}
             </div>
+            )}
           </section>
 
           {obaVidea && (
@@ -208,7 +284,8 @@ export function Trening() {
                 naslednji={naslednjiPoskus(model.poskusi[a.koda])}
                 ocena={ocenaZa(model.ocene, a.koda, izbran(a.koda))}
                 onShraniOceno={(o) => oceni(a.koda, o)}
-                zeton={zeton}
+                url={url.f}
+                samoBranje={!lokalno}
                 videoRef={(el) => {
                   videi.current[a.koda] = el;
                 }}

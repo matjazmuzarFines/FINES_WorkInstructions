@@ -88,6 +88,9 @@ export type ModelInfo = {
   opis?: string;
   opombe?: string;
   ustvarjen?: string;
+  /** Model je nastal iz zahteve AI video creation. */
+  zahteva_id?: number;
+  oddal?: string;
 };
 
 export type TreningModel = {
@@ -99,8 +102,15 @@ export type TreningModel = {
 };
 
 export type TreningIndeks =
-  | { omogoceno: true; koren: string; modeli: TreningModel[]; znanje: string | null }
-  | { omogoceno: false; razlog: string };
+  | {
+      omogoceno: true;
+      /** lokalno = mapa trening/ na disku (vse akcije), objava = kopija v Supabase (produkcija, samo branje). */
+      vir: "lokalno" | "objava";
+      koren?: string;
+      modeli: TreningModel[];
+      znanje: string | null;
+    }
+  | { omogoceno: false; razlog: string; produkcija?: boolean };
 
 /** Naslednja številka poskusa ("01", "02" ...). */
 export function naslednjiPoskus(poskusi: Poskus[]): string {

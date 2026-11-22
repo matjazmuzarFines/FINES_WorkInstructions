@@ -77,7 +77,7 @@ export function napaka(e: { message: string; code?: string } | null): void {
     throw new Error("Ni dovoljenja - potreben je admin dostop.");
   }
   if (e.code === "42P01" || /does not exist|schema cache/i.test(e.message)) {
-    throw new Error("Tabela v bazi ne obstaja - zaženi migracijo supabase/migrations/001_schema.sql.");
+    throw new Error("Tabela v bazi ne obstaja - zaženi manjkajoče migracije iz supabase/migrations/ (npr. 004_ai_orodja.sql).");
   }
   throw new Error(e.message);
 }

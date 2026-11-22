@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { BookOpenText, Factory, Link2, ListChecks, Settings, ShieldCheck, Sparkles } from "lucide-react";
+import { BookOpenText, Clapperboard, Factory, Link2, ListChecks, Settings, ShieldCheck, Sparkles } from "lucide-react";
 
 export type NavItem = {
   label: string;
@@ -7,6 +7,8 @@ export type NavItem = {
   icon: LucideIcon;
   hint: string;
   kmalu?: boolean;
+  /** Značka s številom (npr. čakajoče AI zahteve). */
+  znacka?: "ai-zahteve";
   /** Podmeni: klik na postavko ga razpre (postavka sama ni stran). */
   children?: NavItem[];
 };
@@ -48,13 +50,20 @@ export const NAV: NavGroup[] = [
     icon: ShieldCheck,
     sekcije: [
       {
-        label: "Orodja",
+        label: "AI orodja",
         items: [
           {
             label: "AI trening",
             href: "/admin/trening",
             icon: Sparkles,
-            hint: "Primerjaj AI video navodila Astra in Fable",
+            hint: "Pregled in primerjava AI treningov",
+          },
+          {
+            label: "AI video creation",
+            href: "/admin/ai-video",
+            icon: Clapperboard,
+            hint: "Oddaj datoteke za AI video navodila",
+            znacka: "ai-zahteve",
           },
         ],
       },

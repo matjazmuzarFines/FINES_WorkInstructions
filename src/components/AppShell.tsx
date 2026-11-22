@@ -16,6 +16,7 @@ import { Loading } from "./ui/Notice";
 import { Prijava } from "./Prijava";
 import { ToastProvider } from "./ui/Toast";
 import { AdminProvider, useAdmin } from "./Admin";
+import { useStevecZahtev } from "@/lib/aiZahteve";
 
 export function AppShell({ children }: { children: ReactNode }) {
   const seja = useSeja();
@@ -254,7 +255,7 @@ function NavSekcijaBlok({ sekcija, current, pathname }: { sekcija: NavSekcija; c
           item.children ? (
             <NavPodmeni key={item.href} item={item} pathname={pathname} />
           ) : (
-            <NavLink key={item.href} href={item.href} active={current === item} icon={item.icon} hint={item.hint} kmalu={item.kmalu}>
+            <NavLink key={item.href} href={item.href} active={current === item} icon={item.icon} hint={item.hint} kmalu={item.kmalu} znacka={item.znacka}>
               {item.label}
             </NavLink>
           ),
@@ -305,6 +306,7 @@ function NavLink({
   icon: Icon,
   hint,
   kmalu,
+  znacka,
   majhen,
   children,
 }: {
@@ -313,6 +315,7 @@ function NavLink({
   icon: typeof Home;
   hint: string;
   kmalu?: boolean;
+  znacka?: NavItem["znacka"];
   majhen?: boolean;
   children: ReactNode;
 }) {
@@ -333,6 +336,21 @@ function NavLink({
       {kmalu && (
         <span className="rounded-full bg-ink-600 px-2 py-0.5 text-[10px] font-bold uppercase text-ink-200">kmalu</span>
       )}
+      {znacka === "ai-zahteve" && <ZnackaZahtev />}
     </Link>
+  );
+}
+
+/** Število oddanih AI zahtev, ki čakajo na obdelavo (meni je viden samo adminu). */
+function ZnackaZahtev() {
+  const n = useStevecZahtev(true);
+  if (!n) return null;
+  return (
+    <span
+      className="min-w-5 rounded-full bg-warn-400 px-1.5 py-0.5 text-center text-[11px] font-bold leading-none text-ink-900"
+      title={`${n} AI zahtev čaka na obdelavo`}
+    >
+      {n}
+    </span>
   );
 }

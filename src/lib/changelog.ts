@@ -9,6 +9,18 @@ export type ChangelogEntry = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    verzija: "5.01",
+    datum: "22. 11. 2026",
+    spremembe: [
+      "Meni Admin → Orodja se zdaj imenuje AI orodja.",
+      "AI trening: nov zavihek Pregled (prva stran) - tabela vseh treningov s številom poskusov Astre in Fable, najboljšo oceno, časom generiranja in vrstico Skupaj; klik na model odpre primerjavo.",
+      "AI trening na produkciji: gumb Objavi na produkcijo (samo lokalno) prenese poskuse, ocene, poročila, ZNANJE.md, videe in predoglede v Supabase; produkcija jih prikaže samo za branje (brez prompta in ocenjevanja).",
+      "Nova stran AI orodja → AI video creation: razvojnik naloži STEP, kosovnico (Excel), slike in pojasnila; zahteva gre v vrsto.",
+      "Značka v meniju pokaže število zahtev, ki čakajo na obdelavo. Lokalno gumb V trening prenese datoteke zahteve v nov model AI treninga; zahtevo lahko označiš kot končano ali zavrneš z razlogom.",
+      "Poraba API kreditov: vrstica porabe mesečnih kreditov (privzeto 100 $), obnova in število žetonov; generiranje prek API je pripravljeno, a še izklopljeno.",
+    ],
+  },
+  {
     verzija: "4.03",
     datum: "21. 11. 2026",
     spremembe: [

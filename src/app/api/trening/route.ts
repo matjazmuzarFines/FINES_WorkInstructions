@@ -1,10 +1,25 @@
 import { KRITERIJI, jeAiKoda, kljucOcene, type Ocena } from "@/lib/trening";
-import { beriIndeks, jeVarnoIme, preveriAdmina, razlogIzklopa, shraniOceno, ustvariModel } from "@/lib/treningStreznik";
+import {
+  beriIndeks,
+  izFile,
+  jeVarnoIme,
+  objaviNaProdukcijo,
+  preveriAdmina,
+  razlogIzklopa,
+  shraniOceno,
+  ustvariModel,
+  zahtevaVTrening,
+  zetonIz,
+} from "@/lib/treningStreznik";
 
-/** Indeks training grounda: modeli, vhodne datoteke, poskusi obeh AI-jev in ocene. */
+/**
+ * Indeks training grounda: modeli, vhodne datoteke, poskusi obeh AI-jev in ocene.
+ * ?stanje=1 vrne samo, ali gre za lokalni strežnik (za prikaz lokalnih akcij).
+ */
 export async function GET(req: Request) {
   const izklop = razlogIzklopa();
-  if (izklop) return Response.json({ omogoceno: false, razlog: izklop });
+  if (izklop) return Response.json({ omogoceno: false, razlog: izklop, produkcija: true, lokalno: false });
+  if (new URL(req.url).searchParams.get("stanje")) return Response.json({ lokalno: true });
   const ni = await preveriAdmina(req);
   if (ni) return Response.json({ napaka: ni }, { status: 401 });
   return Response.json(await beriIndeks(), { headers: { "Cache-Control": "no-store" } });
@@ -13,6 +28,8 @@ export async function GET(req: Request) {
 /**
  * POST JSON { akcija: "ocena", model, ai, poskus, ocena } - shrani oceno poskusa v ocene.json.
  * POST multipart (akcija=model, id, naziv, opis, datoteke) - ustvari nov model.
+ * POST JSON { akcija: "objavi" } - objavi trening na produkcijo (Supabase).
+ * POST JSON { akcija: "zahteva", id } - zahtevo AI video creation prenese v nov model treninga.
  */
 export async function POST(req: Request) {
   const izklop = razlogIzklopa();
@@ -31,12 +48,17 @@ export async function POST(req: Request) {
       await ustvariModel(
         id,
         { naziv, opis: String(f.get("opis") ?? "").trim(), ustvarjen: new Date().toISOString() },
-        datoteke,
+        await Promise.all(datoteke.map(izFile)),
       );
       return Response.json({ ok: true, id });
     }
 
-    const b = (await req.json()) as { akcija?: string; model?: string; ai?: string; poskus?: string; ocena?: Ocena };
+    const b = (await req.json()) as { akcija?: string; model?: string; ai?: string; poskus?: string; ocena?: Ocena; id?: number };
+    if (b.akcija === "objavi") return Response.json({ ok: true, ...(await objaviNaProdukcijo(zetonIz(req)!)) });
+    if (b.akcija === "zahteva") {
+      if (!Number.isInteger(b.id)) return napaka("Neveljavna zahteva.");
+      return Response.json({ ok: true, ...(await zahtevaVTrening(zetonIz(req)!, b.id!)) });
+    }
     if (b.akcija !== "ocena") return napaka("Neznana akcija.");
     if (!b.model || !jeVarnoIme(b.model) || !jeAiKoda(b.ai) || !b.poskus || !jeVarnoIme(b.poskus)) {
       return napaka("Neveljaven model / AI / poskus.");

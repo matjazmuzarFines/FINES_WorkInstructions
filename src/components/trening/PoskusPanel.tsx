@@ -4,6 +4,8 @@ import { useRef, useState, type CSSProperties } from "react";
 import { Boxes, ClipboardCopy, FileText, Files, Lightbulb, ListOrdered, Maximize2, Star, VideoOff } from "lucide-react";
 import {
   AI_JI,
+  KRITERIJI,
+  povprecje,
   zagonskiPrompt,
   type AiKoda,
   type Del,
@@ -11,7 +13,6 @@ import {
   type Ocena,
   type Poskus,
 } from "@/lib/trening";
-import { urlDatoteke } from "@/lib/treningApi";
 import { Button } from "@/components/ui/Button";
 import { FilterIzbira } from "@/components/ui/Filtri";
 import { ErrorText, WarningText } from "@/components/ui/Notice";
@@ -33,7 +34,8 @@ export function PoskusPanel({
   naslednji,
   ocena,
   onShraniOceno,
-  zeton,
+  url,
+  samoBranje = false,
   videoRef,
   onDolzina,
 }: {
@@ -45,7 +47,10 @@ export function PoskusPanel({
   naslednji: string;
   ocena: Ocena | undefined;
   onShraniOceno: (o: Ocena) => Promise<void>;
-  zeton: string;
+  /** URL datoteke poskusa (lokalni API ali podpisan URL iz Supabase). */
+  url: (pot: string) => string;
+  /** Produkcija: samo pregled (brez prompta in ocenjevanja). */
+  samoBranje?: boolean;
   videoRef: (el: HTMLVideoElement | null) => void;
   onDolzina: (s: number | null) => void;
 }) {
@@ -93,9 +98,11 @@ export function PoskusPanel({
             hint={`Izberi poskus ${info.naziv}`}
           />
         )}
+        {!samoBranje && (
         <Button icon={ClipboardCopy} hint={`Kopiraj prompt za poskus ${naslednji}`} onClick={kopirajPrompt}>
           Prompt {naslednji}
         </Button>
+        )}
       </div>
 
       {!izbran ? (
@@ -126,8 +133,8 @@ export function PoskusPanel({
                   video.current = el;
                   videoRef(el);
                 }}
-                src={urlDatoteke(izbran.video, zeton)}
-                poster={izbran.predogled ? urlDatoteke(izbran.predogled, zeton) : undefined}
+                src={url(izbran.video)}
+                poster={izbran.predogled ? url(izbran.predogled) : undefined}
                 controls
                 playsInline
                 preload="metadata"
@@ -138,7 +145,7 @@ export function PoskusPanel({
             ) : izbran.predogled ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={urlDatoteke(izbran.predogled, zeton)}
+                src={url(izbran.predogled)}
                 alt={`Predogled - ${info.naziv}`}
                 title="Predogled (videa še ni)"
                 className="aspect-video w-full object-contain"
@@ -151,7 +158,7 @@ export function PoskusPanel({
             )}
           </div>
 
-          {izbran.video && (
+          {izbran.video && !samoBranje && (
             <div className="flex flex-wrap items-center justify-between gap-2">
               <p className="text-xs text-ink-500">Celozaslonski prikaz: gumb v predvajalniku ali dvoklik na video.</p>
               <Button variant="neutral" icon={Maximize2} hint="Odpri velik video z obrazcem za oceno" onClick={odpriOkno}>
@@ -177,7 +184,7 @@ export function PoskusPanel({
                 { koda: "koraki", label: "Koraki", icon: ListOrdered, hint: "Pokaži montažne korake iz koraki.json" },
                 { koda: "deli", label: "Deli", icon: Boxes, hint: "Pokaži inventuro delov iz deli.json" },
                 { koda: "datoteke", label: "Datoteke", icon: Files, hint: "Pokaži vse datoteke poskusa" },
-                { koda: "ocena", label: "Ocena", icon: Star, hint: "Oceni ta poskus po kriterijih" },
+                { koda: "ocena", label: "Ocena", icon: Star, hint: samoBranje ? "Pokaži oceno tega poskusa" : "Oceni ta poskus po kriterijih" },
               ]}
             />
             <div className="rounded-b-xl rounded-tr-xl border border-ink-200 bg-white p-3">
@@ -190,18 +197,19 @@ export function PoskusPanel({
                 ))}
               {pogled === "koraki" && <Koraki napaka={napakaJson(izbran.koraki)} koraki={koraki} />}
               {pogled === "deli" && <Deli napaka={napakaJson(izbran.deli)} deli={deli} />}
-              {pogled === "datoteke" && <SeznamDatotek poskus={izbran} zeton={zeton} />}
-              {pogled === "ocena" && <OcenaObrazec key={`${ai}/${izbran.poskus}/${ocena?.datum ?? ""}`} ocena={ocena} onShrani={onShraniOceno} />}
+              {pogled === "datoteke" && <SeznamDatotek poskus={izbran} url={url} />}
+              {pogled === "ocena" && samoBranje && <OcenaPrikaz ocena={ocena} />}
+              {pogled === "ocena" && !samoBranje && <OcenaObrazec key={`${ai}/${izbran.poskus}/${ocena?.datum ?? ""}`} ocena={ocena} onShrani={onShraniOceno} />}
             </div>
           </div>
         </>
       )}
-      {izbran?.video && okno !== null && (
+      {izbran?.video && okno !== null && !samoBranje && (
         <OcenaVideoOkno
           open
           naslov={`Ocena - ${info.naziv}, poskus ${izbran.poskus}`}
-          video={urlDatoteke(izbran.video, zeton)}
-          poster={izbran.predogled ? urlDatoteke(izbran.predogled, zeton) : undefined}
+          video={url(izbran.video)}
+          poster={izbran.predogled ? url(izbran.predogled) : undefined}
           zacetek={okno}
           ocena={ocena}
           onShrani={onShraniOceno}
@@ -340,14 +348,14 @@ function Deli({ deli, napaka }: { deli: Del[] | null; napaka: string | null }) {
   );
 }
 
-function SeznamDatotek({ poskus, zeton }: { poskus: Poskus; zeton: string }) {
+function SeznamDatotek({ poskus, url }: { poskus: Poskus; url: (pot: string) => string }) {
   if (!poskus.datoteke.length) return <p className="text-sm text-ink-500">Mapa je prazna.</p>;
   return (
     <ul className="max-h-[32rem] divide-y divide-ink-100 overflow-auto text-sm">
       {poskus.datoteke.map((d) => (
         <li key={d.pot} className="flex items-center justify-between gap-3 py-1.5">
           <a
-            href={urlDatoteke(d.pot, zeton)}
+            href={url(d.pot)}
             target="_blank"
             rel="noreferrer"
             title={`Odpri ${d.ime} v novem zavihku`}
@@ -359,5 +367,35 @@ function SeznamDatotek({ poskus, zeton }: { poskus: Poskus; zeton: string }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+/** Ocena samo za branje (produkcija). */
+function OcenaPrikaz({ ocena }: { ocena: Ocena | undefined }) {
+  if (!ocena || !Object.keys(ocena.kriteriji ?? {}).length) return <p className="text-sm text-ink-500">Poskus še ni ocenjen.</p>;
+  const p = povprecje(ocena);
+  return (
+    <div className="flex flex-col gap-3 text-sm">
+      <table className="w-full">
+        <tbody>
+          {KRITERIJI.map((k) => (
+            <tr key={k.koda} className="border-b border-ink-100">
+              <th scope="row" className="py-1.5 pr-3 text-left font-semibold text-ink-700" title={k.opis}>
+                {k.naziv}
+              </th>
+              <td className="py-1.5 text-right font-bold text-ink-900">{ocena.kriteriji[k.koda] ?? "-"}</td>
+            </tr>
+          ))}
+          <tr>
+            <th scope="row" className="py-1.5 pr-3 text-left font-bold text-ink-900">
+              Povprečje
+            </th>
+            <td className="py-1.5 text-right font-bold text-fines-600">{p === null ? "-" : p.toFixed(1).replace(".", ",")}</td>
+          </tr>
+        </tbody>
+      </table>
+      {ocena.komentar && <p className="whitespace-pre-wrap rounded-lg bg-ink-50 p-3 text-ink-700">{ocena.komentar}</p>}
+      {ocena.datum && <p className="text-xs text-ink-500">Ocenjeno {datumCas(ocena.datum)}</p>}
+    </div>
   );
 }
