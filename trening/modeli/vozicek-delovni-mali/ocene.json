@@ -20,5 +20,29 @@
     },
     "komentar": "Postopek je dober. razumel si kako se naredi montaža.\n\nkakovost komponent bi jaz izboljšal. po step modelu boš moral predpostaviti kaj je les, železo, pločevina, vijačni material ipd. in posledično izboljšati in narediti vse komponente čim bolj kakovostnega izgleda.\n\nPri vsaki animaciji mora biti zraven tudi način kako se to zmontira. recimo v primeru vozička je potrebno dodati pri vsaki animaciji tudi na kakšen način komponente pašejo skupaj. plošča se položi v okvir kar je ok. ampak kolesa se privijačijo, cevi, okvirji in ostala pločevina se vari skupaj. to montaža potrebuje v navodilih.\n\nčrke in številke P.... niso najbolj jasne. sicer je spodaj levo v kotu objasnitev ampak mogoče bi lahko bila bolj jasna, da ker po tvoji logiki mora oseba gledati animacijo, si zapomniti številko in gledati potem spodaj v kot kateri element je to. kar ni smiselno za montažo. ",
     "datum": "2026-11-21T20:54:09.381Z"
+  },
+  "astra/02": {
+    "kriteriji": {
+      "uvoz": 4,
+      "sledljivost": 4,
+      "animacija": 4,
+      "razumljivost": 2,
+      "postenost": 4,
+      "ponovljivost": 4
+    },
+    "komentar": "Celoten video nima fokusa samo na montaži za kar je narejen ta video. Recimo glava videa zavzame veliko prostora in prav tako noga ter leva sekcija z pisnimi navodili. Cilj video navodil je da ni pisnih navodil oz. da je že z posnetka logično kaj in kako mora oseba narediti. 1 oseba ne more sproti gledati posnetka in brati razen če bi bil ta daljši in počasnejši. Vse nepomembne informacije in prostor potem odvzemajo fokus na video. In še vse omenjeno zgoraj ni v stilu podjetja FINES. Če že je potrebno dodati pravilen logo.\n\nSame animacije vijačenja, varjenja in v prihodnosti še katerega postopka je potrebno narediti visoko kakovostno oz. animirati, da je bolj jasno za kaj se gre.\n\npotem na prikazu 02/12 obe animacije za zgornji del nista jasno pokazani in izgleda da sta napačni. mogoče nista iz prave smeri prikazani saj izgleda kot da se črta varjenja vleče pa skritem robu.\n\nštevilke P... niso za operaterja ni časnje zato je bolj smiselno da bi kos poimenovali dejansko tako ko je.\n\nPri prikazu 04/12 se kaže vijačenje kolesa ampak se koles preporsto ne vidi zato vijačenje ni logično. Smiselno je, da ko se posnetek gradi da uporablja vse do tega trenutka pokazane elemente.\n\nPri 07 in 08 in 09 in 10 si je težko predstavljati kje lokacijsko je ta postopek montaže ker je preveč približan samemu postopku.\n\nPrav tako bi jaz iz posnetka odstranil kakršen koli tekst ki operaterju ne pomaga in mu ne pomeni nič Recimo 28 delov / 92 teles. ne vem ali so lahko operater s tem pomaga.",
+    "datum": "2026-11-22T15:32:16.917Z"
+  },
+  "fable/02": {
+    "kriteriji": {
+      "uvoz": 5,
+      "sledljivost": 5,
+      "animacija": 5,
+      "razumljivost": 5,
+      "postenost": 5,
+      "ponovljivost": 5
+    },
+    "komentar": "To je odličen posnetek.\n\nedina težava je naslednja:\n[1:03] [1:21] [1:41] [2:00]. Pri omenjenih časih se vijači vijake ali dela postopek in se zaradi pogleda ne vidi kam točno vijaki pridejo ali kje in kako se postopek montaže naredi. Razmišljal sem, da je potrebno zaradi takšnih trenutkov mogoče obrniti kamero ali narediti pogled še iz druge trani, da se vidi kot nekakšen usmerjen in približan pogled iz smeri iz katere se vidi kako je postopek montaže narejen.\n\nPotem sama glava in noga sta mogoče prevelike in nista v stilu FINESa. Posnetek je namenjen izključno operaterju in njega ne zanimajo podatki o stepu. recimo tudi stavek \"vijačnega materiala ni v step\" in predpostavke ter druge razlage niso potrebne.\n\nše ena stvar se pojavlja, da kvadratki beli z opisom in razlago prekrivajo gibanja in pomembne elemente. Jaz bi jih dal malce na stran, da ne prekrivajo pomembnih elementov.\n\nV samem kvadratku so tudi omenjeni trecimo MTC in P.. kode ki operaterju ne povejo nič pametnega. tudi oblikovanje samega kvadratka bi lahko bilo malo boljše. text je čisto ob zgornjem robu in je malo skoraj prekrivanja",
+    "datum": "2026-11-22T15:49:45.803Z"
   }
 }

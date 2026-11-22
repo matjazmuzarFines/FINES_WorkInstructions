@@ -1,0 +1,2311 @@
+{
+  "vir": "MLU123069200 _1_.stp",
+  "enote": "mm",
+  "koordinate": "STEP sestav, Z gor",
+  "deli": [
+    {
+      "id": "P001",
+      "ime": "Cev  30x30x1,5 l=993",
+      "sifra": "MTC324009902",
+      "pojavitev": "MTC324009902:1",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324009902:1",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -496.5,
+          -248.0,
+          570.0
+        ],
+        "max": [
+          496.5,
+          -218.0,
+          600.0
+        ]
+      },
+      "velikost_mm": [
+        993.0,
+        30.0,
+        30.0
+      ],
+      "teziste_mm": [
+        -0.0,
+        -233.279,
+        585.039
+      ],
+      "volumen_mm3": 161366.0,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 1.5 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 1.267,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0,
+          -233.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          585.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P002",
+      "ime": "Cev  30x30x1,5 l=993",
+      "sifra": "MTC324009902",
+      "pojavitev": "MTC324009902:2",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324009902:2",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -496.5,
+          218.0,
+          570.0
+        ],
+        "max": [
+          496.5,
+          248.0,
+          600.0
+        ]
+      },
+      "velikost_mm": [
+        993.0,
+        30.0,
+        30.0
+      ],
+      "teziste_mm": [
+        0.0,
+        233.279,
+        585.039
+      ],
+      "volumen_mm3": 161366.0,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 1.5 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 1.267,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          233.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          585.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P003",
+      "ime": "CEv 30x30x1,5 l=493",
+      "sifra": "MTC324010002",
+      "pojavitev": "MTC324010002:1",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324010002:1",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          468.0,
+          -246.5,
+          570.0
+        ],
+        "max": [
+          498.0,
+          246.5,
+          600.0
+        ]
+      },
+      "velikost_mm": [
+        30.0,
+        493.0,
+        30.0
+      ],
+      "teziste_mm": [
+        483.577,
+        -0.0,
+        585.0
+      ],
+      "volumen_mm3": 78056.0,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 1.5 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 0.613,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          483.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          585.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P004",
+      "ime": "CEv 30x30x1,5 l=493",
+      "sifra": "MTC324010002",
+      "pojavitev": "MTC324010002:2",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324010002:2",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -498.0,
+          -246.5,
+          570.0
+        ],
+        "max": [
+          -468.0,
+          246.5,
+          600.0
+        ]
+      },
+      "velikost_mm": [
+        30.0,
+        493.0,
+        30.0
+      ],
+      "teziste_mm": [
+        -483.577,
+        0.0,
+        585.0
+      ],
+      "volumen_mm3": 78056.0,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 1.5 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 0.613,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          -483.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          585.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P005",
+      "ime": "CEv 30x30x1,5 l=730",
+      "sifra": "MTC324010102",
+      "pojavitev": "MTC324010102:1",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324010102:1",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          468.0,
+          218.0,
+          600.0
+        ],
+        "max": [
+          498.0,
+          248.0,
+          1330.0
+        ]
+      },
+      "velikost_mm": [
+        30.0,
+        30.0,
+        730.0
+      ],
+      "teziste_mm": [
+        483.0,
+        233.0,
+        963.064
+      ],
+      "volumen_mm3": 120084.0,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 1.5 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 0.943,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          483.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          233.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          965.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P006",
+      "ime": "CEv 30x30x1,5 l=730",
+      "sifra": "MTC324010102",
+      "pojavitev": "MTC324010102:2",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324010102:2",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          468.0,
+          -248.0,
+          600.0
+        ],
+        "max": [
+          498.0,
+          -218.0,
+          1330.0
+        ]
+      },
+      "velikost_mm": [
+        30.0,
+        30.0,
+        730.0
+      ],
+      "teziste_mm": [
+        483.0,
+        -233.0,
+        963.064
+      ],
+      "volumen_mm3": 120084.0,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 1.5 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 0.943,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          483.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -233.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          965.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P007",
+      "ime": "CEv 30x30x1,5 l=730",
+      "sifra": "MTC324010102",
+      "pojavitev": "MTC324010102:3",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324010102:3",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -498.0,
+          218.0,
+          600.0
+        ],
+        "max": [
+          -468.0,
+          248.0,
+          1330.0
+        ]
+      },
+      "velikost_mm": [
+        30.0,
+        30.0,
+        730.0
+      ],
+      "teziste_mm": [
+        -483.0,
+        233.0,
+        963.064
+      ],
+      "volumen_mm3": 120084.0,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 1.5 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 0.943,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -483.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          233.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          965.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P008",
+      "ime": "CEv 30x30x1,5 l=730",
+      "sifra": "MTC324010102",
+      "pojavitev": "MTC324010102:4",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324010102:4",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -498.0,
+          -248.0,
+          600.0
+        ],
+        "max": [
+          -468.0,
+          -218.0,
+          1330.0
+        ]
+      },
+      "velikost_mm": [
+        30.0,
+        30.0,
+        730.0
+      ],
+      "teziste_mm": [
+        -483.0,
+        -233.0,
+        963.064
+      ],
+      "volumen_mm3": 120084.0,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 1.5 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 0.943,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -483.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -233.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          965.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P009",
+      "ime": "Povezava zgornja 1000",
+      "sifra": "MTC324010201",
+      "pojavitev": "MTC324010201:1",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324010201:1",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -500.0,
+          220.0,
+          1314.0
+        ],
+        "max": [
+          500.0,
+          253.0,
+          1349.0
+        ]
+      },
+      "velikost_mm": [
+        1000.0,
+        33.0,
+        35.0
+      ],
+      "teziste_mm": [
+        0.0,
+        236.875,
+        1331.706
+      ],
+      "volumen_mm3": 174303.9,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 2.8 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 1.368,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          1.0,
+          0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          253.0
+        ],
+        [
+          -0.0,
+          0.0,
+          -1.0,
+          1330.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P010",
+      "ime": "Povezava zgornja 1000",
+      "sifra": "MTC324010201",
+      "pojavitev": "MTC324010201:2",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324010201:2",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -500.0,
+          -253.0,
+          1314.0
+        ],
+        "max": [
+          500.0,
+          -220.0,
+          1349.0
+        ]
+      },
+      "velikost_mm": [
+        1000.0,
+        33.0,
+        35.0
+      ],
+      "teziste_mm": [
+        -0.0,
+        -236.875,
+        1331.706
+      ],
+      "volumen_mm3": 174303.9,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 2.8 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 1.368,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0,
+          -253.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          1330.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P011",
+      "ime": "Povezava zgornja 500",
+      "sifra": "MTC324010301",
+      "pojavitev": "MTC324010301:1",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324010301:1",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          470.0,
+          -250.0,
+          1314.0
+        ],
+        "max": [
+          503.0,
+          250.0,
+          1349.0
+        ]
+      },
+      "velikost_mm": [
+        33.0,
+        500.0,
+        35.0
+      ],
+      "teziste_mm": [
+        487.16,
+        0.0,
+        1331.831
+      ],
+      "volumen_mm3": 84700.6,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 2.8 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 0.665,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          0.0,
+          -1.0,
+          0.0,
+          503.0
+        ],
+        [
+          -1.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -1.0,
+          1330.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P012",
+      "ime": "Povezava zgornja 500",
+      "sifra": "MTC324010301",
+      "pojavitev": "MTC324010301:2",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324010301:2",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -503.0,
+          -250.0,
+          1314.0
+        ],
+        "max": [
+          -470.0,
+          250.0,
+          1349.0
+        ]
+      },
+      "velikost_mm": [
+        33.0,
+        500.0,
+        35.0
+      ],
+      "teziste_mm": [
+        -487.16,
+        -0.0,
+        1331.831
+      ],
+      "volumen_mm3": 84700.6,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 2.8 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 0.665,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          -0.0,
+          1.0,
+          -0.0,
+          -503.0
+        ],
+        [
+          1.0,
+          0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -1.0,
+          1330.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P013",
+      "ime": "Plošča kolesa",
+      "sifra": "MTC324039900",
+      "pojavitev": "MTC324039900:1",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324039900:1",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -498.0,
+          -248.0,
+          567.0
+        ],
+        "max": [
+          -390.0,
+          -160.0,
+          570.0
+        ]
+      },
+      "velikost_mm": [
+        108.0,
+        88.0,
+        3.0
+      ],
+      "teziste_mm": [
+        -444.0,
+        -204.0,
+        568.5
+      ],
+      "volumen_mm3": 28419.3,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 2.8 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 0.223,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -444.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -204.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          567.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P014",
+      "ime": "Plošča kolesa",
+      "sifra": "MTC324039900",
+      "pojavitev": "MTC324039900:2",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324039900:2",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -498.0,
+          160.0,
+          567.0
+        ],
+        "max": [
+          -390.0,
+          248.0,
+          570.0
+        ]
+      },
+      "velikost_mm": [
+        108.0,
+        88.0,
+        3.0
+      ],
+      "teziste_mm": [
+        -444.0,
+        204.0,
+        568.5
+      ],
+      "volumen_mm3": 28419.3,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 2.8 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 0.223,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -444.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          204.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          567.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P015",
+      "ime": "Plošča kolesa",
+      "sifra": "MTC324039900",
+      "pojavitev": "MTC324039900:3",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324039900:3",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          390.0,
+          -248.0,
+          567.0
+        ],
+        "max": [
+          498.0,
+          -160.0,
+          570.0
+        ]
+      },
+      "velikost_mm": [
+        108.0,
+        88.0,
+        3.0
+      ],
+      "teziste_mm": [
+        444.0,
+        -204.0,
+        568.5
+      ],
+      "volumen_mm3": 28419.3,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 2.8 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 0.223,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          444.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -204.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          567.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P016",
+      "ime": "Plošča kolesa",
+      "sifra": "MTC324039900",
+      "pojavitev": "MTC324039900:4",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324039900:4",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          390.0,
+          160.0,
+          567.0
+        ],
+        "max": [
+          498.0,
+          248.0,
+          570.0
+        ]
+      },
+      "velikost_mm": [
+        108.0,
+        88.0,
+        3.0
+      ],
+      "teziste_mm": [
+        444.0,
+        204.0,
+        568.5
+      ],
+      "volumen_mm3": 28419.3,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 2.8 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 0.223,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          444.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          204.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          567.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P017",
+      "ime": "Polica lesena 993x493x18",
+      "sifra": "MTC324010802",
+      "pojavitev": "MTC324010802:1",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324010802:1",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -496.5,
+          -246.5,
+          1333.0
+        ],
+        "max": [
+          496.5,
+          246.5,
+          1351.0
+        ]
+      },
+      "velikost_mm": [
+        993.0,
+        493.0,
+        18.0
+      ],
+      "teziste_mm": [
+        -0.0,
+        0.0,
+        1342.0
+      ],
+      "volumen_mm3": 8811882.0,
+      "material": "Iveral",
+      "material_razred_step": "les / iverna plosca",
+      "material_razred_geometrija": "les / iverna plosca",
+      "material_geometrija_razlaga": "poln kvader debeline 18 mm brez lukenj in zaokrozitev",
+      "gostota_g_cm3": 0.719678,
+      "masa_kg_izracun": 6.342,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.0953,
+        0.0908,
+        0.0931
+      ],
+      "transformacija_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1333.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P018",
+      "ime": "Polica lesena 930x482x18",
+      "sifra": "MTC324011101",
+      "pojavitev": "MTC324011101:1",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324011101:1",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -465.0,
+          -241.0,
+          600.0
+        ],
+        "max": [
+          465.0,
+          241.0,
+          618.0
+        ]
+      },
+      "velikost_mm": [
+        930.0,
+        482.0,
+        18.0
+      ],
+      "teziste_mm": [
+        0.0,
+        0.0,
+        609.0
+      ],
+      "volumen_mm3": 8068680.0,
+      "material": "Iveral",
+      "material_razred_step": "les / iverna plosca",
+      "material_razred_geometrija": "les / iverna plosca",
+      "material_geometrija_razlaga": "poln kvader debeline 18 mm brez lukenj in zaokrozitev",
+      "gostota_g_cm3": 0.719678,
+      "masa_kg_izracun": 5.807,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.0953,
+        0.0908,
+        0.0931
+      ],
+      "transformacija_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          600.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P019",
+      "ime": "Povezava vmesna 1000",
+      "sifra": "MTC324011201",
+      "pojavitev": "MTC324011201:1",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324011201:1",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -494.5,
+          214.5,
+          947.6
+        ],
+        "max": [
+          494.5,
+          247.5,
+          982.6
+        ]
+      },
+      "velikost_mm": [
+        989.0,
+        33.0,
+        35.0
+      ],
+      "teziste_mm": [
+        0.0,
+        230.8,
+        964.969
+      ],
+      "volumen_mm3": 170838.2,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 2.8 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 1.341,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0,
+          247.5
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          963.6
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P020",
+      "ime": "Povezava vmesna 1000",
+      "sifra": "MTC324011201",
+      "pojavitev": "MTC324011201:2",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324011201:2",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -494.5,
+          -247.5,
+          947.6
+        ],
+        "max": [
+          494.5,
+          -214.5,
+          982.6
+        ]
+      },
+      "velikost_mm": [
+        989.0,
+        33.0,
+        35.0
+      ],
+      "teziste_mm": [
+        -0.0,
+        -230.8,
+        964.969
+      ],
+      "volumen_mm3": 170838.2,
+      "material": "Steel, Mild",
+      "material_razred_step": "jeklo",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 2.8 mm",
+      "gostota_g_cm3": 7.85,
+      "masa_kg_izracun": 1.341,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.5149,
+        0.5029,
+        0.491
+      ],
+      "transformacija_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -247.5
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          963.6
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P021",
+      "ime": "Polica lesena 930x482x18",
+      "sifra": "MTC324011101",
+      "pojavitev": "MTC324011101:2",
+      "tip": "solid",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/MTC324011101:2",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -465.0,
+          -241.0,
+          966.6
+        ],
+        "max": [
+          465.0,
+          241.0,
+          984.6
+        ]
+      },
+      "velikost_mm": [
+        930.0,
+        482.0,
+        18.0
+      ],
+      "teziste_mm": [
+        0.0,
+        0.0,
+        975.6
+      ],
+      "volumen_mm3": 8068680.0,
+      "material": "Iveral",
+      "material_razred_step": "les / iverna plosca",
+      "material_razred_geometrija": "les / iverna plosca",
+      "material_geometrija_razlaga": "poln kvader debeline 18 mm brez lukenj in zaokrozitev",
+      "gostota_g_cm3": 0.719678,
+      "masa_kg_izracun": 5.807,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.0953,
+        0.0908,
+        0.0931
+      ],
+      "transformacija_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          966.6
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P022",
+      "ime": "Kolo fi80 gibljivo z zavoro",
+      "sifra": "kolo_fi80_z zavoro TENTE",
+      "pojavitev": "kolo_fi80_z zavoro TENTE:1",
+      "tip": "produkt z 17 telesi",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/kolo_fi80_z zavoro TENTE:1",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -496.0,
+          164.008,
+          459.106
+        ],
+        "max": [
+          -323.188,
+          244.0,
+          567.0
+        ]
+      },
+      "velikost_mm": [
+        172.81,
+        79.99,
+        107.89
+      ],
+      "teziste_mm": [
+        -406.987,
+        203.981,
+        517.015
+      ],
+      "volumen_mm3": 232776.1,
+      "material": "Generic",
+      "material_razred_step": null,
+      "material_razred_geometrija": "kupljen sestavni del (vec teles)",
+      "material_geometrija_razlaga": "17 teles v enem produktu",
+      "gostota_g_cm3": 1.0,
+      "masa_kg_izracun": 0.233,
+      "stevilo_teles": 17,
+      "barva_rgb": [
+        0.604,
+        0.604,
+        1.0
+      ],
+      "transformacija_mm": [
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -440.974504
+        ],
+        [
+          1.0,
+          -0.0,
+          -0.0,
+          204.004
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          525.540704
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P023",
+      "ime": "Kolo fi80 gibljivo z zavoro",
+      "sifra": "kolo_fi80_z zavoro TENTE",
+      "pojavitev": "kolo_fi80_z zavoro TENTE:2",
+      "tip": "produkt z 17 telesi",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/kolo_fi80_z zavoro TENTE:2",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -496.0,
+          -243.992,
+          459.106
+        ],
+        "max": [
+          -323.188,
+          -164.0,
+          567.0
+        ]
+      },
+      "velikost_mm": [
+        172.81,
+        79.99,
+        107.89
+      ],
+      "teziste_mm": [
+        -406.987,
+        -204.019,
+        517.015
+      ],
+      "volumen_mm3": 232776.1,
+      "material": "Generic",
+      "material_razred_step": null,
+      "material_razred_geometrija": "kupljen sestavni del (vec teles)",
+      "material_geometrija_razlaga": "17 teles v enem produktu",
+      "gostota_g_cm3": 1.0,
+      "masa_kg_izracun": 0.233,
+      "stevilo_teles": 17,
+      "barva_rgb": [
+        0.604,
+        0.604,
+        1.0
+      ],
+      "transformacija_mm": [
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          -440.974504
+        ],
+        [
+          1.0,
+          -0.0,
+          -0.0,
+          -203.996
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          525.540704
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P024",
+      "ime": "Kolo fi80 gibljivo z zavoro",
+      "sifra": "kolo_fi80_z zavoro TENTE",
+      "pojavitev": "kolo_fi80_z zavoro TENTE:3",
+      "tip": "produkt z 17 telesi",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/kolo_fi80_z zavoro TENTE:3",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          392.0,
+          164.008,
+          459.106
+        ],
+        "max": [
+          564.812,
+          244.0,
+          567.0
+        ]
+      },
+      "velikost_mm": [
+        172.81,
+        79.99,
+        107.89
+      ],
+      "teziste_mm": [
+        481.013,
+        203.981,
+        517.015
+      ],
+      "volumen_mm3": 232776.1,
+      "material": "Generic",
+      "material_razred_step": null,
+      "material_razred_geometrija": "kupljen sestavni del (vec teles)",
+      "material_geometrija_razlaga": "17 teles v enem produktu",
+      "gostota_g_cm3": 1.0,
+      "masa_kg_izracun": 0.233,
+      "stevilo_teles": 17,
+      "barva_rgb": [
+        0.604,
+        0.604,
+        1.0
+      ],
+      "transformacija_mm": [
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          447.025496
+        ],
+        [
+          1.0,
+          -0.0,
+          -0.0,
+          204.004
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          525.540704
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P025",
+      "ime": "Kolo fi80 gibljivo z zavoro",
+      "sifra": "kolo_fi80_z zavoro TENTE",
+      "pojavitev": "kolo_fi80_z zavoro TENTE:4",
+      "tip": "produkt z 17 telesi",
+      "stars": "MLU123069200",
+      "pot": "MLU123069200/kolo_fi80_z zavoro TENTE:4",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          392.0,
+          -243.992,
+          459.106
+        ],
+        "max": [
+          564.812,
+          -164.0,
+          567.0
+        ]
+      },
+      "velikost_mm": [
+        172.81,
+        79.99,
+        107.89
+      ],
+      "teziste_mm": [
+        481.013,
+        -204.019,
+        517.015
+      ],
+      "volumen_mm3": 232776.1,
+      "material": "Generic",
+      "material_razred_step": null,
+      "material_razred_geometrija": "kupljen sestavni del (vec teles)",
+      "material_geometrija_razlaga": "17 teles v enem produktu",
+      "gostota_g_cm3": 1.0,
+      "masa_kg_izracun": 0.233,
+      "stevilo_teles": 17,
+      "barva_rgb": [
+        0.604,
+        0.604,
+        1.0
+      ],
+      "transformacija_mm": [
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          447.025496
+        ],
+        [
+          1.0,
+          -0.0,
+          -0.0,
+          -203.996
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          525.540704
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P026",
+      "ime": "Nosilec ročaja",
+      "sifra": "MTC324079400",
+      "pojavitev": "MTC324079400:1",
+      "tip": "solid",
+      "stars": "MLU124029200:1",
+      "pot": "MLU123069200/MLU124029200:1/MTC324079400:1",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -574.0,
+          214.4,
+          1227.0
+        ],
+        "max": [
+          -469.5,
+          217.4,
+          1300.5
+        ]
+      },
+      "velikost_mm": [
+        104.5,
+        3.0,
+        73.5
+      ],
+      "teziste_mm": [
+        -511.086,
+        215.9,
+        1275.962
+      ],
+      "volumen_mm3": 12211.1,
+      "material": "Stainless Steel AISI 304",
+      "material_razred_step": "inox",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 2.6 mm",
+      "gostota_g_cm3": 8.0,
+      "masa_kg_izracun": 0.098,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.9047,
+        0.9047,
+        0.9047
+      ],
+      "transformacija_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          -483.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          214.4
+        ],
+        [
+          -0.0,
+          0.0,
+          -1.0,
+          1285.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P027",
+      "ime": "Cev inox fi30x1,5 l=428",
+      "sifra": "MTC324079500",
+      "pojavitev": "MTC324079500:1",
+      "tip": "solid",
+      "stars": "MLU124029200:1",
+      "pot": "MLU123069200/MLU124029200:1/MTC324079500:1",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -574.0,
+          -213.6,
+          1270.5
+        ],
+        "max": [
+          -544.0,
+          214.4,
+          1300.5
+        ]
+      },
+      "velikost_mm": [
+        30.0,
+        428.0,
+        30.0
+      ],
+      "teziste_mm": [
+        -559.0,
+        0.4,
+        1285.5
+      ],
+      "volumen_mm3": 57481.7,
+      "material": "Stainless Steel AISI 304",
+      "material_razred_step": "inox",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 1.5 mm",
+      "gostota_g_cm3": 8.0,
+      "masa_kg_izracun": 0.46,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.9047,
+        0.9047,
+        0.9047
+      ],
+      "transformacija_mm": [
+        [
+          0.0,
+          -1.0,
+          0.0,
+          -559.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.4
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1285.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "P028",
+      "ime": "Nosilec ročaja",
+      "sifra": "MTC324079400",
+      "pojavitev": "MTC324079400:2",
+      "tip": "solid",
+      "stars": "MLU124029200:1",
+      "pot": "MLU123069200/MLU124029200:1/MTC324079400:2",
+      "kolicina": 1,
+      "bbox_mm": {
+        "min": [
+          -574.0,
+          -216.6,
+          1227.0
+        ],
+        "max": [
+          -469.5,
+          -213.6,
+          1300.5
+        ]
+      },
+      "velikost_mm": [
+        104.5,
+        3.0,
+        73.5
+      ],
+      "teziste_mm": [
+        -511.086,
+        -215.1,
+        1275.962
+      ],
+      "volumen_mm3": 12211.1,
+      "material": "Stainless Steel AISI 304",
+      "material_razred_step": "inox",
+      "material_razred_geometrija": "jeklo (plocevina / cev)",
+      "material_geometrija_razlaga": "tankostenski del, ekvivalentna debelina stene 2.6 mm",
+      "gostota_g_cm3": 8.0,
+      "masa_kg_izracun": 0.098,
+      "stevilo_teles": 1,
+      "barva_rgb": [
+        0.9047,
+        0.9047,
+        0.9047
+      ],
+      "transformacija_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          -483.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -216.6
+        ],
+        [
+          -0.0,
+          0.0,
+          -1.0,
+          1285.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "opomba": "Ime (opis) in sifra iz STEP PRODUCT; pojavitev iz NEXT_ASSEMBLY_USAGE_OCCURRENCE."
+    },
+    {
+      "id": "V01",
+      "ime": "Lesni vijak 4 mm (predlog)",
+      "sifra": "",
+      "pojavitev": "",
+      "tip": "vijačni material - NI v STEP (predpostavka iz lukenj)",
+      "stars": "MLU123069200",
+      "kolicina": 6,
+      "bbox_mm": {
+        "min": [
+          -358.0,
+          -241.0,
+          590.5
+        ],
+        "max": [
+          358.0,
+          241.0,
+          606.5
+        ]
+      },
+      "volumen_mm3": null,
+      "material": null,
+      "material_razred_step": null,
+      "material_razred_geometrija": "vijačni material (pocinkano jeklo - predpostavka)",
+      "stevilo_teles": 0,
+      "barva_rgb": [
+        0.78,
+        0.8,
+        0.84
+      ],
+      "opomba": "Ni v STEP in ni v kosovnici (kosovnice ni). Vrsta in mera sklepana iz lukenj: P001: luknja 4.5 mm, za njo poln les P018 brez luknje -> lesni vijak ~4 mm od strani P001. Soosna dostopna luknja v nasprotni steni (28 mm) -> vijak se vstavi skozi profil."
+    },
+    {
+      "id": "V02",
+      "ime": "Lesni vijak 4 mm (predlog)",
+      "sifra": "",
+      "pojavitev": "",
+      "tip": "vijačni material - NI v STEP (predpostavka iz lukenj)",
+      "stars": "MLU123069200",
+      "kolicina": 6,
+      "bbox_mm": {
+        "min": [
+          -358.0,
+          -242.0,
+          1322.0
+        ],
+        "max": [
+          358.0,
+          242.0,
+          1338.0
+        ]
+      },
+      "volumen_mm3": null,
+      "material": null,
+      "material_razred_step": null,
+      "material_razred_geometrija": "vijačni material (pocinkano jeklo - predpostavka)",
+      "stevilo_teles": 0,
+      "barva_rgb": [
+        0.78,
+        0.8,
+        0.84
+      ],
+      "opomba": "Ni v STEP in ni v kosovnici (kosovnice ni). Vrsta in mera sklepana iz lukenj: P009: luknja 5.0 mm, za njo poln les P017 brez luknje -> lesni vijak ~4 mm od strani P009."
+    },
+    {
+      "id": "V03",
+      "ime": "Lesni vijak 4 mm (predlog)",
+      "sifra": "",
+      "pojavitev": "",
+      "tip": "vijačni material - NI v STEP (predpostavka iz lukenj)",
+      "stars": "MLU123069200",
+      "kolicina": 2,
+      "bbox_mm": {
+        "min": [
+          -492.0,
+          -8.0,
+          1322.0
+        ],
+        "max": [
+          492.0,
+          8.0,
+          1338.0
+        ]
+      },
+      "volumen_mm3": null,
+      "material": null,
+      "material_razred_step": null,
+      "material_razred_geometrija": "vijačni material (pocinkano jeklo - predpostavka)",
+      "stevilo_teles": 0,
+      "barva_rgb": [
+        0.78,
+        0.8,
+        0.84
+      ],
+      "opomba": "Ni v STEP in ni v kosovnici (kosovnice ni). Vrsta in mera sklepana iz lukenj: P011: luknja 5.0 mm, za njo poln les P017 brez luknje -> lesni vijak ~4 mm od strani P011."
+    },
+    {
+      "id": "V04",
+      "ime": "Šestkotna zakovična matica M6 (predlog)",
+      "sifra": "",
+      "pojavitev": "",
+      "tip": "vijačni material - NI v STEP (predpostavka iz lukenj)",
+      "stars": "MLU123069200",
+      "kolicina": 4,
+      "bbox_mm": {
+        "min": [
+          -491.0,
+          -226.0,
+          947.5
+        ],
+        "max": [
+          491.0,
+          226.0,
+          963.5
+        ]
+      },
+      "volumen_mm3": null,
+      "material": null,
+      "material_razred_step": null,
+      "material_razred_geometrija": "vijačni material (pocinkano jeklo - predpostavka)",
+      "stevilo_teles": 0,
+      "barva_rgb": [
+        0.78,
+        0.8,
+        0.84
+      ],
+      "opomba": "Ni v STEP in ni v kosovnici (kosovnice ni). Vrsta in mera sklepana iz lukenj: P019: utor 6.5x12.0 mm soosno s sestkotno luknjo zev 9.1 mm v P007 (reza 0.5 mm, odmik osi 0.00 mm). Sestkotni izrez 9.1 -> zakovicna matica M6; prehodna luknja 6.5 -> M6."
+    },
+    {
+      "id": "V05",
+      "ime": "Vijak M6 s šestrobo glavo + podložka (predlog)",
+      "sifra": "",
+      "pojavitev": "",
+      "tip": "vijačni material - NI v STEP (predpostavka iz lukenj)",
+      "stars": "MLU123069200",
+      "kolicina": 4,
+      "bbox_mm": {
+        "min": [
+          -491.0,
+          -222.5,
+          947.5
+        ],
+        "max": [
+          491.0,
+          222.5,
+          963.5
+        ]
+      },
+      "volumen_mm3": null,
+      "material": null,
+      "material_razred_step": null,
+      "material_razred_geometrija": "vijačni material (pocinkano jeklo - predpostavka)",
+      "stevilo_teles": 0,
+      "barva_rgb": [
+        0.78,
+        0.8,
+        0.84
+      ],
+      "opomba": "Ni v STEP in ni v kosovnici (kosovnice ni). Vrsta in mera sklepana iz lukenj: P019: utor 6.5x12.0 mm soosno s sestkotno luknjo zev 9.1 mm v P007 (reza 0.5 mm, odmik osi 0.00 mm). Sestkotni izrez 9.1 -> zakovicna matica M6; prehodna luknja 6.5 -> M6."
+    },
+    {
+      "id": "V06",
+      "ime": "Lesni vijak 4 mm (predlog)",
+      "sifra": "",
+      "pojavitev": "",
+      "tip": "vijačni material - NI v STEP (predpostavka iz lukenj)",
+      "stars": "MLU123069200",
+      "kolicina": 6,
+      "bbox_mm": {
+        "min": [
+          -358.0,
+          -236.5,
+          955.6
+        ],
+        "max": [
+          358.0,
+          236.5,
+          971.6
+        ]
+      },
+      "volumen_mm3": null,
+      "material": null,
+      "material_razred_step": null,
+      "material_razred_geometrija": "vijačni material (pocinkano jeklo - predpostavka)",
+      "stevilo_teles": 0,
+      "barva_rgb": [
+        0.78,
+        0.8,
+        0.84
+      ],
+      "opomba": "Ni v STEP in ni v kosovnici (kosovnice ni). Vrsta in mera sklepana iz lukenj: P019: luknja 5.0 mm, za njo poln les P021 brez luknje -> lesni vijak ~4 mm od strani P019."
+    },
+    {
+      "id": "V07",
+      "ime": "Vijak M8 s šestrobo glavo + podložka (predlog)",
+      "sifra": "",
+      "pojavitev": "",
+      "tip": "vijačni material - NI v STEP (predpostavka iz lukenj)",
+      "stars": "MLU123069200",
+      "kolicina": 16,
+      "bbox_mm": {
+        "min": [
+          -490.8,
+          -242.0,
+          556.5
+        ],
+        "max": [
+          491.7,
+          242.0,
+          572.5
+        ]
+      },
+      "volumen_mm3": null,
+      "material": null,
+      "material_razred_step": null,
+      "material_razred_geometrija": "vijačni material (pocinkano jeklo - predpostavka)",
+      "stevilo_teles": 0,
+      "barva_rgb": [
+        0.78,
+        0.8,
+        0.84
+      ],
+      "opomba": "Ni v STEP in ni v kosovnici (kosovnice ni). Vrsta in mera sklepana iz lukenj: P022 (kupljen del): pritrdilni utor 9.2x10.7 mm, za njim plosca P014 BREZ modelirane luknje. Pravilo cloveka (ocene.json): kolesa se vedno vijacijo -> vijak M8; navoj / matica v P014: ni znano / zahteva potrditev."
+    },
+    {
+      "id": "V08",
+      "ime": "Šestkotna zakovična matica M6 (predlog)",
+      "sifra": "",
+      "pojavitev": "",
+      "tip": "vijačni material - NI v STEP (predpostavka iz lukenj)",
+      "stars": "MLU123069200",
+      "kolicina": 4,
+      "bbox_mm": {
+        "min": [
+          -491.0,
+          -226.0,
+          1232.5
+        ],
+        "max": [
+          -475.0,
+          226.0,
+          1293.5
+        ]
+      },
+      "volumen_mm3": null,
+      "material": null,
+      "material_razred_step": null,
+      "material_razred_geometrija": "vijačni material (pocinkano jeklo - predpostavka)",
+      "stevilo_teles": 0,
+      "barva_rgb": [
+        0.78,
+        0.8,
+        0.84
+      ],
+      "opomba": "Ni v STEP in ni v kosovnici (kosovnice ni). Vrsta in mera sklepana iz lukenj: P026: krog 6.4x6.4 mm soosno s sestkotno luknjo zev 9.1 mm v P007 (reza 0.6 mm, odmik osi 0.00 mm). Sestkotni izrez 9.1 -> zakovicna matica M6; prehodna luknja 6.4 -> M6."
+    },
+    {
+      "id": "V09",
+      "ime": "Vijak M6 s šestrobo glavo + podložka (predlog)",
+      "sifra": "",
+      "pojavitev": "",
+      "tip": "vijačni material - NI v STEP (predpostavka iz lukenj)",
+      "stars": "MLU123069200",
+      "kolicina": 4,
+      "bbox_mm": {
+        "min": [
+          -491.0,
+          -221.6,
+          1232.5
+        ],
+        "max": [
+          -475.0,
+          222.4,
+          1293.5
+        ]
+      },
+      "volumen_mm3": null,
+      "material": null,
+      "material_razred_step": null,
+      "material_razred_geometrija": "vijačni material (pocinkano jeklo - predpostavka)",
+      "stevilo_teles": 0,
+      "barva_rgb": [
+        0.78,
+        0.8,
+        0.84
+      ],
+      "opomba": "Ni v STEP in ni v kosovnici (kosovnice ni). Vrsta in mera sklepana iz lukenj: P026: krog 6.4x6.4 mm soosno s sestkotno luknjo zev 9.1 mm v P007 (reza 0.6 mm, odmik osi 0.00 mm). Sestkotni izrez 9.1 -> zakovicna matica M6; prehodna luknja 6.4 -> M6."
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useParams, useRouter } from "next/navigation";
 import { BookOpen, ChevronDown, CloudUpload, FileBox, FolderOpen, Image as ImageIcon, LayoutList, Pause, Play, Plus, RefreshCw, SplitSquareHorizontal } from "lucide-react";
 import { AI_JI, naslednjiPoskus, type AiKoda, type Ocena, type TreningIndeks } from "@/lib/trening";
 import { naloziIndeks, objaviTrening, shraniOceno, urlDatoteke, ustvariSliko } from "@/lib/treningApi";
@@ -10,6 +11,7 @@ import { FilterIzbira, FilterPolje, FilterVrstica } from "@/components/ui/Filtri
 import { ErrorText, Loading, WarningText } from "@/components/ui/Notice";
 import { Zavihki } from "@/components/ui/Zavihki";
 import { useToast } from "@/components/ui/Toast";
+import { lahkoZapustim } from "@/lib/neshranjeno";
 import { NovModelOkno } from "./NovModelOkno";
 import { Besedilo, PoskusPanel } from "./PoskusPanel";
 import { PrimerjavaTabela, ocenaZa } from "./PrimerjavaTabela";
@@ -18,6 +20,9 @@ import { SlikaModela } from "./SlikaModela";
 import { datumCas, napakaJson, podatki, velikost } from "./oblika";
 
 const SPOMIN_MODEL = "wi-trening-model";
+const POT = "/admin/trening";
+/** Naslov primerjave modela (vsak model ima svoj URL, da gumb nazaj vrne na pregled). */
+export const treningHref = (id: string) => `${POT}/${encodeURIComponent(id)}`;
 
 type Pogled = "pregled" | "primerjava";
 
@@ -25,20 +30,25 @@ type Pogled = "pregled" | "primerjava";
  * AI trening (training ground): isti 3D model obdelata GPT-6.2 Astra in Claude Fable 5.2
  * (vsak v svojem chatu v VS Code), tukaj pa izhode primerjaš drug ob drugem in jih oceniš.
  * Lokalno: vse akcije (prompt, ocena, nov model, objava). Produkcija: objavljena kopija, samo pregled.
+ * Pogled je v URL: /admin/trening = Pregled, /admin/trening/<model> = Primerjava tega modela.
  */
 export function Trening() {
   const notify = useToast();
+  const router = useRouter();
+  const param = useParams<{ model?: string }>().model;
+  const modelId = param ? decodeURIComponent(param) : null;
   const [indeks, setIndeks] = useState<TreningIndeks | null>(null);
   const [url, setUrl] = useState<{ f: (pot: string) => string }>({ f: () => "" });
   const [objavljeno, setObjavljeno] = useState<string | null>(null);
   const [objavljam, setObjavljam] = useState(false);
   const [risem, setRisem] = useState(false);
-  const [pogled, setPogled] = useState<Pogled>("pregled");
+  // Primerjava brez modelov nima URL modela -> prazno stanje samo v pogledu.
+  const [praznaPrimerjava, setPraznaPrimerjava] = useState(false);
   const [napaka, setNapaka] = useState<string | null>(null);
   const [osvezujem, setOsvezujem] = useState(false);
-  const [modelId, setModelId] = useState<string | null>(null);
-  const [izbira, setIzbira] = useState<Partial<Record<AiKoda, string>>>({});
-  const [dolzine, setDolzine] = useState<Partial<Record<AiKoda, number | null>>>({});
+  // Izbran poskus in dolžina videa po modelu (`model/ai`), da ob nazaj / naprej ostane izbira modela.
+  const [izbira, setIzbira] = useState<Record<string, string>>({});
+  const [dolzine, setDolzine] = useState<Record<string, number | null>>({});
   const [novModel, setNovModel] = useState(false);
   const videi = useRef<Partial<Record<AiKoda, HTMLVideoElement | null>>>({});
 
@@ -69,21 +79,39 @@ export function Trening() {
     nalozi();
   }, [nalozi]);
 
+  // Zadnji odprt model -> zavihek Primerjava ga odpre znova.
+  useEffect(() => {
+    if (modelId) window.localStorage.setItem(SPOMIN_MODEL, modelId);
+  }, [modelId]);
+
   if (napaka && !indeks) return <ErrorText>{napaka}</ErrorText>;
   if (!indeks) return <Loading />;
   if (!indeks.omogoceno) return <WarningText>{indeks.razlog}</WarningText>;
 
   const modeli = indeks.modeli;
   const lokalno = indeks.vir === "lokalno";
-  const shranjen = typeof window !== "undefined" ? window.localStorage.getItem(SPOMIN_MODEL) : null;
-  const model =
-    modeli.find((m) => m.id === modelId) ?? modeli.find((m) => m.id === shranjen) ?? modeli[modeli.length - 1] ?? null;
+  const pogled: Pogled = modelId || praznaPrimerjava ? "primerjava" : "pregled";
+  const model = modelId ? (modeli.find((m) => m.id === modelId) ?? null) : null;
 
-  function izberiModel(id: string) {
-    window.localStorage.setItem(SPOMIN_MODEL, id);
-    setModelId(id);
-    setIzbira({});
-    setDolzine({});
+  /** Odpre primerjavo modela (nov vnos v zgodovini; `zamenjaj` = izbira v filtru Model). */
+  function odpriModel(id: string, zamenjaj = false) {
+    if (!lahkoZapustim()) return;
+    setPraznaPrimerjava(false);
+    if (zamenjaj) router.replace(treningHref(id));
+    else router.push(treningHref(id));
+  }
+
+  function izberiPogled(p: Pogled) {
+    if (p === pogled || !lahkoZapustim()) return;
+    if (p === "pregled") {
+      setPraznaPrimerjava(false);
+      if (modelId) router.push(POT);
+      return;
+    }
+    const shranjen = window.localStorage.getItem(SPOMIN_MODEL);
+    const cilj = modeli.find((m) => m.id === shranjen) ?? modeli[modeli.length - 1];
+    if (cilj) router.push(treningHref(cilj.id));
+    else setPraznaPrimerjava(true);
   }
 
   async function izrisiSliko(id: string) {
@@ -114,7 +142,7 @@ export function Trening() {
 
   const izbran = (ai: AiKoda) => {
     const p = model?.poskusi[ai] ?? [];
-    return p.find((x) => x.poskus === izbira[ai]) ?? p[p.length - 1] ?? null;
+    return p.find((x) => x.poskus === izbira[`${model?.id}/${ai}`]) ?? p[p.length - 1] ?? null;
   };
 
   async function oceni(ai: AiKoda, o: Ocena) {
@@ -181,7 +209,7 @@ export function Trening() {
         <Zavihki<Pogled>
           label="Pogled AI treninga"
           value={pogled}
-          onChange={setPogled}
+          onChange={izberiPogled}
           zavihki={[
             { koda: "pregled", label: "Pregled", icon: LayoutList, hint: "Pregled vseh treningov in poskusov" },
             { koda: "primerjava", label: "Primerjava", icon: SplitSquareHorizontal, hint: "Primerjaj poskusa Astre in Fable" },
@@ -193,10 +221,7 @@ export function Trening() {
               <TreningPregled
                 modeli={modeli}
                 url={url.f}
-                onOdpri={(id) => {
-                  izberiModel(id);
-                  setPogled("primerjava");
-                }}
+                href={treningHref}
               />
               <details className="group rounded-lg border border-ink-200 p-3">
                 <summary
@@ -215,6 +240,13 @@ export function Trening() {
                 </div>
               </details>
             </>
+          ) : modelId && !model ? (
+            <div className="flex flex-col items-center gap-3 p-8 text-center">
+              <WarningText>Modela {modelId} ni med treningi (morda je bil preimenovan ali še ni objavljen).</WarningText>
+              <Button variant="neutral" icon={LayoutList} hint="Vrni se na pregled vseh treningov" onClick={() => izberiPogled("pregled")}>
+                Na pregled
+              </Button>
+            </div>
           ) : !model ? (
             <div className="flex flex-col items-center gap-3 p-8 text-center">
               <FileBox className="h-12 w-12 text-fines-500" aria-hidden />
@@ -241,7 +273,7 @@ export function Trening() {
                   label="Model"
                   value={model.id}
                   options={modeli.map((m) => ({ value: m.id, label: podatki(m.info)?.naziv ?? m.id }))}
-                  onChange={izberiModel}
+                  onChange={(id) => odpriModel(id, true)}
                   hint="Izberi 3D model za primerjavo"
                 />
                 {obaVidea && (
@@ -307,8 +339,8 @@ export function Trening() {
                     poskusi={model.poskusi[a.koda]}
                     izbran={izbran(a.koda)}
                     onIzberi={(p) => {
-                      setIzbira((s) => ({ ...s, [a.koda]: p }));
-                      setDolzine((s) => ({ ...s, [a.koda]: null }));
+                      setIzbira((s) => ({ ...s, [`${model.id}/${a.koda}`]: p }));
+                      setDolzine((s) => ({ ...s, [`${model.id}/${a.koda}`]: null }));
                     }}
                     naslednji={naslednjiPoskus(model.poskusi[a.koda])}
                     ocena={ocenaZa(model.ocene, a.koda, izbran(a.koda))}
@@ -318,7 +350,7 @@ export function Trening() {
                     videoRef={(el) => {
                       videi.current[a.koda] = el;
                     }}
-                    onDolzina={(s) => setDolzine((d) => ({ ...d, [a.koda]: s }))}
+                    onDolzina={(s) => setDolzine((d) => ({ ...d, [`${model.id}/${a.koda}`]: s }))}
                   />
                 ))}
               </div>
@@ -328,7 +360,7 @@ export function Trening() {
                   Object.fromEntries(
                     AI_JI.map((a) => [
                       a.koda,
-                      { poskus: izbran(a.koda), ocena: ocenaZa(model.ocene, a.koda, izbran(a.koda)), dolzina: dolzine[a.koda] ?? null },
+                      { poskus: izbran(a.koda), ocena: ocenaZa(model.ocene, a.koda, izbran(a.koda)), dolzina: dolzine[`${model.id}/${a.koda}`] ?? null },
                     ]),
                   ) as Record<AiKoda, { poskus: ReturnType<typeof izbran>; ocena: Ocena | undefined; dolzina: number | null }>
                 }
@@ -345,7 +377,7 @@ export function Trening() {
           setNovModel(false);
           notify("success", `Model ${id} je dodan v trening/modeli/${id}/.`);
           await nalozi();
-          izberiModel(id);
+          odpriModel(id);
         }}
       />
     </div>

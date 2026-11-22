@@ -1,0 +1,28 @@
+{
+  "ai_model": "claude-fable-5-2",
+  "zacetek": "2026-11-22T16:50:00+01:00",
+  "konec": "2026-11-22T17:39:41+01:00",
+  "status": "uspeh",
+  "povzetek": "Kamera pri vsakem spoju izbrana z merjeno vidnostjo (ID slika, do 144 smeri): vijaki v korakih 7, 9, 11, 13 so zdaj vidni s strani dostopa (prej privit vijak 0 % viden). Pred detajlom pregled vseh mest vijakov, vsaka vrsta vijaka ima svoj detajl. Napisi postavljeni z masko (39 napisov, prekrivanje gibanja in spojev 0 px), brez šifer. Glava in noga v slogu FINES (logo, oranžna, Inter), 124 px namesto 360 px. Geometrija, spoji in zaporedje kot v poskusu 02. Video 13 korakov, 182,2 s, 1920x1080.",
+  "orodja": [
+    "Python 3.12.16 (uv, trening/okolje/fable)",
+    "cadquery-ocp 8.0.1.1.0 (OpenCascade 8.0, XCAF)",
+    "trimesh 5.2.1",
+    "numpy 2.5.5",
+    "VTK 9.6.2 (offscreen, PBR + SSAO; druga scena za ID slike)",
+    "Pillow 13.0.0 (glava, noga, napisi)",
+    "pisava Inter 4.1",
+    "ffmpeg 9.0.2 (libx264)"
+  ],
+  "tezave": [
+    "Zaporedje montaže, način spajanja in vijačni material so predlog - zahteva potrditev tehnologa. Na zahtevo iz ocene to ni več napisano v videu, samo v koraki.json, spoji.json in poročilu.",
+    "Vijačnega materiala ni v STEP in kosovnice ni: vrsta, mera in dolžina vijakov ter zakovične matice so predpostavka iz lukenj.",
+    "Uteži za izbiro kamere (kot 50 st. na os vijaka, prag 75 % za pregled, elevacija do 45 st.) so nastavljene na enem modelu.",
+    "Pregled mest vijakov v koraku 6 (kolesa) je pogled vzdolž vozička od spodaj - poševni pogledi so imeli preslabo vidnost.",
+    "Lesni vijak 4 mm je v detajlu majhen; privit vijak v cevi (korak 7) se vidi samo skozi prosojno cev.",
+    "Prehodi kamere niso preverjeni sličico za sličico; kontrola prekrivanja napisov velja za faze z mirujočo kamero.",
+    "Slog glave, noge in napisov je predlog po barvah in logu aplikacije - standard FINES za video ne obstaja.",
+    "Render je VTK, ne Blender (prenos zavrnjen v poskusih 01 in 02; tokrat ni bil ponovno poskušen).",
+    "Celoten postopek je bil za končni video zagnan enkrat (exit 0); enakost kamer med dvema polnima zagonoma ni preverjena."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "fps": 30,
+  "velikost": [
+    1920,
+    1080
+  ],
+  "nadvzorcenje": 1.5,
+  "slicic": 5466,
+  "dolzina_s": 182.2,
+  "pisava": "Inter",
+  "poglavja": [
+    {
+      "cas_s": 0.0,
+      "opis": "uvod: celoten sestav"
+    },
+    {
+      "cas_s": 4.0,
+      "opis": "korak 1: Spodnji okvir (VARJENJE)"
+    },
+    {
+      "cas_s": 14.3,
+      "opis": "korak 2: Plošče koles (VARJENJE)"
+    },
+    {
+      "cas_s": 24.6,
+      "opis": "korak 3: Navpične noge (VARJENJE)"
+    },
+    {
+      "cas_s": 34.9,
+      "opis": "korak 4: Zgornje povezave (VARJENJE)"
+    },
+    {
+      "cas_s": 45.2,
+      "opis": "korak 5: Zakovične matice M6 v noge (VSTAVLJANJE ZAKOVIČNIH MATIC)"
+    },
+    {
+      "cas_s": 56.8,
+      "opis": "korak 6: Kolesa (VIJAČENJE)"
+    },
+    {
+      "cas_s": 71.6,
+      "opis": "korak 7: Spodnja polica (POLAGANJE + VIJAČENJE)"
+    },
+    {
+      "cas_s": 86.4,
+      "opis": "korak 8: Vmesna povezava – zadnja (VIJAČENJE)"
+    },
+    {
+      "cas_s": 101.2,
+      "opis": "korak 9: Vmesna polica (POLAGANJE + VIJAČENJE)"
+    },
+    {
+      "cas_s": 116.0,
+      "opis": "korak 10: Vmesna povezava – sprednja (POLAGANJE + VIJAČENJE)"
+    },
+    {
+      "cas_s": 136.3,
+      "opis": "korak 11: Zgornja polica (POLAGANJE + VIJAČENJE)"
+    },
+    {
+      "cas_s": 151.1,
+      "opis": "korak 12: Ročaj – zvarjenec (VARJENJE)"
+    },
+    {
+      "cas_s": 161.4,
+      "opis": "korak 13: Montaža ročaja (VIJAČENJE)"
+    },
+    {
+      "cas_s": 176.2,
+      "opis": "zakljucek: koncni sestav"
+    }
+  ]
+}

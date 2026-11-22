@@ -1,10 +1,4 @@
-import { SamoAdmin } from "@/components/Admin";
-import { Trening } from "@/components/trening/Trening";
-
+// Vsebino (zavihek Pregled) izriše Trening v layout.tsx.
 export default function TreningStran() {
-  return (
-    <SamoAdmin>
-      <Trening />
-    </SamoAdmin>
-  );
+  return null;
 }

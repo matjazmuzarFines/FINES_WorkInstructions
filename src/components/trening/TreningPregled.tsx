@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { AI_JI, kljucOcene, povprecje, type AiKoda, type TreningModel } from "@/lib/trening";
 import { ujemaIskanje } from "@/lib/iskanje";
 import { danesIso, prenesiXlsx } from "@/lib/excel";
@@ -60,12 +61,13 @@ const ocena = (v: number | null) => (v === null ? "" : v.toFixed(1).replace(".",
 export function TreningPregled({
   modeli,
   url,
-  onOdpri,
+  href,
 }: {
   modeli: TreningModel[];
   /** URL datoteke (sličica modela) - lokalni API ali podpisan URL Supabase. */
   url: (pot: string) => string;
-  onOdpri: (id: string) => void;
+  /** Naslov primerjave modela - vrstica je povezava, da gumb nazaj vrne na pregled. */
+  href: (id: string) => string;
 }) {
   const [iskanje, setIskanje] = useState("");
   const [ocenjenost, setOcenjenost] = useState<Ocenjenost>("vsi");
@@ -237,10 +239,9 @@ export function TreningPregled({
               return (
                 <tr key={r.id} className="border-b border-ink-100 hover:bg-ink-50">
                   <td className="px-2 py-1.5">
-                    <button
-                      type="button"
+                    <Link
+                      href={href(r.id)}
                       title={`Odpri primerjavo za ${r.naziv}`}
-                      onClick={() => onOdpri(r.id)}
                       className="group flex items-center gap-3 text-left"
                     >
                       <SlikaModela src={r.slika ? url(r.slika) || null : null} naziv={r.naziv} />
@@ -251,7 +252,7 @@ export function TreningPregled({
                           {r.zahteva ? ` · zahteva #${r.zahteva}` : ""}
                         </span>
                       </span>
-                    </button>
+                    </Link>
                   </td>
                   {AI_JI.map((a, i) => {
                     const x = r.ai[a.koda];

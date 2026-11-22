@@ -1,0 +1,514 @@
+{
+  "metoda": "Maska gibajocih delov / vijakov / zvarov cez celo fazo (unija ID slik) + varnostni rob 14 px; napis se postavi na mesto z najmanjso ceno. prekrivanje_pomembnega_px mora biti 0.",
+  "napisov": 39,
+  "s_prekrivanjem": [],
+  "napisi": [
+    {
+      "faza": "korak 1: premik",
+      "napis": "2x  Cev 30x30x1,5 l=993",
+      "okvir_px": [
+        1010,
+        256,
+        1329,
+        309
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 1: premik",
+      "napis": "2x  Cev 30x30x1,5 l=493",
+      "okvir_px": [
+        1208,
+        322,
+        1528,
+        375
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 1: detajl zvara",
+      "napis": "Zvar po obodu stika",
+      "okvir_px": [
+        990,
+        614,
+        1252,
+        667
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.006
+    },
+    {
+      "faza": "korak 2: premik",
+      "napis": "4x  Plošča kolesa",
+      "okvir_px": [
+        1040,
+        656,
+        1272,
+        709
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 2: detajl zvara",
+      "napis": "Zvar po obodu stika",
+      "okvir_px": [
+        976,
+        612,
+        1238,
+        665
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.006
+    },
+    {
+      "faza": "korak 3: premik",
+      "napis": "4x  Cev 30x30x1,5 l=730",
+      "okvir_px": [
+        872,
+        228,
+        1191,
+        281
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 3: detajl zvara",
+      "napis": "Zvar po obodu stika",
+      "okvir_px": [
+        618,
+        442,
+        880,
+        495
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 4: premik",
+      "napis": "2x  Povezava zgornja 1000",
+      "okvir_px": [
+        984,
+        150,
+        1324,
+        203
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 4: premik",
+      "napis": "2x  Povezava zgornja 500",
+      "okvir_px": [
+        642,
+        110,
+        971,
+        163
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 4: detajl zvara",
+      "napis": "Zvar po obodu stika",
+      "okvir_px": [
+        664,
+        378,
+        926,
+        431
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.009
+    },
+    {
+      "faza": "korak 5: pregled mest vijakov",
+      "napis": "8x  Zakovična matica M6 | s strani",
+      "okvir_px": [
+        508,
+        378,
+        827,
+        456
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.071
+    },
+    {
+      "faza": "korak 5: detajl vijačenja (Zakovična matica M6)",
+      "napis": "8x  Zakovična matica M6 | s strani",
+      "okvir_px": [
+        1162,
+        598,
+        1481,
+        676
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 6: premik",
+      "napis": "4x  Kolo fi80 gibljivo z zavoro",
+      "okvir_px": [
+        900,
+        842,
+        1268,
+        895
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 6: pregled mest vijakov",
+      "napis": "16x  Vijak M8 + podložka | od spodaj",
+      "okvir_px": [
+        988,
+        742,
+        1303,
+        820
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.086
+    },
+    {
+      "faza": "korak 6: detajl vijačenja (Vijak M8 + podložka)",
+      "napis": "16x  Vijak M8 + podložka | od spodaj",
+      "okvir_px": [
+        458,
+        684,
+        773,
+        762
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.001
+    },
+    {
+      "faza": "korak 7: premik",
+      "napis": "Polica lesena 930x482x18",
+      "okvir_px": [
+        438,
+        856,
+        772,
+        909
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 7: pregled mest vijakov",
+      "napis": "6x  Lesni vijak 4 mm | od spodaj skozi cev",
+      "okvir_px": [
+        956,
+        832,
+        1221,
+        910
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 7: detajl vijačenja (Lesni vijak 4 mm)",
+      "napis": "6x  Lesni vijak 4 mm | od spodaj skozi cev",
+      "okvir_px": [
+        564,
+        446,
+        829,
+        524
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.021
+    },
+    {
+      "faza": "korak 8: premik",
+      "napis": "Povezava vmesna 1000",
+      "okvir_px": [
+        656,
+        790,
+        962,
+        843
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.01
+    },
+    {
+      "faza": "korak 8: pregled mest vijakov",
+      "napis": "2x  Vijak M6 + podložka | s strani",
+      "okvir_px": [
+        824,
+        526,
+        1129,
+        604
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.052
+    },
+    {
+      "faza": "korak 8: detajl vijačenja (Vijak M6 + podložka)",
+      "napis": "2x  Vijak M6 + podložka | s strani",
+      "okvir_px": [
+        468,
+        610,
+        773,
+        688
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 9: premik",
+      "napis": "Polica lesena 930x482x18",
+      "okvir_px": [
+        428,
+        690,
+        762,
+        743
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 9: pregled mest vijakov",
+      "napis": "3x  Lesni vijak 4 mm | od spodaj",
+      "okvir_px": [
+        1004,
+        774,
+        1269,
+        852
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.006
+    },
+    {
+      "faza": "korak 9: detajl vijačenja (Lesni vijak 4 mm)",
+      "napis": "3x  Lesni vijak 4 mm | od spodaj",
+      "okvir_px": [
+        1026,
+        736,
+        1291,
+        814
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.005
+    },
+    {
+      "faza": "korak 10: premik",
+      "napis": "Povezava vmesna 1000",
+      "okvir_px": [
+        678,
+        802,
+        984,
+        855
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.006
+    },
+    {
+      "faza": "korak 10: pregled mest vijakov",
+      "napis": "2x  Vijak M6 + podložka | s strani",
+      "okvir_px": [
+        546,
+        370,
+        851,
+        448
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.085
+    },
+    {
+      "faza": "korak 10: pregled mest vijakov",
+      "napis": "3x  Lesni vijak 4 mm | od spodaj",
+      "okvir_px": [
+        520,
+        460,
+        785,
+        538
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.066
+    },
+    {
+      "faza": "korak 10: detajl vijačenja (Vijak M6 + podložka)",
+      "napis": "2x  Vijak M6 + podložka | s strani",
+      "okvir_px": [
+        986,
+        300,
+        1291,
+        378
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.011
+    },
+    {
+      "faza": "korak 10: detajl vijačenja (Lesni vijak 4 mm)",
+      "napis": "3x  Lesni vijak 4 mm | od spodaj",
+      "okvir_px": [
+        650,
+        404,
+        915,
+        482
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.084
+    },
+    {
+      "faza": "korak 11: premik",
+      "napis": "Polica lesena 993x493x18",
+      "okvir_px": [
+        972,
+        144,
+        1306,
+        197
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 11: pregled mest vijakov",
+      "napis": "8x  Lesni vijak 4 mm | od spodaj",
+      "okvir_px": [
+        856,
+        362,
+        1121,
+        440
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.07
+    },
+    {
+      "faza": "korak 11: detajl vijačenja (Lesni vijak 4 mm)",
+      "napis": "8x  Lesni vijak 4 mm | od spodaj",
+      "okvir_px": [
+        666,
+        354,
+        931,
+        432
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.005
+    },
+    {
+      "faza": "korak 12: premik",
+      "napis": "Cev inox fi30x1,5 l=428",
+      "okvir_px": [
+        1274,
+        218,
+        1579,
+        271
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 12: premik",
+      "napis": "2x  Nosilec ročaja",
+      "okvir_px": [
+        1246,
+        486,
+        1482,
+        539
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 12: detajl zvara",
+      "napis": "Zvar po obodu stika",
+      "okvir_px": [
+        990,
+        410,
+        1252,
+        463
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 13: premik",
+      "napis": "Cev inox fi30x1,5 l=428",
+      "okvir_px": [
+        1326,
+        406,
+        1631,
+        459
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 13: premik",
+      "napis": "2x  Nosilec ročaja",
+      "okvir_px": [
+        1240,
+        472,
+        1476,
+        525
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    },
+    {
+      "faza": "korak 13: pregled mest vijakov",
+      "napis": "4x  Vijak M6 + podložka | s strani",
+      "okvir_px": [
+        1198,
+        572,
+        1504,
+        650
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.005
+    },
+    {
+      "faza": "korak 13: detajl vijačenja (Vijak M6 + podložka)",
+      "napis": "4x  Vijak M6 + podložka | s strani",
+      "okvir_px": [
+        1100,
+        632,
+        1406,
+        710
+      ],
+      "prekrivanje_pomembnega_px": 0,
+      "prekrivanje_z_varnostnim_robom_px": 0,
+      "delez_na_geometriji": 0.0
+    }
+  ]
+}

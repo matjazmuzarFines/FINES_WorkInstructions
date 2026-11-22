@@ -9,6 +9,14 @@ export type ChangelogEntry = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    verzija: "5.05",
+    datum: "22. 11. 2026",
+    spremembe: [
+      "AI trening: primerjava modela ima svoj naslov (/admin/trening/<model>) - gumb Nazaj v brskalniku in v aplikaciji vrne na Pregled treningov, povezavo do modela lahko deliš.",
+      "Vrstica v Pregledu treningov je povezava (odpre se lahko tudi v novem zavihku); izbran poskus ostane, ko se vrneš na isti model.",
+    ],
+  },
+  {
     verzija: "5.04",
     datum: "22. 11. 2026",
     spremembe: [

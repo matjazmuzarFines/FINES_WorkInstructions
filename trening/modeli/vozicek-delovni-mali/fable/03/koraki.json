@@ -1,0 +1,1487 @@
+{
+  "opomba": "Zaporedje in način spajanja sta predlog AI iz geometrije in pripomb človeka; ni potrjeno s tehnologom.",
+  "koraki": [
+    {
+      "st": 1,
+      "sklop": "A. Zvarjenec okvirja",
+      "naslov": "Spodnji okvir",
+      "opis": "Štiri cevi 30x30x1,5 sestavi v pravokotni okvir in jih zvari v vogalih.",
+      "navodilo": "Štiri cevi sestavi v pravokotni okvir in jih zvari v vogalih.",
+      "deli": [
+        "P001",
+        "P002",
+        "P003",
+        "P004"
+      ],
+      "deli_step": [
+        "P001",
+        "P002",
+        "P003",
+        "P004"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          -260.0,
+          0.0
+        ],
+        "do_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trajanje_s": 2.0,
+        "koordinate": "odmik od končnega položaja v sestavu STEP (mm, Z gor)",
+        "pot": "P001:-Y, P002:+Y, P003:+X, P004:-X",
+        "pot_po_delih_mm": {
+          "P001": [
+            [
+              0.0,
+              -260.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P002": [
+            [
+              0.0,
+              260.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P003": [
+            [
+              260.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P004": [
+            [
+              -260.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "spajanje": {
+        "nacin": "varjenje",
+        "napis": "VARJENJE",
+        "opis": "Varjenje: 4 stikov jeklo-jeklo brez lukenj za vijake, skupni obod stikov 646 mm. Vrsta, debelina in dolžina zvarov: ni znano / zahteva potrditev.",
+        "spoji": [
+          "S01",
+          "S02",
+          "S08",
+          "S09"
+        ],
+        "vijacni_material": [],
+        "vir": "geometrija (luknje, stiki) + pripomba človeka v ocene.json",
+        "potrditev": "ni znano / zahteva potrditev"
+      },
+      "kamera": {
+        "pogled": "zgoraj spredaj-desno",
+        "detajli": [
+          {
+            "spoj": "varjenje",
+            "smer": [
+              0.754,
+              -0.633,
+              0.174
+            ],
+            "vidnost_povp": 0.585
+          }
+        ]
+      },
+      "opozorila": [
+        "Zaporedje in način spajanja sta predlog - zahteva potrditev tehnologa.",
+        "Orodje, momenti, zaščitna oprema, kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev"
+    },
+    {
+      "st": 2,
+      "sklop": "A. Zvarjenec okvirja",
+      "naslov": "Plošče koles",
+      "opis": "Plošče koles 108x88x3 privari v vogale na spodnjo stran okvirja.",
+      "navodilo": "Plošče koles privari v vogale na spodnjo stran okvirja.",
+      "deli": [
+        "P013",
+        "P014",
+        "P015",
+        "P016"
+      ],
+      "deli_step": [
+        "P013",
+        "P014",
+        "P015",
+        "P016"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          -160.0
+        ],
+        "do_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trajanje_s": 2.0,
+        "koordinate": "odmik od končnega položaja v sestavu STEP (mm, Z gor)",
+        "pot": "-Z",
+        "pot_po_delih_mm": {
+          "P013": [
+            [
+              0.0,
+              0.0,
+              -160.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P014": [
+            [
+              0.0,
+              0.0,
+              -160.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P015": [
+            [
+              0.0,
+              0.0,
+              -160.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P016": [
+            [
+              0.0,
+              0.0,
+              -160.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "spajanje": {
+        "nacin": "varjenje",
+        "napis": "VARJENJE",
+        "opis": "Varjenje: 8 stikov jeklo-jeklo brez lukenj za vijake, skupni obod stikov 1821 mm. Vrsta, debelina in dolžina zvarov: ni znano / zahteva potrditev.",
+        "spoji": [
+          "S05",
+          "S06",
+          "S12",
+          "S13",
+          "S17",
+          "S18",
+          "S21",
+          "S22"
+        ],
+        "vijacni_material": [],
+        "vir": "geometrija (luknje, stiki) + pripomba človeka v ocene.json",
+        "potrditev": "ni znano / zahteva potrditev"
+      },
+      "kamera": {
+        "pogled": "od spodaj",
+        "detajli": [
+          {
+            "spoj": "varjenje",
+            "smer": [
+              0.749,
+              -0.629,
+              -0.208
+            ],
+            "vidnost_povp": 0.395
+          }
+        ]
+      },
+      "opozorila": [
+        "Zaporedje in način spajanja sta predlog - zahteva potrditev tehnologa.",
+        "Orodje, momenti, zaščitna oprema, kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev"
+    },
+    {
+      "st": 3,
+      "sklop": "A. Zvarjenec okvirja",
+      "naslov": "Navpične noge",
+      "opis": "Štiri noge (cev 30x30x1,5 l=730, s šestkotnimi luknjami) postavi v vogale okvirja in privari.",
+      "navodilo": "Noge postavi v vogale okvirja in jih privari.",
+      "deli": [
+        "P005",
+        "P006",
+        "P007",
+        "P008"
+      ],
+      "deli_step": [
+        "P005",
+        "P006",
+        "P007",
+        "P008"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          420.0
+        ],
+        "do_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trajanje_s": 2.0,
+        "koordinate": "odmik od končnega položaja v sestavu STEP (mm, Z gor)",
+        "pot": "+Z",
+        "pot_po_delih_mm": {
+          "P005": [
+            [
+              0.0,
+              0.0,
+              420.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P006": [
+            [
+              0.0,
+              0.0,
+              420.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P007": [
+            [
+              0.0,
+              0.0,
+              420.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P008": [
+            [
+              0.0,
+              0.0,
+              420.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "spajanje": {
+        "nacin": "varjenje",
+        "napis": "VARJENJE",
+        "opis": "Varjenje: 8 stikov jeklo-jeklo brez lukenj za vijake, skupni obod stikov 412 mm. Vrsta, debelina in dolžina zvarov: ni znano / zahteva potrditev.",
+        "spoji": [
+          "S03",
+          "S04",
+          "S10",
+          "S11",
+          "S15",
+          "S16",
+          "S19",
+          "S20"
+        ],
+        "vijacni_material": [],
+        "vir": "geometrija (luknje, stiki) + pripomba človeka v ocene.json",
+        "potrditev": "ni znano / zahteva potrditev"
+      },
+      "kamera": {
+        "pogled": "spredaj-desno",
+        "detajli": [
+          {
+            "spoj": "varjenje",
+            "smer": [
+              -0.694,
+              0.583,
+              0.423
+            ],
+            "vidnost_povp": 0.605
+          }
+        ]
+      },
+      "opozorila": [
+        "Zaporedje in način spajanja sta predlog - zahteva potrditev tehnologa.",
+        "Orodje, momenti, zaščitna oprema, kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev"
+    },
+    {
+      "st": 4,
+      "sklop": "A. Zvarjenec okvirja",
+      "naslov": "Zgornje povezave",
+      "opis": "Zgornje povezave (profil 3 mm) položi na vrh nog, privari na noge in med seboj v vogalih.",
+      "navodilo": "Zgornje povezave položi na vrh nog in jih privari.",
+      "deli": [
+        "P009",
+        "P010",
+        "P011",
+        "P012"
+      ],
+      "deli_step": [
+        "P009",
+        "P010",
+        "P011",
+        "P012"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          300.0
+        ],
+        "do_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trajanje_s": 2.0,
+        "koordinate": "odmik od končnega položaja v sestavu STEP (mm, Z gor)",
+        "pot": "+Z",
+        "pot_po_delih_mm": {
+          "P009": [
+            [
+              0.0,
+              0.0,
+              300.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P010": [
+            [
+              0.0,
+              0.0,
+              300.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P011": [
+            [
+              0.0,
+              0.0,
+              300.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P012": [
+            [
+              0.0,
+              0.0,
+              300.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "spajanje": {
+        "nacin": "varjenje",
+        "napis": "VARJENJE",
+        "opis": "Varjenje: 12 stikov jeklo-jeklo brez lukenj za vijake, skupni obod stikov 904 mm. Vrsta, debelina in dolžina zvarov: ni znano / zahteva potrditev.",
+        "spoji": [
+          "S23",
+          "S24",
+          "S26",
+          "S27",
+          "S29",
+          "S30",
+          "S33",
+          "S34",
+          "S37",
+          "S38",
+          "S40",
+          "S41"
+        ],
+        "vijacni_material": [],
+        "vir": "geometrija (luknje, stiki) + pripomba človeka v ocene.json",
+        "potrditev": "ni znano / zahteva potrditev"
+      },
+      "kamera": {
+        "pogled": "zgoraj spredaj-desno",
+        "detajli": [
+          {
+            "spoj": "varjenje",
+            "smer": [
+              -0.694,
+              0.583,
+              0.423
+            ],
+            "vidnost_povp": 0.429
+          }
+        ]
+      },
+      "opozorila": [
+        "Zaporedje in način spajanja sta predlog - zahteva potrditev tehnologa.",
+        "Orodje, momenti, zaščitna oprema, kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev"
+    },
+    {
+      "st": 5,
+      "sklop": "B. Končna montaža",
+      "naslov": "Zakovične matice M6 v noge",
+      "opis": "V šestkotne luknje nog, ki jih uporabljajo vmesni povezavi in ročaj, vstavi šestkotne zakovične matice M6.",
+      "navodilo": "V označene šestkotne luknje nog vstavi zakovične matice M6.",
+      "deli": [
+        "V04",
+        "V08"
+      ],
+      "deli_step": [],
+      "gibanje": {
+        "tip": "brez",
+        "od_mm": [
+          0,
+          0,
+          0
+        ],
+        "do_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trajanje_s": 2.0,
+        "koordinate": "odmik od končnega položaja v sestavu STEP (mm, Z gor)",
+        "pot": "-",
+        "pot_po_delih_mm": {},
+        "kontrola_poti": "ni premika delov iz STEP"
+      },
+      "spajanje": {
+        "nacin": "zakovicenje",
+        "napis": "VSTAVLJANJE ZAKOVIČNIH MATIC",
+        "opis": "8x šestkotna zakovična matica M6 v šestkotne luknje 9,1 mm (predpostavka po meri izreza; matic ni v STEP). Orodje: ni znano / zahteva potrditev.",
+        "spoji": [],
+        "vijacni_material": [
+          {
+            "id": "V04",
+            "ime": "Šestkotna zakovična matica M6 (predpostavka)",
+            "kolicina": 4,
+            "kosi": [
+              "V04_01",
+              "V04_02",
+              "V04_03",
+              "V04_04"
+            ]
+          },
+          {
+            "id": "V08",
+            "ime": "Šestkotna zakovična matica M6 (predpostavka)",
+            "kolicina": 4,
+            "kosi": [
+              "V08_01",
+              "V08_02",
+              "V08_03",
+              "V08_04"
+            ]
+          }
+        ],
+        "vir": "geometrija (luknje, stiki) + pripomba človeka v ocene.json",
+        "potrditev": "ni znano / zahteva potrditev"
+      },
+      "kamera": {
+        "pogled": "spredaj-desno",
+        "pregled_spojev": {
+          "smer": [
+            0.694,
+            -0.583,
+            0.423
+          ],
+          "vidnost_povp": 0.746
+        },
+        "detajli": [
+          {
+            "spoj": "Zakovična matica M6",
+            "smer": [
+              0.754,
+              0.633,
+              0.174
+            ],
+            "vidnost_izvlecen": 1.0,
+            "prosojni_deli": []
+          }
+        ]
+      },
+      "opozorila": [
+        "Zaporedje in način spajanja sta predlog - zahteva potrditev tehnologa.",
+        "Orodje, momenti, zaščitna oprema, kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev"
+    },
+    {
+      "st": 6,
+      "sklop": "B. Končna montaža",
+      "naslov": "Kolesa",
+      "opis": "Kolesa fi80 z zavoro nastavi na plošče koles in vsako privijači s 4 vijaki.",
+      "navodilo": "Kolesa nastavi na plošče in vsako privijači s 4 vijaki M8.",
+      "deli": [
+        "P022",
+        "P023",
+        "P024",
+        "P025",
+        "V07"
+      ],
+      "deli_step": [
+        "P022",
+        "P023",
+        "P024",
+        "P025"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          -220.0
+        ],
+        "do_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trajanje_s": 2.0,
+        "koordinate": "odmik od končnega položaja v sestavu STEP (mm, Z gor)",
+        "pot": "-Z",
+        "pot_po_delih_mm": {
+          "P022": [
+            [
+              0.0,
+              0.0,
+              -220.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P023": [
+            [
+              0.0,
+              0.0,
+              -220.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P024": [
+            [
+              0.0,
+              0.0,
+              -220.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P025": [
+            [
+              0.0,
+              0.0,
+              -220.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "spajanje": {
+        "nacin": "vijacenje",
+        "napis": "VIJAČENJE",
+        "opis": "Vijačenje: 16x Vijak M8 s šestrobo glavo + podložka. Vijačnega materiala ni v STEP - vrsta in mera sta predpostavka iz lukenj. Moment: ni znano / zahteva potrditev.",
+        "spoji": [
+          "S45",
+          "S46",
+          "S47",
+          "S48"
+        ],
+        "vijacni_material": [
+          {
+            "id": "V07",
+            "ime": "Vijak M8 s šestrobo glavo + podložka (predpostavka)",
+            "kolicina": 16,
+            "kosi": [
+              "V07_01",
+              "V07_02",
+              "V07_03",
+              "V07_04",
+              "V07_05",
+              "V07_06",
+              "V07_07",
+              "V07_08",
+              "V07_09",
+              "V07_10",
+              "V07_11",
+              "V07_12",
+              "V07_13",
+              "V07_14",
+              "V07_15",
+              "V07_16"
+            ]
+          }
+        ],
+        "vir": "geometrija (luknje, stiki) + pripomba človeka v ocene.json",
+        "potrditev": "ni znano / zahteva potrditev"
+      },
+      "kamera": {
+        "pogled": "od spodaj",
+        "pregled_spojev": {
+          "smer": [
+            0.707,
+            0.0,
+            -0.707
+          ],
+          "vidnost_povp": 0.648
+        },
+        "detajli": [
+          {
+            "spoj": "Vijak M8 + podložka",
+            "smer": [
+              0.707,
+              0.0,
+              -0.707
+            ],
+            "vidnost_izvlecen": 0.818,
+            "prosojni_deli": []
+          }
+        ]
+      },
+      "opozorila": [
+        "Zaporedje in način spajanja sta predlog - zahteva potrditev tehnologa.",
+        "Orodje, momenti, zaščitna oprema, kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev"
+    },
+    {
+      "st": 7,
+      "sklop": "B. Končna montaža",
+      "naslov": "Spodnja polica",
+      "opis": "Polico 930x482x18 vstavi med noge na spodnji okvir in jo od spodaj privijači skozi cevi okvirja.",
+      "navodilo": "Polico vstavi na spodnji okvir in jo privijači od spodaj skozi cevi.",
+      "deli": [
+        "P018",
+        "V01"
+      ],
+      "deli_step": [
+        "P018"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          -700.0,
+          0.0
+        ],
+        "do_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trajanje_s": 2.0,
+        "koordinate": "odmik od končnega položaja v sestavu STEP (mm, Z gor)",
+        "pot": "-Y",
+        "pot_po_delih_mm": {
+          "P018": [
+            [
+              0.0,
+              -700.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "spajanje": {
+        "nacin": "polaganje + vijacenje",
+        "napis": "POLAGANJE + VIJAČENJE",
+        "opis": "Polaganje + vijačenje: 6x Lesni vijak 4 mm. Vijačnega materiala ni v STEP - vrsta in mera sta predpostavka iz lukenj. Moment: ni znano / zahteva potrditev.",
+        "spoji": [
+          "S07",
+          "S14"
+        ],
+        "vijacni_material": [
+          {
+            "id": "V01",
+            "ime": "Lesni vijak 4 mm (predpostavka)",
+            "kolicina": 6,
+            "kosi": [
+              "V01_01",
+              "V01_02",
+              "V01_03",
+              "V01_04",
+              "V01_05",
+              "V01_06"
+            ]
+          }
+        ],
+        "vir": "geometrija (luknje, stiki) + pripomba človeka v ocene.json",
+        "potrditev": "ni znano / zahteva potrditev"
+      },
+      "kamera": {
+        "pogled": "zgoraj spredaj-desno",
+        "pregled_spojev": {
+          "smer": [
+            0.489,
+            -0.847,
+            -0.208
+          ],
+          "vidnost_povp": 0.633
+        },
+        "detajli": [
+          {
+            "spoj": "Lesni vijak 4 mm",
+            "smer": [
+              0.676,
+              -0.568,
+              -0.469
+            ],
+            "vidnost_izvlecen": 1.0,
+            "prosojni_deli": [
+              "P001"
+            ]
+          }
+        ]
+      },
+      "opozorila": [
+        "Zaporedje in način spajanja sta predlog - zahteva potrditev tehnologa.",
+        "Orodje, momenti, zaščitna oprema, kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev"
+    },
+    {
+      "st": 8,
+      "sklop": "B. Končna montaža",
+      "naslov": "Vmesna povezava – zadnja",
+      "opis": "Vmesno povezavo nastavi na notranjo stran zadnjih nog (utor 6,5x12 na šestkotno luknjo) in privijači.",
+      "navodilo": "Zadnjo vmesno povezavo privijači na notranjo stran nog.",
+      "deli": [
+        "P019",
+        "V05"
+      ],
+      "deli_step": [
+        "P019"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          -260.0
+        ],
+        "do_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trajanje_s": 2.0,
+        "koordinate": "odmik od končnega položaja v sestavu STEP (mm, Z gor)",
+        "pot": "-Z",
+        "pot_po_delih_mm": {
+          "P019": [
+            [
+              0.0,
+              0.0,
+              -260.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "spajanje": {
+        "nacin": "vijacenje",
+        "napis": "VIJAČENJE",
+        "opis": "Vijačenje: 2x Vijak M6 s šestrobo glavo + podložka. Vijačnega materiala ni v STEP - vrsta in mera sta predpostavka iz lukenj. Moment: ni znano / zahteva potrditev.",
+        "spoji": [
+          "S25",
+          "S31"
+        ],
+        "vijacni_material": [
+          {
+            "id": "V05",
+            "ime": "Vijak M6 s šestrobo glavo + podložka (predpostavka)",
+            "kolicina": 2,
+            "kosi": [
+              "V05_01",
+              "V05_02"
+            ]
+          }
+        ],
+        "vir": "geometrija (luknje, stiki) + pripomba človeka v ocene.json",
+        "potrditev": "ni znano / zahteva potrditev"
+      },
+      "kamera": {
+        "pogled": "spredaj-desno",
+        "pregled_spojev": {
+          "smer": [
+            0.453,
+            -0.785,
+            0.423
+          ],
+          "vidnost_povp": 0.935
+        },
+        "detajli": [
+          {
+            "spoj": "Vijak M6 + podložka",
+            "smer": [
+              0.754,
+              -0.633,
+              0.174
+            ],
+            "vidnost_izvlecen": 1.0,
+            "prosojni_deli": []
+          }
+        ]
+      },
+      "opozorila": [
+        "Zaporedje in način spajanja sta predlog - zahteva potrditev tehnologa.",
+        "Orodje, momenti, zaščitna oprema, kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev"
+    },
+    {
+      "st": 9,
+      "sklop": "B. Končna montaža",
+      "naslov": "Vmesna polica",
+      "opis": "Polico 930x482x18 vstavi s sprednje strani nad rob povezave, spusti na zadnjo povezavo in privijači od spodaj.",
+      "navodilo": "Polico vstavi s sprednje strani in jo privijači od spodaj.",
+      "deli": [
+        "P021",
+        "V06"
+      ],
+      "deli_step": [
+        "P021"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          -700.0,
+          0.0
+        ],
+        "do_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trajanje_s": 2.0,
+        "koordinate": "odmik od končnega položaja v sestavu STEP (mm, Z gor)",
+        "pot": "-Y",
+        "pot_po_delih_mm": {
+          "P021": [
+            [
+              0.0,
+              -700.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "spajanje": {
+        "nacin": "polaganje + vijacenje",
+        "napis": "POLAGANJE + VIJAČENJE",
+        "opis": "Polaganje + vijačenje: 3x Lesni vijak 4 mm. Vijačnega materiala ni v STEP - vrsta in mera sta predpostavka iz lukenj. Moment: ni znano / zahteva potrditev.",
+        "spoji": [
+          "S49"
+        ],
+        "vijacni_material": [
+          {
+            "id": "V06",
+            "ime": "Lesni vijak 4 mm (predpostavka)",
+            "kolicina": 3,
+            "kosi": [
+              "V06_01",
+              "V06_02",
+              "V06_03"
+            ]
+          }
+        ],
+        "vir": "geometrija (luknje, stiki) + pripomba človeka v ocene.json",
+        "potrditev": "ni znano / zahteva potrditev"
+      },
+      "kamera": {
+        "pogled": "zgoraj spredaj-desno",
+        "pregled_spojev": {
+          "smer": [
+            0.441,
+            -0.765,
+            -0.469
+          ],
+          "vidnost_povp": 0.686
+        },
+        "detajli": [
+          {
+            "spoj": "Lesni vijak 4 mm",
+            "smer": [
+              0.883,
+              0.0,
+              -0.469
+            ],
+            "vidnost_izvlecen": 1.0,
+            "prosojni_deli": []
+          }
+        ]
+      },
+      "opozorila": [
+        "Zaporedje in način spajanja sta predlog - zahteva potrditev tehnologa.",
+        "Orodje, momenti, zaščitna oprema, kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev"
+    },
+    {
+      "st": 10,
+      "sklop": "B. Končna montaža",
+      "naslov": "Vmesna povezava – sprednja",
+      "opis": "Sprednjo vmesno povezavo dvigni od spodaj pod polico, privijači na nogi in polico privijači od spodaj.",
+      "navodilo": "Sprednjo povezavo dvigni pod polico, privijači na nogi in v polico.",
+      "deli": [
+        "P020",
+        "V05",
+        "V06"
+      ],
+      "deli_step": [
+        "P020"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          -260.0
+        ],
+        "do_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trajanje_s": 2.0,
+        "koordinate": "odmik od končnega položaja v sestavu STEP (mm, Z gor)",
+        "pot": "-Z",
+        "pot_po_delih_mm": {
+          "P020": [
+            [
+              0.0,
+              0.0,
+              -260.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "spajanje": {
+        "nacin": "polaganje + vijacenje",
+        "napis": "POLAGANJE + VIJAČENJE",
+        "opis": "Polaganje + vijačenje: 2x Vijak M6 s šestrobo glavo + podložka; 3x Lesni vijak 4 mm. Vijačnega materiala ni v STEP - vrsta in mera sta predpostavka iz lukenj. Moment: ni znano / zahteva potrditev.",
+        "spoji": [
+          "S28",
+          "S35",
+          "S50"
+        ],
+        "vijacni_material": [
+          {
+            "id": "V05",
+            "ime": "Vijak M6 s šestrobo glavo + podložka (predpostavka)",
+            "kolicina": 2,
+            "kosi": [
+              "V05_03",
+              "V05_04"
+            ]
+          },
+          {
+            "id": "V06",
+            "ime": "Lesni vijak 4 mm (predpostavka)",
+            "kolicina": 3,
+            "kosi": [
+              "V06_04",
+              "V06_05",
+              "V06_06"
+            ]
+          }
+        ],
+        "vir": "geometrija (luknje, stiki) + pripomba človeka v ocene.json",
+        "potrditev": "ni znano / zahteva potrditev"
+      },
+      "kamera": {
+        "pogled": "spredaj-desno nizko",
+        "pregled_spojev": {
+          "smer": [
+            0.83,
+            -0.302,
+            -0.469
+          ],
+          "vidnost_povp": 0.805
+        },
+        "detajli": [
+          {
+            "spoj": "Vijak M6 + podložka",
+            "smer": [
+              0.749,
+              0.629,
+              -0.208
+            ],
+            "vidnost_izvlecen": 1.0,
+            "prosojni_deli": []
+          },
+          {
+            "spoj": "Lesni vijak 4 mm",
+            "smer": [
+              0.83,
+              -0.302,
+              -0.469
+            ],
+            "vidnost_izvlecen": 1.0,
+            "prosojni_deli": []
+          }
+        ]
+      },
+      "opozorila": [
+        "Zaporedje in način spajanja sta predlog - zahteva potrditev tehnologa.",
+        "Orodje, momenti, zaščitna oprema, kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev"
+    },
+    {
+      "st": 11,
+      "sklop": "B. Končna montaža",
+      "naslov": "Zgornja polica",
+      "opis": "Polico 993x493x18 položi na zgornje povezave in jo privijači od spodaj.",
+      "navodilo": "Polico položi na zgornje povezave in jo privijači od spodaj.",
+      "deli": [
+        "P017",
+        "V02",
+        "V03"
+      ],
+      "deli_step": [
+        "P017"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          0.0,
+          0.0,
+          320.0
+        ],
+        "do_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trajanje_s": 2.0,
+        "koordinate": "odmik od končnega položaja v sestavu STEP (mm, Z gor)",
+        "pot": "+Z",
+        "pot_po_delih_mm": {
+          "P017": [
+            [
+              0.0,
+              0.0,
+              320.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "spajanje": {
+        "nacin": "polaganje + vijacenje",
+        "napis": "POLAGANJE + VIJAČENJE",
+        "opis": "Polaganje + vijačenje: 6x Lesni vijak 4 mm; 2x Lesni vijak 4 mm. Vijačnega materiala ni v STEP - vrsta in mera sta predpostavka iz lukenj. Moment: ni znano / zahteva potrditev.",
+        "spoji": [
+          "S39",
+          "S42",
+          "S43",
+          "S44"
+        ],
+        "vijacni_material": [
+          {
+            "id": "V02",
+            "ime": "Lesni vijak 4 mm (predpostavka)",
+            "kolicina": 6,
+            "kosi": [
+              "V02_01",
+              "V02_02",
+              "V02_03",
+              "V02_04",
+              "V02_05",
+              "V02_06"
+            ]
+          },
+          {
+            "id": "V03",
+            "ime": "Lesni vijak 4 mm (predpostavka)",
+            "kolicina": 2,
+            "kosi": [
+              "V03_01",
+              "V03_02"
+            ]
+          }
+        ],
+        "vir": "geometrija (luknje, stiki) + pripomba človeka v ocene.json",
+        "potrditev": "ni znano / zahteva potrditev"
+      },
+      "kamera": {
+        "pogled": "zgoraj spredaj-desno",
+        "pregled_spojev": {
+          "smer": [
+            0.489,
+            -0.847,
+            -0.208
+          ],
+          "vidnost_povp": 0.746
+        },
+        "detajli": [
+          {
+            "spoj": "Lesni vijak 4 mm",
+            "smer": [
+              0.153,
+              -0.87,
+              -0.469
+            ],
+            "vidnost_izvlecen": 1.0,
+            "prosojni_deli": []
+          }
+        ]
+      },
+      "opozorila": [
+        "Zaporedje in način spajanja sta predlog - zahteva potrditev tehnologa.",
+        "Orodje, momenti, zaščitna oprema, kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev"
+    },
+    {
+      "st": 12,
+      "sklop": "C. Podsestav ročaja",
+      "naslov": "Ročaj – zvarjenec",
+      "opis": "Cev inox fi30 l=428 in dva nosilca zvari v podsestav MLU124029200 (v STEP označen kot zvarjenec).",
+      "navodilo": "Cev ročaja in oba nosilca zvari v ročaj.",
+      "deli": [
+        "P027",
+        "P026",
+        "P028"
+      ],
+      "deli_step": [
+        "P027",
+        "P026",
+        "P028"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          -260.0,
+          0.0,
+          160.0
+        ],
+        "do_mm": [
+          -260.0,
+          0.0,
+          0.0
+        ],
+        "trajanje_s": 2.0,
+        "koordinate": "odmik od končnega položaja v sestavu STEP (mm, Z gor)",
+        "pot": "P027:+Z, P026:+Y, P028:-Y",
+        "pot_po_delih_mm": {
+          "P027": [
+            [
+              -260.0,
+              0.0,
+              160.0
+            ],
+            [
+              -260.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P026": [
+            [
+              -260.0,
+              160.0,
+              0.0
+            ],
+            [
+              -260.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P028": [
+            [
+              -260.0,
+              -160.0,
+              0.0
+            ],
+            [
+              -260.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "spajanje": {
+        "nacin": "varjenje",
+        "napis": "VARJENJE",
+        "opis": "Varjenje: 2 stikov jeklo-jeklo brez lukenj za vijake, skupni obod stikov 188 mm. Vrsta, debelina in dolžina zvarov: ni znano / zahteva potrditev.",
+        "spoji": [
+          "S51",
+          "S52"
+        ],
+        "vijacni_material": [],
+        "vir": "geometrija (luknje, stiki) + pripomba človeka v ocene.json",
+        "potrditev": "ni znano / zahteva potrditev"
+      },
+      "kamera": {
+        "pogled": "zadaj-levo",
+        "detajli": [
+          {
+            "spoj": "varjenje",
+            "smer": [
+              -0.985,
+              0.0,
+              0.174
+            ],
+            "vidnost_povp": 0.999
+          }
+        ]
+      },
+      "opozorila": [
+        "Zaporedje in način spajanja sta predlog - zahteva potrditev tehnologa.",
+        "Orodje, momenti, zaščitna oprema, kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev"
+    },
+    {
+      "st": 13,
+      "sklop": "B. Končna montaža",
+      "naslov": "Montaža ročaja",
+      "opis": "Zvarjeni ročaj nastavi na notranjo stran nog in privijači.",
+      "navodilo": "Ročaj nastavi na notranjo stran nog in ga privijači.",
+      "deli": [
+        "P027",
+        "P026",
+        "P028",
+        "V09"
+      ],
+      "deli_step": [
+        "P027",
+        "P026",
+        "P028"
+      ],
+      "gibanje": {
+        "tip": "premik",
+        "od_mm": [
+          -260.0,
+          0.0,
+          0.0
+        ],
+        "do_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trajanje_s": 2.0,
+        "koordinate": "odmik od končnega položaja v sestavu STEP (mm, Z gor)",
+        "pot": "skupina",
+        "pot_po_delih_mm": {
+          "P027": [
+            [
+              -260.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P026": [
+            [
+              -260.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "P028": [
+            [
+              -260.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "kontrola_poti": "brez trkov (preverjeno)"
+      },
+      "spajanje": {
+        "nacin": "vijacenje",
+        "napis": "VIJAČENJE",
+        "opis": "Vijačenje: 4x Vijak M6 s šestrobo glavo + podložka. Vijačnega materiala ni v STEP - vrsta in mera sta predpostavka iz lukenj. Moment: ni znano / zahteva potrditev.",
+        "spoji": [
+          "S32",
+          "S36"
+        ],
+        "vijacni_material": [
+          {
+            "id": "V09",
+            "ime": "Vijak M6 s šestrobo glavo + podložka (predpostavka)",
+            "kolicina": 4,
+            "kosi": [
+              "V09_01",
+              "V09_02",
+              "V09_03",
+              "V09_04"
+            ]
+          }
+        ],
+        "vir": "geometrija (luknje, stiki) + pripomba človeka v ocene.json",
+        "potrditev": "ni znano / zahteva potrditev"
+      },
+      "kamera": {
+        "pogled": "zadaj-levo",
+        "pregled_spojev": {
+          "smer": [
+            -0.698,
+            0.254,
+            0.669
+          ],
+          "vidnost_povp": 0.765
+        },
+        "detajli": [
+          {
+            "spoj": "Vijak M6 + podložka",
+            "smer": [
+              -0.453,
+              -0.785,
+              0.423
+            ],
+            "vidnost_izvlecen": 1.0,
+            "prosojni_deli": []
+          }
+        ]
+      },
+      "opozorila": [
+        "Zaporedje in način spajanja sta predlog - zahteva potrditev tehnologa.",
+        "Orodje, momenti, zaščitna oprema, kontrolne točke: ni znano / zahteva potrditev."
+      ],
+      "potrditev": "ni znano / zahteva potrditev"
+    }
+  ]
+}

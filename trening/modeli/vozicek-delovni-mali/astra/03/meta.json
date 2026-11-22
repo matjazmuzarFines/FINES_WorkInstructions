@@ -1,0 +1,22 @@
+{
+  "ai_model": "gpt-6.2-astra",
+  "zacetek": "2026-11-22T16:52:05+01:00",
+  "konec": "2026-11-22T17:12:44+01:00",
+  "status": "uspeh",
+  "povzetek": "19 korakov, 5 min 05 s. Šest vidnih stikov, 72 kandidatnih mest za vijake. Osem mest pri kolesih zadržanih po preizkusu dostopa.",
+  "orodja": [
+    "Python 3.12.14",
+    "cadquery-ocp-novtk 8.0.1.1.0",
+    "numpy 2.3.5",
+    "moderngl 5.13.0",
+    "glcontext 3.1.0",
+    "Pillow 13.0.0",
+    "imageio-ffmpeg 0.8.1",
+    "FFmpeg 9.0.2-essentials_build-www.gyan.dev"
+  ],
+  "tezave": [
+    "Nosilne plošče so polne na vseh 16 predlaganih oseh koles.",
+    "Ravni dostop omejen pri V007, V008, V015, V016, V011, V012, V003, V004.",
+    "Manjkajo kosovnica pritrdil, varilna risba, tolerance in potrditev zaporedja."
+  ]
+}

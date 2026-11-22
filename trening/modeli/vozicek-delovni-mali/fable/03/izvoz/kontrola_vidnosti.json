@@ -1,0 +1,441 @@
+{
+  "metoda": "ID slika 960x540 (vsak del / vijak / zvar svoja barva). vidnost = vidni piksli cilja ob vseh delih / piksli cilja, ce bi bil sam. Vijak se meri v treh legah: izvlecen, na pol, privit. 'pogled poskusa 02' = isti izrez v smeri glavnega pogleda koraka.",
+  "kandidatov_smeri": 144,
+  "maskirnih_izrisov": 7831,
+  "prag_opozorila": "detajl vijačenja: izvlecen < 0,6",
+  "pod_pragom": [],
+  "meritve": [
+    {
+      "korak": 1,
+      "faza": "detajl zvara",
+      "cilji": [
+        "S01"
+      ],
+      "smer_az_el": [
+        320,
+        10
+      ],
+      "vidnost_min": 0.585,
+      "vidnost_povp": 0.585,
+      "vidnost_pogled_poskusa_02_min_povp": [
+        0.556,
+        0.556
+      ],
+      "preizkusenih_smeri": 144,
+      "opomba": "zvar tece po obodu stika - zadnja stran oboda je vedno zakrita"
+    },
+    {
+      "korak": 2,
+      "faza": "detajl zvara",
+      "cilji": [
+        "S06",
+        "S17"
+      ],
+      "smer_az_el": [
+        320,
+        -12
+      ],
+      "vidnost_min": 0.388,
+      "vidnost_povp": 0.395,
+      "vidnost_pogled_poskusa_02_min_povp": [
+        0.316,
+        0.347
+      ],
+      "preizkusenih_smeri": 144,
+      "opomba": "zvar tece po obodu stika - zadnja stran oboda je vedno zakrita"
+    },
+    {
+      "korak": 3,
+      "faza": "detajl zvara",
+      "cilji": [
+        "S03",
+        "S16"
+      ],
+      "smer_az_el": [
+        140,
+        25
+      ],
+      "vidnost_min": 0.598,
+      "vidnost_povp": 0.605,
+      "vidnost_pogled_poskusa_02_min_povp": [
+        0.01,
+        0.015
+      ],
+      "preizkusenih_smeri": 144,
+      "opomba": "zvar tece po obodu stika - zadnja stran oboda je vedno zakrita"
+    },
+    {
+      "korak": 4,
+      "faza": "detajl zvara",
+      "cilji": [
+        "S26",
+        "S27",
+        "S40"
+      ],
+      "smer_az_el": [
+        140,
+        25
+      ],
+      "vidnost_min": 0.314,
+      "vidnost_povp": 0.429,
+      "vidnost_pogled_poskusa_02_min_povp": [
+        0.056,
+        0.094
+      ],
+      "preizkusenih_smeri": 144,
+      "opomba": "zvar tece po obodu stika - zadnja stran oboda je vedno zakrita"
+    },
+    {
+      "korak": 5,
+      "faza": "pregled mest vijakov",
+      "cilji": 8,
+      "smer_az_el": [
+        320,
+        25
+      ],
+      "vidnost_min": 0.54,
+      "vidnost_povp": 0.746,
+      "vidnost_pogled_poskusa_02_min_povp": [
+        0.495,
+        0.738
+      ],
+      "preizkusenih_smeri": 54
+    },
+    {
+      "korak": 5,
+      "faza": "detajl vijačenja",
+      "vijak": "Zakovična matica M6",
+      "cilji": [
+        "V08_03",
+        "V08_04"
+      ],
+      "smer_az_el": [
+        40,
+        10
+      ],
+      "vidnost_izvlecen": 1.0,
+      "vidnost_na_pol": 1.0,
+      "vidnost_privit": 0.517,
+      "vidnost_pogled_poskusa_02": {
+        "izvlecen": 1.0,
+        "na_pol": 0.478,
+        "privit": 0.001
+      },
+      "prosojni_deli_med_vijacenjem": [],
+      "preizkusenih_smeri": 64
+    },
+    {
+      "korak": 6,
+      "faza": "pregled mest vijakov",
+      "cilji": 16,
+      "smer_az_el": [
+        0,
+        -45
+      ],
+      "vidnost_min": 0.543,
+      "vidnost_povp": 0.648,
+      "vidnost_pogled_poskusa_02_min_povp": [
+        0.0,
+        0.534
+      ],
+      "preizkusenih_smeri": 54
+    },
+    {
+      "korak": 6,
+      "faza": "detajl vijačenja",
+      "vijak": "Vijak M8 + podložka",
+      "cilji": [
+        "V07_13",
+        "V07_14",
+        "V07_15",
+        "V07_16"
+      ],
+      "smer_az_el": [
+        0,
+        -45
+      ],
+      "vidnost_izvlecen": 0.818,
+      "vidnost_na_pol": 0.724,
+      "vidnost_privit": 0.254,
+      "vidnost_pogled_poskusa_02": {
+        "izvlecen": 0.712,
+        "na_pol": 0.497,
+        "privit": 0.32
+      },
+      "prosojni_deli_med_vijacenjem": [],
+      "preizkusenih_smeri": 72
+    },
+    {
+      "korak": 7,
+      "faza": "pregled mest vijakov",
+      "cilji": 6,
+      "smer_az_el": [
+        300,
+        -12
+      ],
+      "vidnost_min": 0.567,
+      "vidnost_povp": 0.633,
+      "vidnost_pogled_poskusa_02_min_povp": [
+        0.0,
+        0.231
+      ],
+      "preizkusenih_smeri": 54
+    },
+    {
+      "korak": 7,
+      "faza": "detajl vijačenja",
+      "vijak": "Lesni vijak 4 mm",
+      "cilji": [
+        "V01_02"
+      ],
+      "smer_az_el": [
+        320,
+        -28
+      ],
+      "vidnost_izvlecen": 1.0,
+      "vidnost_na_pol": 0.924,
+      "vidnost_privit": 0.0,
+      "vidnost_pogled_poskusa_02": {
+        "izvlecen": 1.0,
+        "na_pol": 0.12,
+        "privit": 0.0
+      },
+      "prosojni_deli_med_vijacenjem": [
+        "P001"
+      ],
+      "preizkusenih_smeri": 72
+    },
+    {
+      "korak": 8,
+      "faza": "pregled mest vijakov",
+      "cilji": 2,
+      "smer_az_el": [
+        300,
+        25
+      ],
+      "vidnost_min": 0.931,
+      "vidnost_povp": 0.935,
+      "vidnost_pogled_poskusa_02_min_povp": [
+        0.918,
+        0.922
+      ],
+      "preizkusenih_smeri": 24
+    },
+    {
+      "korak": 8,
+      "faza": "detajl vijačenja",
+      "vijak": "Vijak M6 + podložka",
+      "cilji": [
+        "V05_02"
+      ],
+      "smer_az_el": [
+        320,
+        10
+      ],
+      "vidnost_izvlecen": 1.0,
+      "vidnost_na_pol": 1.0,
+      "vidnost_privit": 0.696,
+      "vidnost_pogled_poskusa_02": {
+        "izvlecen": 1.0,
+        "na_pol": 1.0,
+        "privit": 0.761
+      },
+      "prosojni_deli_med_vijacenjem": [],
+      "preizkusenih_smeri": 64
+    },
+    {
+      "korak": 9,
+      "faza": "pregled mest vijakov",
+      "cilji": 3,
+      "smer_az_el": [
+        300,
+        -28
+      ],
+      "vidnost_min": 0.657,
+      "vidnost_povp": 0.686,
+      "vidnost_pogled_poskusa_02_min_povp": [
+        0.0,
+        0.0
+      ],
+      "preizkusenih_smeri": 54
+    },
+    {
+      "korak": 9,
+      "faza": "detajl vijačenja",
+      "vijak": "Lesni vijak 4 mm",
+      "cilji": [
+        "V06_02"
+      ],
+      "smer_az_el": [
+        0,
+        -28
+      ],
+      "vidnost_izvlecen": 1.0,
+      "vidnost_na_pol": 1.0,
+      "vidnost_privit": 0.486,
+      "vidnost_pogled_poskusa_02": {
+        "izvlecen": 0.0,
+        "na_pol": 0.0,
+        "privit": 0.0
+      },
+      "prosojni_deli_med_vijacenjem": [],
+      "preizkusenih_smeri": 72
+    },
+    {
+      "korak": 10,
+      "faza": "pregled mest vijakov",
+      "cilji": 5,
+      "smer_az_el": [
+        340,
+        -28
+      ],
+      "vidnost_min": 0.75,
+      "vidnost_povp": 0.805,
+      "vidnost_pogled_poskusa_02_min_povp": [
+        0.0,
+        0.582
+      ],
+      "preizkusenih_smeri": 46
+    },
+    {
+      "korak": 10,
+      "faza": "detajl vijačenja",
+      "vijak": "Vijak M6 + podložka",
+      "cilji": [
+        "V05_03"
+      ],
+      "smer_az_el": [
+        40,
+        -12
+      ],
+      "vidnost_izvlecen": 1.0,
+      "vidnost_na_pol": 1.0,
+      "vidnost_privit": 0.694,
+      "vidnost_pogled_poskusa_02": {
+        "izvlecen": 1.0,
+        "na_pol": 0.706,
+        "privit": 0.0
+      },
+      "prosojni_deli_med_vijacenjem": [],
+      "preizkusenih_smeri": 64
+    },
+    {
+      "korak": 10,
+      "faza": "detajl vijačenja",
+      "vijak": "Lesni vijak 4 mm",
+      "cilji": [
+        "V06_05"
+      ],
+      "smer_az_el": [
+        340,
+        -28
+      ],
+      "vidnost_izvlecen": 1.0,
+      "vidnost_na_pol": 1.0,
+      "vidnost_privit": 0.512,
+      "vidnost_pogled_poskusa_02": {
+        "izvlecen": 1.0,
+        "na_pol": 1.0,
+        "privit": 0.174
+      },
+      "prosojni_deli_med_vijacenjem": [],
+      "preizkusenih_smeri": 72
+    },
+    {
+      "korak": 11,
+      "faza": "pregled mest vijakov",
+      "cilji": 8,
+      "smer_az_el": [
+        300,
+        -12
+      ],
+      "vidnost_min": 0.614,
+      "vidnost_povp": 0.746,
+      "vidnost_pogled_poskusa_02_min_povp": [
+        0.0,
+        0.338
+      ],
+      "preizkusenih_smeri": 54
+    },
+    {
+      "korak": 11,
+      "faza": "detajl vijačenja",
+      "vijak": "Lesni vijak 4 mm",
+      "cilji": [
+        "V02_04"
+      ],
+      "smer_az_el": [
+        280,
+        -28
+      ],
+      "vidnost_izvlecen": 1.0,
+      "vidnost_na_pol": 1.0,
+      "vidnost_privit": 0.531,
+      "vidnost_pogled_poskusa_02": {
+        "izvlecen": 1.0,
+        "na_pol": 0.905,
+        "privit": 0.0
+      },
+      "prosojni_deli_med_vijacenjem": [],
+      "preizkusenih_smeri": 72
+    },
+    {
+      "korak": 12,
+      "faza": "detajl zvara",
+      "cilji": [
+        "S51"
+      ],
+      "smer_az_el": [
+        180,
+        10
+      ],
+      "vidnost_min": 0.999,
+      "vidnost_povp": 0.999,
+      "vidnost_pogled_poskusa_02_min_povp": [
+        0.49,
+        0.49
+      ],
+      "preizkusenih_smeri": 144,
+      "opomba": "zvar tece po obodu stika - zadnja stran oboda je vedno zakrita"
+    },
+    {
+      "korak": 13,
+      "faza": "pregled mest vijakov",
+      "cilji": 4,
+      "smer_az_el": [
+        160,
+        42
+      ],
+      "vidnost_min": 0.642,
+      "vidnost_povp": 0.765,
+      "vidnost_pogled_poskusa_02_min_povp": [
+        0.174,
+        0.649
+      ],
+      "preizkusenih_smeri": 54
+    },
+    {
+      "korak": 13,
+      "faza": "detajl vijačenja",
+      "vijak": "Vijak M6 + podložka",
+      "cilji": [
+        "V09_01",
+        "V09_02"
+      ],
+      "smer_az_el": [
+        240,
+        25
+      ],
+      "vidnost_izvlecen": 1.0,
+      "vidnost_na_pol": 1.0,
+      "vidnost_privit": 0.775,
+      "vidnost_pogled_poskusa_02": {
+        "izvlecen": 0.781,
+        "na_pol": 0.446,
+        "privit": 0.0
+      },
+      "prosojni_deli_med_vijacenjem": [],
+      "preizkusenih_smeri": 64
+    }
+  ]
+}
